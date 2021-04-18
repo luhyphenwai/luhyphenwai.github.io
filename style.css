@@ -86,6 +86,19 @@ table {
 	float:right;
 }
 
+.titleText{
+	margin-top: 20px;
+	text-align: center;
+}
+.descriptionText{
+	margin-top: 20;
+}
+
+.sections{
+	width:100%; 
+	height: 400px;
+}
+
 /* Tag stylsheets */
 
 ul li{
@@ -115,6 +128,11 @@ ul li p{
 
 ul li a:hover{
 	color: black;
+}
+
+p{
+	
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 img{
