@@ -49,14 +49,41 @@ table {
 /* Own classes*/
 .wrapper{
 	margin: 0 auto;
-	width: 90%;
+	width: 100%;
 }
 
 .topbar {
-	width: 90%;
-	height: 100px;
+	width: 100%;
+	height: 75px;
 	background-color : rgba(0,0,0,0.5);
     position: fixed;
+}
+
+.title{
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color:  white;
+	font-size: 20px;
+	display: block;
+	float:left;
+}
+
+.titlebox{
+    line-height: 75px;
+	padding: 0 20px;
+	margin-right: 20px;
+	float: left;
+	font-size: 20px;
+}
+
+.leftBox{
+	width: 50%;
+	height: 500;
+	float: left;
+}
+.rightBox{
+	width: 50%;
+	height: 500;
+	float:right;
 }
 
 /* Tag stylsheets */
@@ -64,19 +91,36 @@ table {
 ul li{
 	list-style: decimal;
 	display:inline-block;
-    line-height: 100px;
+	
+    line-height: 75px;
+	padding: 0 20px;
+	margin-right: 20px;
+	float:right;
 }
 
 ul li a{
 	text-decoration:overline;
 	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	color:  white;
-	padding: 0 20px;
 	display: block;
+}
+
+ul li p{
+	text-decoration:overline;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color:  white;
+	display: block;
+	margin-right: 50px;
 }
 
 ul li a:hover{
 	color: black;
+}
+
+img{
+	float: left;
+	max-width:100%;
+	max-height: 100%;
 }
 
 h1{
