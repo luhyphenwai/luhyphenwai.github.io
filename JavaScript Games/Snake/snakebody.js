@@ -8,23 +8,23 @@ export default class SnakeBody{
         this.size = size;
 
         if (!isHead){
-            
             this.position ={
                 x: snakeAhead.position.x,
                 y: snakeAhead.position.y
             }
         }else {
-            
             this.position ={
-                x: 40,
-                y: 40
+                x: gameSize/2-size,
+                y: gameSize/2-size
             }
         }
 
         this.speed = {
-            x: 1,
+            x: 0,
             y: 0
         };
+
+        this.dead = false;
         
     }
 
@@ -45,18 +45,18 @@ export default class SnakeBody{
             this.speed.y = Math.sign(this.snakeAhead.position.y - this.position.y);
         }
         
-        // Wrap snake
-        if (this.position.x > this.gameSize){
-            this.position.x = 0;
+        // Kill snake
+        if (this.position.x > this.gameSize-this.size){
+            this.dead = true;
         }   
         if (this.position.x < 0){
-            this.position.x = this.gameSize;
+            this.dead = true;
         }
         if (this.position.y > this.gameSize){
-            this.position.y = this.size;
+            this.dead = true;
         }   
-        if (this.position.y <this.size){
-            this.position.y = this.gameSize;
+        if (this.position.y < this.size){
+            this.dead = true;
         }
     }
 
