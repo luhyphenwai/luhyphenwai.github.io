@@ -108,6 +108,7 @@ ul li{
     line-height: 75px;
 	padding: 0 20px;
 	margin-right: 20px;
+	float:right;
 }
 
 ul li a{
