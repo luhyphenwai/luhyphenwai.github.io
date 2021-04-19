@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Unity Pathfinding</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="text-align: center" class="wrapper">
+    <!-- Top menu bar -->
+    <nav class="topbar">
+      <div class="titlebox">
+        <p class="title"> luhyphenwai</p>
+      </div>
+      <ul>
+        <li><a href="javascript_games.html">test</a></li>
+        <li><a href="projects.html">My Stuff</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Border to separate top menu bar from main site-->
+    <div style="height: 75px;"></div>
+    
+    <canvas id="unity-canvas" style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="Unity Pathfinding/Build/Unity Pathfinding.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Unity Pathfinding/Build/Unity Pathfinding.data.br",
+        frameworkUrl: "Unity Pathfinding/Build/Unity Pathfinding.framework.js.br",
+        codeUrl: "Unity Pathfinding/Build/Unity Pathfinding.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Unity Pathfinding",
+        productVersion: "1.0",
+      });
+    </script>
+  </body>
+</html>
