@@ -114,27 +114,6 @@ function scoreBoard(){
     ctx.fillText("Score: " + score, 200, 18)
 }
 
-// Draw grid 
-// function grid(){
-//     ctx.fillStyle = "#000000";
-//     for(let x = 0; x < GAME_SIZE/GRID_SIZE; x++){
-            
-//         ctx.beginPath();
-//         ctx.moveTo(x * GRID_SIZE, 0);
-//         ctx.lineTo(x * GRID_SIZE, GAME_SIZE);
-//         ctx.stroke();
-        
-
-//     }
-//     for(let y = 0; y < GAME_SIZE/GRID_SIZE; y++){
-                
-//         ctx.beginPath();
-//         ctx.moveTo(0, y * GRID_SIZE);
-//         ctx.lineTo(GAME_SIZE, y * GRID_SIZE);
-//         ctx.stroke();
-//     }
-// }
-
 function gameOverScreen(){
     ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
     ctx.fillRect(0,0,GAME_SIZE,GAME_SIZE);

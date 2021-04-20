@@ -1,6 +1,6 @@
 //@ts-check
 export default class SnakeBody{
-    constructor(isHead, size, gameSize, snakeAhead, snakeHead){
+    constructor(isHead, size, gameSize, snakeAhead){
         this.isHead = isHead;
         this.gameSize = gameSize;
 
