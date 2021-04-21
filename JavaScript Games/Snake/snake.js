@@ -1,6 +1,5 @@
 //@ts-check
 import SnakeBody from "./snakebody.js";
-import InputHandler from "./input.js";
 import Apple from "./apple.js";
 
 // References
@@ -31,7 +30,52 @@ function start(){
     for(let i = 1; i < 5; i++){
         snake.push(new SnakeBody(false, GRID_SIZE, GAME_SIZE, snake[i-1]));
     }
-    new InputHandler(snake[0]);
+    // new InputHandler(snake[0]);
+    addEventListener("keydown", (key) =>{
+        switch (key.key) {
+            case "ArrowUp":
+                snake[0].speed.x = 0;
+                snake[0].speed.y = -1;
+                break;
+            case "ArrowDown":
+                snake[0].speed.x = 0;
+                snake[0].speed.y = 1;
+                break;
+            case "ArrowLeft":
+                snake[0].speed.x = -1;
+                snake[0].speed.y = 0;
+                break;
+            case "ArrowRight":
+                snake[0].speed.x = 1;
+                snake[0].speed.y = 0;
+                break;
+            default:
+                break;
+        }
+    });
+
+    addEventListener("keydown", (key) =>{
+        switch (key.key) {
+            case "ArrowUp":
+                snake[0].speed.x = 0;
+                snake[0].speed.y = -1;
+                break;
+            case "ArrowDown":
+                snake[0].speed.x = 0;
+                snake[0].speed.y = 1;
+                break;
+            case "ArrowLeft":
+                snake[0].speed.x = -1;
+                snake[0].speed.y = 0;
+                break;
+            case "ArrowRight":
+                snake[0].speed.x = 1;
+                snake[0].speed.y = 0;
+                break;
+            default:
+                break;
+        }
+    });
 }
 start();
 requestAnimationFrame(gameLoop);
