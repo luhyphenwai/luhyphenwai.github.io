@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COVID-19 Tracker</title>
+        <link rel="stylesheet" href="/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body lang="en">
+        <!-- Top menu bar -->
+        <nav class="topbar">
+            <div class="titlebox">
+                <p class = "topbarText"> &lt;/luwai&gt; </p>    
+            </div>
+            <ul>
+                <li><a class = "topbarText"href="projects.html">My Stuff</a></li>
+                <li><a class = "topbarText"href="index.html">Home</a></li>
+            </ul>
+        </nav>
+            
+        <div style="height: 75px;"></div>
+        <!-- Main Body of Site -->
+        <h1>Global COVID-19 Statistics</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                    <th>Total Recovered</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="data">
+                    <th id="gCases"></th>
+                    <th id="gDeaths"></th>
+                    <th id="gRecovered"></th>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>Individual Country Statistics</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                    <th>Total Recovered</th>
+    
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="data">
+                    <th id="cases"></th>
+                    <th id="deaths"></th>
+                    <th id="recovered"></th>
+                </tr>
+            </tbody>
+        </table>
+        <input type="text" id="country" value="Country">
+        <button onclick="fetchData()">Refresh Stats</button>
+        
+        <script>
+            let country = document.getElementById("country").value
+
+            // setGlobalData();
+            function fetchData(){
+                country = document.getElementById("country").value
+                console.log(country)
+                fetch("https://api.covid19api.com/summary")
+                .then(res => {
+                    if(res.ok){
+                        console.log("SUCCESS")
+                    }   else {
+                        console.log("Not Successful")
+                    }
+                    return res.json()
+                })
+                .then(data => generateHTML(data))
+                .catch(error => console.log("ERROR"))
+
+                setGlobalData();
+            
+            }
+            
+            function generateHTML(data){
+                console.log(data)
+                data.Countries.forEach((obj, index) => {
+                    if (obj.Country == country){
+                                
+                        document.getElementById("cases").textContent = obj.TotalConfirmed
+                        document.getElementById("deaths").textContent = obj.TotalDeaths
+                        document.getElementById("recovered").textContent = obj.TotalRecovered
+                    }
+                });
+            }
+
+            function setGlobalData(){
+                fetch("https://api.covid19api.com/summary")
+                .then(res => {
+                    if(res.ok){
+                        console.log("SUCCESS")
+                    }   else {
+                        console.log("Not Successful")
+                    }
+                    return res.json()
+                })
+                .then(data => {
+                    document.getElementById("gCases").textContent = data.Global.TotalConfirmed
+                    document.getElementById("gDeaths").textContent = data.Global.TotalDeaths
+                    document.getElementById("gRecovered").textContent = data.Global.TotalRecovered
+                })
+                .catch(error => console.log("ERROR"))
+
+            }
+        </script>
+    </body>
+</html>
