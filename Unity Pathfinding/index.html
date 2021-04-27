@@ -6,7 +6,7 @@
     <title>Unity WebGL Player | Unity Pathfinding</title>
     <link rel="stylesheet" href="../style.css">
   </head>
-  <body style="text-align: center" class="wrapper">
+  <body style="text-align: center" >
     <!-- Top menu bar -->
     <nav class="topbar">
       <div class="titlebox">
@@ -17,22 +17,24 @@
         <li><a href="/index.html">Home</a></li>
       </ul>
     </nav>
-  
-    <!-- Border to separate top menu bar from main site-->
-    <div style="height: 100px;"></div>
+      <div class="wrapper">
+        <!-- Border to separate top menu bar from main site-->
+        <div style="height: 100px;"></div>
+        
+        <canvas id="unity-canvas" style="width: 800px; height: 600px; background: #231F20"></canvas>
+        <script src="Build/Unity Pathfinding.loader.js"></script>
+        <script>
+          createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "Build/Unity Pathfinding.data.unityweb",
+            frameworkUrl: "Build/Unity Pathfinding.framework.js.unityweb",
+            codeUrl: "Build/Unity Pathfinding.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "DefaultCompany",
+            productName: "Unity Pathfinding",
+            productVersion: "1.0",
+          });
+        </script>
+      </div>
     
-    <canvas id="unity-canvas" style="width: 800px; height: 600px; background: #231F20"></canvas>
-    <script src="Build/Unity Pathfinding.loader.js"></script>
-    <script>
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/Unity Pathfinding.data.unityweb",
-        frameworkUrl: "Build/Unity Pathfinding.framework.js.unityweb",
-        codeUrl: "Build/Unity Pathfinding.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Unity Pathfinding",
-        productVersion: "1.0",
-      });
-    </script>
   </body>
 </html>
