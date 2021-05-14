@@ -6,44 +6,174 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!-- fonts -->
+    <!-- google stuff -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+
+    <link href='https://css.gg/instagram.css' rel='stylesheet'>
+
     <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101312929);</script>
     <script async src="//static.getclicky.com/js"></script>
   </head>
 
   <!-- Main body, displayed on website-->
-  <body>
+  <body id="body">
     <!-- Top menu bar -->
-    <nav class="topbar">
-      <div class="titlebox">
-        <p class = "topbarText"> &lt;/luwai&gt; </p>
+    <nav class="topbar" id="topBar">
+      <a class = "left-text" href="#" onclick="fadeOut('/index.html')" id="leftText"> lu-wai </a>
+      <div class="right-box"id="rightBox">
+        <a href="#" onclick="fadeOut('/contacts.html')" class="right-item" id="right1" onmouseover="this.style.marginRight='11px'" onmouseout="this.style.marginRight='15px'">Me</a>
+        <a href="#" onclick="fadeOut('/projects.html')" class="right-item" id="right2">Projects</a>
+        <a href="#"class="material-icons right-item" onclick="toggleMenu()"id="right3">menu</a>
       </div>
-      <ul>
-        <li><a class = "topbarText" href="projects.html">My Stuff</a></li>
-        <li><a class = "topbarText" href="index.html">Home</a></li>
-      </ul>
+      <div class="line" id="line"></div>
+
+      </div>
+      
     </nav>
+
+    <!-- Sidebar menu -->
+    <div class="menu-hidden" id="menu">
+      <div class="menu-topbar">
+        <a href="#" onclick="fadeOut('/index.html')"class="topleft-text">lu-wai</a>
+        <a href="#"class="material-icons menu-toggle" onclick="toggleMenu()">close</a>
+      </div>
+
+      <div class="menu-main">
+        <a href="#"onclick="fadeOut('/projects.html')" class="menu-section">
+          <div class="menu-section-text">My Projects</div>
+        </a>
+        <a href="#"onclick="fadeOut('/me.html')" class="menu-section">
+          <div class="menu-section-text">Me</div>
+        </a>
+      </div>
+      <p class="menu-bottombar-text">Contact me</p>
+      <div class="menu-bottombar">
+        <a class="material-icons menu-bottombar-item" href="#" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+        <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
+        <img src="/Images/itchio-textless-white.svg" alt="Insta" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
+      </div>
+    </div>
+    <script>
+      window.onscroll = function() {scrollFunction()};
+      
+      
+      // Navbar animations
+      function scrollFunction(){
+        let line = document.getElementById("line");
+        let topBar = document.getElementById("topBar");
+        let leftItem = document.getElementById("leftText");
+        let rightBox = document.getElementById("rightBox");
+        let right1 = document.getElementById("right1");
+        let right2 = document.getElementById("right2");
+        let right3 = document.getElementById("right3");
+        if (document.body.scrollTop > 100|| document.documentElement.scrollTop > 100) {
+          line.className = "line-min";
+          topBar.className = "topbar-min";
+          leftItem.className = "left-text-min";
+          rightBox.className = "right-box-min";
+          right1.className = "right-item-min";
+          right1.style.color = "rgba(0,0,0,0)";
+          right1.style.pointerEvents = "none";
+          right2.className = "right-item-min";
+          right2.style.color = "rgba(0,0,0,0)";
+          right2.style.pointerEvents = "none";
+          right3.className = "material-icons right-item-min";
+        }
+        else {
+          line.className = "line";
+          topBar.className = "topbar";
+          leftItem.className = "left-text";
+          rightBox.className = "right-box";
+          right1.className = "right-item";
+          right1.style.color = "rgba(0,0,0,1)";
+          right1.style.pointerEvents = "";
+          right2.className = "right-item";
+          right2.style.color = "rgba(0,0,0,1)";
+          right2.style.pointerEvents = "";
+          right3.className = "material-icons right-item";
+        }
+      }
+
+      function toggleMenu(){
+        let menu = document.getElementById("menu");
+        if (menu.className == "menu"){
+          menu.className = "menu-hidden";
+        } else if (menu.className == "menu-hidden"){
+          menu.className = "menu";
+        }
+      }
+
+      function fadeOut(link){
+        console.log("bruh")
+        document.getElementById("body").className = "fadeOut";
+        setTimeout(switchLink(link), 2000)
+      }
+      function switchLink(link){
+        window.location = link;
+      }
+
+    </script>
+    
     
     <div class = "wrapper">
       <!-- Border to separate top menu bar from main site-->
-      <div style="height: 50px;"></div>
-
+      <div style="height: 90px;"></div>
       <!-- Main Body of the site-->
-      <div class="section">
-        <div class="leftBox">
-          <img class = "leftBoxObject"src="Images/me.png" alt="me" style="width: 600px; height: 600px;">
-        </div>
-        <div class="rightBox">
-          <div class="boxTextObject">
-
-            <h1 class="titleText">Whats popping,</h1>
-            <h1 class="titleText">its luwai wong baby</h1>
-            <p class = "centerText">Welcome to my lair</p>
-          </div>
-        </div>
+      <div class="section" style="height: 90vh;">
+        <h1 class="title" style="animation: oneIn ease 1.75s;">Welcome</h1>
+        <h1 class="title" style="animation: twoIn ease 2s; margin-left: 45vw;">to</h1>
+        <h1 class="title" style="animation: threeIn ease 2s; margin-left:50vw;">hell</h1>
+        <h1 class="subtitle">please enjoy your stay here</h1>
       </div>
+      <div class="section" style="background-color:blanchedalmond;">
+
+      </div>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
       
 
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      <h1>bruh</h1>
+      
 
       
     </div>

@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     </head>
 
     <body lang="en" background="/Images/pariag2.PNG">
@@ -24,27 +25,38 @@
             <!-- Main Body of Site -->
         <div style="height: 25px;"></div>
         <h1 style="font-size: 40px;">COVID-19 STATISTICS</h1>
+        
         <h1>Global Statistics</h1>
-        <h2 id="gCases">Total Cases:</h2>
-        <h2 id="gDeaths">Total Deaths:</h2>
-        <h2 id="gRecovered">Total Recovered:</h2>
+        <div class="flexbox-container">
+            <h2 id="gCases" class="flexbox-item">Total Cases:</h2>
+            <h2 id="gDeaths" class="flexbox-item">Total Deaths:</h2>
+            <h2 id="gRecovered" class="flexbox-item">Total Recovered:</h2>
+        </div>
 
         <h1>Country Statistics</h1>
-        <h2 id="cases">Total Cases:</h2>
-        <h2 id="deaths">Total Deaths:</h2>
-        <h2 id="recovered">Total Recovered:</h2>
+        <div class="flexbox-container">
+            <h2 id="cases" class="flexbox-item">Total Cases: None</h2>
+            <h2 id="deaths" class="flexbox-item">Total Deaths: None</h2>
+            <h2 id="recovered" class="flexbox-item">Total Recovered: None</h2>
+        </div>
         <p>Select a Country</p>
         <select id="country" name="country">
             
-         </select>
+        </select>
         <button onclick="fetchData()">Refresh Stats</button>
         
+        
         <script>
+
+            // Dropdown menu
             let country = document.getElementById("country").value
             let dropdown = document.getElementById("country")
 
             generateDropDownList();
             setGlobalData();
+            
+            
+            
 
             function generateDropDownList(){
                 fetch("https://api.covid19api.com/summary")
@@ -69,6 +81,7 @@
                 setGlobalData();
             
             }
+
             function fetchData(){
                 country = document.getElementById("country").value
                 console.log(country)

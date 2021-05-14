@@ -5,22 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Valorant Weather Tracker</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <title>Weather</title>
+
+    <style>
+        h1 {
+            font-family: 'Bungee', cursive;
+        }
+
+        h2 {
+            font-family: 'Bungee', cursive;
+        }
+
+        h3{
+            font-family: 'Bungee', cursive;
+        }
+    </style>
 </head>
 <body style="background-color: gray;">
     <!-- Top menu bar -->
     <nav class="topbar">
         <div class="titlebox">
-            <p class = "topbarText"> &lt;/luwai&gt; </p>    
+            <p class = "topbarText"> lu-wai </p>    
         </div>
-        <ul>
-            <li><a class = "topbarText"href="../projects.html">My Stuff</a></li>
-            <li><a class = "topbarText"href="../index.html">Home</a></li>
-        </ul>
     </nav>
     <div style="height: 100px;"></div>
-    <div class="wrapper">
 
+    <div class="wrapper">
+        <input type="text" placeholder="Find your city">
+        <h1 id="pos">position</h1>
+        <h1 id="temp">24<sup>o</sup></h1>
+        <h2 id="feels">feels like 22</h2>
+        <h3 id="status">Sunny</h3>
+        
     </div>
+
+
+    <script>
+        const APIKEY = "d37ab5221f5ebbf46eda9ce6a1239979";
+        let coords = {long: 0, lat: 0};
+        // Get location
+        getLocation();
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("pos").innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+        }
+
+        
+    </script>
 </body>
 </html>
