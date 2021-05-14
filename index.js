@@ -67,22 +67,4 @@ function switchLink(link){
     
 }
 
-// Fade in
-let element = document.getElementById("section2");
-section2();
-function section2(){
-    var scrollArea = 450;
-    if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
-        element.style.opacity = 1;
-    } else {
-    
-    element.style.opacity = 0;
-    }
-}
 
-function section3(){
-    var scrollArea = 600;
-    if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
-
-    }
-}
