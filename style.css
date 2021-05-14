@@ -69,6 +69,7 @@ table {
 	height: 100px;
 	background-color : white;
     position: fixed;
+	z-index: 99;
 }
 .left-text{
 	font-family: 'Montserrat', sans-serif;
