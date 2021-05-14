@@ -400,7 +400,7 @@ table {
 
 .section{
 	margin: 0;
-	height: 110vh;
+	height: 100vh;
 	z-index: -10;
 }
 .inner-section{
@@ -411,8 +411,8 @@ table {
 	font-size: 7.5vw;
 	font-weight: 900;
 	width: 40vw;
-	height: 20vh;
-	margin-top: 4vh;
+	height: 150px;
+	margin-top: 5vh;
 	font-style: italic;
 	margin-left: 25vw;
 	overflow-x: hidden;
@@ -458,13 +458,13 @@ table {
 	font-family: 'Montserrat', sans-serif;
 	color:red;
 	opacity: 0;
-	font-size: 2vw;
+	font-size: 2.5vw;
 	font-weight: 100;
 	width: 50vw;
 	height: 20vh;
-	margin-top: 20px;
+	margin-top: 10vh;
 	font-style: italic;
-	margin-left: 35vw;
+	margin-left: 32.5vw;
 	overflow-x: hidden;
 	z-index: 10;
 	animation: fadeInAnimation ease 1s;
@@ -485,19 +485,27 @@ table {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 2vw;
 	font-weight: 800;
-	width: 35vw;
+	width: 40vw;
 	text-align: center;
 	padding: 4%;
+	margin-right: 5vw;
 	padding-top: 5vh;
 }
 .section-description{
 	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5vw;
+	font-weight: 800;
+	width: 40vw;
+	text-align: left;
+	padding: 0.5vh;
 }
 
 .section-image{
 	height: 35vw;
 	width: 35vw;
+	outline: 2px solid black;
 	padding: 2%;
+	margin-top: 5vh;
 }
 
 .flexbox-container{
