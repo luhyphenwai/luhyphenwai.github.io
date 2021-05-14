@@ -70,6 +70,7 @@ table {
 	background-color : white;
     position: fixed;
 	z-index: 100;
+	transition: 0.5s;
 }
 .left-text{
 	font-family: 'Montserrat', sans-serif;
@@ -84,7 +85,7 @@ table {
 	margin-left: 2%;
 	float: left;
 	
-	transition: 0.25s;
+	transition: 0.5s;
 }
 .left-text:hover {
 	
@@ -111,7 +112,7 @@ table {
 	margin-left: 15px;
 	margin-right: 15px;
 	padding: 0, 20px;
-	transition: 0.25s
+	transition: 0.5s;
 }
 .right-item:hover{
 	margin-top: 32px;
@@ -139,7 +140,7 @@ table {
 	height: 2px;
 	margin-left: 2.5%;
 
-	transition: width 0.5s, margin-left 0.5s;
+	transition: 0.5s;
 }
 
 /* Minimized nav */
@@ -150,6 +151,7 @@ table {
     position: fixed;
 	transition: height 0.5s;
 	z-index: 100;
+	transition: 0.5s;
 }
 .left-text-min{
 	font-family: 'Montserrat', sans-serif;
@@ -164,8 +166,7 @@ table {
 	margin-left: 1.75%;
 	float: left;
 	
-	transition: font-size 0.5s, 
-	margin-left 0.5s, padding 0.5s, margin-top 0.5s;
+	transition: 0.5s;
 }
 .left-text-min:hover {
 	
@@ -177,7 +178,7 @@ table {
 	display: flex;
 	justify-content:flex-end;
 	height: 75px;
-	transition: height 0.5s;
+	transition: 0.5s;
 }
 .right-item-min{
 	font-family: 'Montserrat', sans-serif;
@@ -192,9 +193,7 @@ table {
 	margin-right: 3%;
 	padding: 0, 20px;
 	
-	transition: font-size 0.5s, 
-	margin-left 0.5s, padding 0.5s, 
-	margin-top 0.5s, margin-right 0.5s, color 0.5s;
+	transition: 0.5s;
 }
 .right-item-min:hover{
 	font-size: 35px;
@@ -214,7 +213,7 @@ table {
 	background-color: black;
 	width: 100%;
 	height: 2px;
-	transition: width 0.5s, margin-left 0.5s;
+	transition: 0.5s;
 }
 
 .titleText{
@@ -402,6 +401,10 @@ table {
 	margin: 0;
 	height: 100vh;
 	z-index: -10;
+	transition: 0.5s;
+}
+.section-content{
+	transition: 0.5s;
 }
 .inner-section{
 	width: 50%;
@@ -411,7 +414,7 @@ table {
 	font-size: 7.5vw;
 	font-weight: 900;
 	width: 40vw;
-	height: 150px;
+	height: 175px;
 	margin-top: 5vh;
 	font-style: italic;
 	margin-left: 25vw;
@@ -501,8 +504,8 @@ table {
 }
 
 .section-image{
-	height: 35vw;
-	width: 35vw;
+	height: 50vh;
+	width: 50vh;
 	outline: 2px solid black;
 	padding: 2%;
 	margin-top: 5vh;
