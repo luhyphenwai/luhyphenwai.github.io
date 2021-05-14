@@ -45,7 +45,7 @@ function scrollFunction(){
         right3.className = "material-icons right-item";
     }
 
-    if (window.location.href.indexOf("/index.html") == -1){
+    if (window.location.href.indexOf("/index.html") == -1 && window.location.href != "https://luhyphenwai.github.io/"){
         line.className = "line-min";
         topBar.className = "topbar-min";
         leftItem.className = "left-text-min";
