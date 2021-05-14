@@ -5,36 +5,93 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Unity Pathfinding</title>
     <link rel="stylesheet" href="../style.css">
+
+    <!-- fonts -->
+    <!-- google stuff -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+
+    <link href='https://css.gg/instagram.css' rel='stylesheet'>
   </head>
-  <body style="text-align: center" >
+
+
+  <body style="text-align: center; background-color: black;" id="body" >
     <!-- Top menu bar -->
-    <nav class="topbar">
-      <div class="titlebox">
-        <p class="title"> luhyphenwai</p>
-      </div>
-      <ul>
-        <li><a href="/projects.html">My Stuff</a></li>
-        <li><a href="/index.html">Home</a></li>
-      </ul>
+    <nav class="topbar" id="topBar">
+      <a class = "left-text" style="cursor: pointer;" onclick="fadeOut('/index.html')" id="leftText"> lu-wai </a>
+        <div class="right-box"id="rightBox">
+          <a style="cursor: pointer;" onclick="fadeOut('/contacts.html')" class="right-item" id="right1" onmouseover="this.style.marginRight='11px'" onmouseout="this.style.marginRight='15px'">Me</a>
+          <a style="cursor: pointer;" onclick="fadeOut('/projects.html')" class="right-item" id="right2">Stuff</a>
+          <a style="cursor: pointer;"class="material-icons right-item" onclick="toggleMenu()"id="right3">menu</a>
+        </div>
+      <div class="line" id="line"></div>
     </nav>
-      <div class="wrapper">
-        <!-- Border to separate top menu bar from main site-->
-        <div style="height: 100px;"></div>
-        
-        <canvas id="unity-canvas" style="width: 800px; height: 600px; background: #231F20"></canvas>
-        <script src="Build/Unity Pathfinding.loader.js"></script>
-        <script>
-          createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "Build/Unity Pathfinding.data.unityweb",
-            frameworkUrl: "Build/Unity Pathfinding.framework.js.unityweb",
-            codeUrl: "Build/Unity Pathfinding.wasm.unityweb",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "DefaultCompany",
-            productName: "Unity Pathfinding",
-            productVersion: "1.0",
-          });
-        </script>
+  
+    <!-- Sidebar menu -->
+    <div class="menu-hidden" id="menu">
+      <div class="menu-topbar">
+        <a href="#" onclick="fadeOut('/index.html')"class="topleft-text">lu-wai</a>
+        <a href="#"class="material-icons menu-toggle" onclick="toggleMenu()">close</a>
       </div>
-    
+
+      <div class="menu-main">
+        <a href="#"onclick="fadeOut('/projects.html')" class="menu-section">
+          <div class="menu-section-text">My Stuff</div>
+        </a>
+        <a href="#"onclick="fadeOut('/me.html')" class="menu-section">
+          <div class="menu-section-text">Me</div>
+        </a>
+      </div>
+      <p class="menu-bottombar-text">Find me</p>
+      <div class="menu-bottombar">
+        <a class="material-icons menu-bottombar-item" href="#" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+        <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
+        <img src="/Images/itchio-textless-white.svg" alt="Insta" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
+        <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
+      </div>
+    </div>
+    <script src="/index.js"></script>
+
+    <!-- Main -->
+    <div class="wrapper">
+      <div style="height: 20px;"></div>
+      <div class="section-header" style="color: white; ">UNITY PATHFINDING</div>
+      <!-- Border to separate top menu bar from main site-->
+      
+      <canvas id="unity-canvas" style="width: 800px; height: 600px; background: #231F20"></canvas>
+      <script src="Build/Unity Pathfinding.loader.js"></script>
+      <script>
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+          dataUrl: "Build/Unity Pathfinding.data.unityweb",
+          frameworkUrl: "Build/Unity Pathfinding.framework.js.unityweb",
+          codeUrl: "Build/Unity Pathfinding.wasm.unityweb",
+          streamingAssetsUrl: "StreamingAssets",
+          companyName: "DefaultCompany",
+          productName: "Unity Pathfinding",
+          productVersion: "1.0",
+        });
+      </script>
+      <div class="section">
+        
+        <div class="section-subheader" style="color: white; margin-left: 30vw;">What is this?</div>
+        <p class="section-description" style="color: white; margin-left: 30vw; text-align: left;text-indent: 50px;" >This is a visualization of a couple pathfinding algorithms which I implemented in Unity, like A*, Dijkstra, and Greedy BFS.</p>
+        <p class="section-description" style="color: white; margin-left: 30vw; text-align: left;text-indent: 50px;" >The green node is the starting position and the red node is the target position. Yellow nodes are already visited nodes and blue nodes are open nodes. You can use the draw tool to draw walls and move the starting and target position to test out the algorithm. The generate maze button uses a recursive maze generating algorithm.</p>
+        <p class="section-description" style="color: white; margin-left: 30vw; text-align: left;text-indent: 50px;" > If you set the pathfinding speed to the maximum, the pathfinding algorithm will instantly run, Otherwise, the algorithm will run the animations.</p>
+        <div class="section-description" style="color: red; margin-left: 30vw;">THIS PROGRAM MAY LAG YOUR COMPUTER</div>
+        
+      </div>
+    </div>
+    <!-- Bottom bar -->
+    <div style="background-color: black; height: 15vh;">
+      <p class="menu-bottombar-text" style="padding-top:5vh; margin: 0;">Find me</p>
+      <div class="menu-bottombar">
+        <a class="material-icons menu-bottombar-item" style="cursor: pointer;" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+        <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
+        <img src="/Images/itchio-textless-white.svg" alt="Itch" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
+        <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
+      </div>
+    </div>
   </body>
 </html>
