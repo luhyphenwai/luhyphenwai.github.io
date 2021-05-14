@@ -69,7 +69,7 @@ table {
 	height: 100px;
 	background-color : white;
     position: fixed;
-	z-index: 99;
+	z-index: 100;
 }
 .left-text{
 	font-family: 'Montserrat', sans-serif;
@@ -149,6 +149,7 @@ table {
 	background-color : white;
     position: fixed;
 	transition: height 0.5s;
+	z-index: 100;
 }
 .left-text-min{
 	font-family: 'Montserrat', sans-serif;
@@ -365,6 +366,8 @@ table {
 	min-height: 40px;
 	cursor: pointer;
 }
+
+
 /* animations */
 @keyframes fadeInAnimation {
 	0% {
@@ -397,7 +400,8 @@ table {
 
 .section{
 	margin: 0;
-	height: 100vh;
+	height: 110vh;
+	z-index: -10;
 }
 .inner-section{
 	width: 50%;
@@ -408,7 +412,7 @@ table {
 	font-weight: 900;
 	width: 40vw;
 	height: 20vh;
-	margin-top: 50px;
+	margin-top: 4vh;
 	font-style: italic;
 	margin-left: 25vw;
 	overflow-x: hidden;
@@ -462,11 +466,45 @@ table {
 	font-style: italic;
 	margin-left: 35vw;
 	overflow-x: hidden;
-	
+	z-index: 10;
 	animation: fadeInAnimation ease 1s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
+}
+.section-header{
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-size: 3vw;
+	font-weight: 800;
+	padding-top: 12.5vh;
+	padding-bottom: 3vh;
+
+}
+.section-subheader{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2vw;
+	font-weight: 800;
+	width: 35vw;
+	text-align: center;
+	padding: 4%;
+	padding-top: 5vh;
+}
+.section-description{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.section-image{
+	height: 35vw;
+	width: 35vw;
+	padding: 2%;
+}
+
+.flexbox-container{
+	display: flex;
+	justify-content: center;
+	width: 95vw;
+	margin-left: 2.5vw;
 }
 /* Tag stylsheets */
 
