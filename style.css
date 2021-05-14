@@ -247,6 +247,7 @@ table {
 
 	overflow-x: hidden;
 	transition: margin-left 0.5s, width 0.5s;
+	z-index: 100;
 }
 .menu-hidden{
 	position: fixed;
@@ -257,6 +258,7 @@ table {
 	
 	overflow-x: hidden;
 	transition: 0.5s;
+	z-index: 100;
 }
 .material-icons.menu-toggle{
 	width: 36px;
