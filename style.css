@@ -491,16 +491,16 @@ table {
 	font-weight: 800;
 	width: 40vw;
 	text-align: center;
-	padding: 4%;
 	margin-right: 5vw;
 	padding-top: 5vh;
+	padding-bottom: 1vh;
 }
 .section-description{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.5vw;
-	font-weight: 800;
+	font-weight: 400;
 	width: 40vw;
-	text-align: left;
+	text-align: center;
 	padding: 0.5vh;
 }
 
@@ -510,6 +510,62 @@ table {
 	outline: 2px solid black;
 	padding: 2%;
 	margin-top: 5vh;
+}
+.section-interactable-text{
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-size: 3vw;
+	font-weight: 800;
+	padding-top: 12.5vh;
+	padding-bottom: 3vh;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.section-interactable-text:hover{
+	font-size: 4vw;
+	padding-top: 12vh;
+}
+.section-button{
+	width: 35%;
+	height: 25vh;
+	margin: 2%;
+	background-color: rgba(0, 0, 0, 1);
+	opacity: 1;
+	background-image: "/Images/me.png";
+	outline: 2px solid black;
+
+	transition: 0.5s;
+}
+.selection-button-img{
+	width: max-content;
+	height: max-content;
+	opacity: 1;
+}
+.selection-button-img:hover{
+	width: max-content;
+	height: max-content;
+	z-index: -100;
+	opacity: 0;
+}
+
+.section-button:hover{
+	background-color: rgba(0, 0, 0, 0);
+}
+.section-button-text{
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 40px;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+	z-index: 10;
+}
+.section-button-text:hover{
+	color: black;
 }
 
 .flexbox-container{

@@ -8,6 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/Images/confounded-face.svg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- fonts -->
     <!-- google stuff -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,11 +25,11 @@
   <body id="body">
     <!-- Top menu bar -->
     <nav class="topbar" id="topBar">
-      <a class = "left-text" href="#" onclick="fadeOut('/index.html')" id="leftText"> lu-wai </a>
+      <a class = "left-text" style="cursor: pointer;" onclick="fadeOut('/index.html')" id="leftText"> lu-wai </a>
       <div class="right-box"id="rightBox">
-        <a href="#" onclick="fadeOut('/contacts.html')" class="right-item" id="right1" onmouseover="this.style.marginRight='11px'" onmouseout="this.style.marginRight='15px'">Me</a>
-        <a href="#" onclick="fadeOut('/projects.html')" class="right-item" id="right2">Projects</a>
-        <a href="#"class="material-icons right-item" onclick="toggleMenu()"id="right3">menu</a>
+        <a style="cursor: pointer;" onclick="fadeOut('/contacts.html')" class="right-item" id="right1" onmouseover="this.style.marginRight='11px'" onmouseout="this.style.marginRight='15px'">Me</a>
+        <a style="cursor: pointer;" onclick="fadeOut('/projects.html')" class="right-item" id="right2">Projects</a>
+        <a style="cursor: pointer;"class="material-icons right-item" onclick="toggleMenu()"id="right3">menu</a>
       </div>
       <div class="line" id="line"></div>
 
@@ -39,23 +40,24 @@
     <!-- Sidebar menu -->
     <div class="menu-hidden" id="menu">
       <div class="menu-topbar">
-        <a href="#" onclick="fadeOut('/index.html')"class="topleft-text">lu-wai</a>
-        <a href="#"class="material-icons menu-toggle" onclick="toggleMenu()">close</a>
+        <a style="cursor: pointer;" onclick="fadeOut('/index.html')"class="topleft-text">lu-wai</a>
+        <a style="cursor: pointer;"class="material-icons menu-toggle" onclick="toggleMenu()">close</a>
       </div>
 
       <div class="menu-main">
-        <a href="#"onclick="fadeOut('/projects.html')" class="menu-section">
+        <a style="cursor: pointer;"onclick="fadeOut('/projects.html')" class="menu-section">
           <div class="menu-section-text">My Projects</div>
         </a>
-        <a href="#"onclick="fadeOut('/me.html')" class="menu-section">
+        <a style="cursor: pointer;"onclick="fadeOut('/me.html')" class="menu-section">
           <div class="menu-section-text">Me</div>
         </a>
       </div>
       <p class="menu-bottombar-text">Contact me</p>
       <div class="menu-bottombar">
-        <a class="material-icons menu-bottombar-item" href="#" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+        <a class="material-icons menu-bottombar-item" style="cursor: pointer;" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
         <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
         <img src="/Images/itchio-textless-white.svg" alt="Insta" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
+        <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
       </div>
     </div>
     
@@ -65,124 +67,76 @@
       <!-- Border to separate top menu bar from main site-->
       <div style="height: 90px;"></div>
       <!-- Main Body of the site-->
+
+      <!-- Title sequence -->
       <div class="section" style="height: 90vh;">
         <h1 class="title" style="animation: oneIn ease 1.75s;" title="whats popping">Welcome</h1>
         <h1 class="title" style="animation: twoIn ease 2s; margin-left: 45vw;" title="yo">to</h1>
         <h1 class="title" style="animation: threeIn ease 2s; margin-left:50vw;" title="whats up">hell</h1>
         <h1 class="subtitle" title="this stuff is pretty dope isnt it">hope you enjoy your stay</h1>
       </div>
+
+      <!-- Sections -->
       <div class="section" style="background-color:blanchedalmond;">
         <div class="section-content" id="section2">
           <h2 class="section-header" style="color:black;">I'm lu-wai</h2>
           <div class="flexbox-container">
             <div>
-              <h3 class="section-subheader">What I do </h3>
-              <h3 class="section-description">sum fucking gamer shit</h3>
-              <h3 class="section-description">this is it</h3>
+              <h3 class="section-subheader">What do I do? </h3>
+              <h3 class="section-description">I make things</h3>
+              <h3 class="section-description">thats about it</h3>
+              <h3 class="section-description">its pretty cool tho</h3>
             </div>
             <img class="section-image"src="/Images/me.png" alt="">
           </div>
         </div>
-        
-        
       </div>
 
       <div class="section">
-
+        <div class="section-content">
+          <h2 class="section-interactable-text" style="color:black;">My Projects</h2>
+          <div class="flexbox-container">
+            <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/JavaScript Games/javascript_games.html')"id="b1">
+              <div class="section-button-text">
+                JavaScript Games <br> (April 2021)
+              </div>
+            </a>
+            <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/Unity Pathfinding/index.html')"id="b2">
+              <div class="section-button-text">
+                Unity Pathfinding <br>(April 2021)
+              </div>
+            </a>
+            <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/Necromerger/index.html')"id="b3">
+              <div class="section-button-text">
+                Necromerger <br>(May 2021)
+              </div>
+            </a>
+            <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/Web Applications/covid19Tracker.html')"id="b4">
+              <div class="section-button-text">
+                COVID-19 Tracker <br>(April 2021)
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-      
+
+      <!-- Script -->
+      <script>
+
+      </script>
       <!-- Bottom bar -->
       <div style="background-color: black; height: 15vh;">
         <p class="menu-bottombar-text" style="padding-top:5vh;">Contact me</p>
         <div class="menu-bottombar">
-          <a class="material-icons menu-bottombar-item" href="#" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+          <a class="material-icons menu-bottombar-item" style="cursor: pointer;" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
           <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
           <img src="/Images/itchio-textless-white.svg" alt="Itch" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
           <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
         </div>
       </div>
 
-      <script>
-        window.onscroll = function() {
-          scrollFunction();
-          section2();
-        };
-        
-        
-        // Navbar animations
-        function scrollFunction(){
-          let line = document.getElementById("line");
-          let topBar = document.getElementById("topBar");
-          let leftItem = document.getElementById("leftText");
-          let rightBox = document.getElementById("rightBox");
-          let right1 = document.getElementById("right1");
-          let right2 = document.getElementById("right2");
-          let right3 = document.getElementById("right3");
-          if (document.body.scrollTop > 80|| document.documentElement.scrollTop > 80) {
-            line.className = "line-min";
-            topBar.className = "topbar-min";
-            leftItem.className = "left-text-min";
-            rightBox.className = "right-box-min";
-            right1.className = "right-item-min";
-            right1.style.color = "rgba(0,0,0,0)";
-            right1.style.pointerEvents = "none";
-            right2.className = "right-item-min";
-            right2.style.color = "rgba(0,0,0,0)";
-            right2.style.pointerEvents = "none";
-            right3.className = "material-icons right-item-min";
-          }
-          else {
-            line.className = "line";
-            topBar.className = "topbar";
-            leftItem.className = "left-text";
-            rightBox.className = "right-box";
-            right1.className = "right-item";
-            right1.style.color = "rgba(0,0,0,1)";
-            right1.style.pointerEvents = "";
-            right2.className = "right-item";
-            right2.style.color = "rgba(0,0,0,1)";
-            right2.style.pointerEvents = "";
-            right3.className = "material-icons right-item";
-          }
-        }
-  
-        function toggleMenu(){
-          let menu = document.getElementById("menu");
-          if (menu.className == "menu"){
-            menu.className = "menu-hidden";
-          } else if (menu.className == "menu-hidden"){
-            menu.className = "menu";
-          }
-        }
-  
-        function fadeOut(link){
-          document.getElementById("body").className = "fadeOut";
-          setTimeout(switchLink(link), 2000)
-        }
-        function switchLink(link){
-          if (link.charAt(0) == "/"){
-            window.location = link;
-          } else {
-            window.open(link);
-          }
-          
-          document.getElementById("body").className = "fadeIn";
-        }
-        
-        // Fade in
-        let element = document.getElementById("section2");
-        section2();
-        function section2(){
-          var scrollArea = 500;
-          if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
-            element.style.opacity = 1;
-          } else {
-            
-            element.style.opacity = 0;
-          }
-        }
-  
-      </script>
+      
+      <script src = "/index.js"></script>
     </div>
   </body>
 </html>
