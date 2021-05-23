@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <title id="title">Weather Tracker</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/Images/confounded-face.svg" />
-    
-    <link rel="stylesheet" href="style.css">
-    
+    <title id="title">typer</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/Images/Icons8-Ios7-Computer-Hardware-Keyboard.ico">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/Web Applications/typer/typer.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- fonts -->
     <!-- google stuff -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
@@ -17,11 +13,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
 
     <link href='https://css.gg/instagram.css' rel='stylesheet'>
-
-    
-
 </head>
-<body style="background-color: gray;" id="body">
+
+<body id="body">
     <!-- Top menu bar -->
     <nav class="topbar" id="topBar">
         <a class = "left-text" style="cursor: pointer;" onclick="fadeOut('/index.html')" id="leftText"> lu-wai </a>
@@ -43,7 +37,7 @@
         <div class="menu-main">
           <a style="cursor: pointer;"onclick="fadeOut('/projects.html')" class="menu-section">
             <div class="menu-section-text">My Stuff</div>
-          </a>
+          </a>3
           <a style="cursor: pointer;"onclick="fadeOut('/me.html')" class="menu-section">
             <div class="menu-section-text">Me</div>
           </a>
@@ -57,35 +51,31 @@
         </div>
       </div>
 
-    <div class="wrapper">
-        <input type="text" placeholder="Find your city">
-        <h1 id="pos">position</h1>
-        <h1 id="temp">24<sup>o</sup></h1>
-        <h2 id="feels">feels like 22</h2>
-        <h3 id="status">Sunny</h3>
+      <div class="wrapper">
+        <div style="height: 100px;"></div>
+        <h1 class="typer-title">typer</h1>
+        <div class="menu-bar">
+          <h1>bruh</h1>
+        </div>
+        <div class="flexbox-container" style="width: 100vw;">
+          <div class="typing-section">
+            <div class="flexbox-container"  style="width: max-content; margin-left: 2.5%;">
+              <div class="details" id="wpm">wpm:XX</div>
+              <div class="details" id="accuracy">accuracy:XX</div>
+              <div class="details" id="time">time:XX</div>
+            </div>
+            <div class="text-area" id="text-area">
+  
+            </div>
+            <div class="flexbox-container">
+              <input class="text-input" id="text-input"type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="input" id="input" oninput="OnKeyDown()">
+            </div>
+            
+          </div>
+        </div>
         
-    </div>
-
-
-    <script>
-        const APIKEY = "d37ab5221f5ebbf46eda9ce6a1239979";
-        let coords = {long: 0, lat: 0};
-        // Get location
-        getLocation();
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-
-        function showPosition(position) {
-            document.getElementById("pos").innerHTML = "Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude;
-        }
-
         
-    </script>
+      </div>
+      <script src="/Web Applications/typer/typer.js"></script>
+      <script src="/index.js"></script>
 </body>
-</html>

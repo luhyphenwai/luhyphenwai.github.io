@@ -129,11 +129,11 @@
                     })
                     .then(data => {
                         data.Countries.forEach((obj, index) => {
-                        var dropdownObj = document.createElement("option")
-                        dropdownObj.textContent = obj.Country;
-                        dropdownObj.value = obj.Country;
-                        dropdown.appendChild(dropdownObj)
-                    });
+                            var dropdownObj = document.createElement("option")
+                            dropdownObj.textContent = obj.Country;
+                            dropdownObj.value = obj.Country;
+                            dropdown.appendChild(dropdownObj)
+                        });
                     })
                     .catch(error => console.log("ERROR"))
 
