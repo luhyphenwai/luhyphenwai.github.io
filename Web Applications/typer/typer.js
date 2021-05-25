@@ -1,10 +1,16 @@
+// Variables
+let currentMode = 0;
+let currentWordNumber =25;
+
 // Random text variables
 let randomText=[];
+let quotes=[]
 
 // Text variables
 let correctWords = 0;
 let currentText=[];
 let typedText=[];
+let currentWordIndex = 0;
 let canType = true;
 
 // Speed Variables
@@ -20,7 +26,9 @@ let accuracyDisplay = document.getElementById("accuracy");
 let timeDisplay = document.getElementById("time");
 let textArea = document.getElementById("text-area");
 let input = document.getElementById("text-input");
-
+let wordsButton = document.getElementById("words");
+let quotesButton = document.getElementById("quotes");
+let numberButtons = [document.getElementById("15"), document.getElementById("25"), document.getElementById("50"), document.getElementById("100")];
 ParseText();
 
 // Parse the text from 1-1000.txt
@@ -32,12 +40,20 @@ function ParseText(){
         randomText = str.split("\n")
         GenerateRandomText();
     })
+
+    fetch("/Web Applications/typer/quotes.json")
+    .then(res => res.json())
+    .then(quoteJSON => {
+        for(var i = 0; i < quoteJSON.quotes.length; i++){
+            quotes.push(quoteJSON.quotes[i].quote.toString());
+        }
+    })
 }
 
 // Generates random text from 1-1000.txt
 function GenerateRandomText(){
     let area = document.getElementById("text-area");
-    for(var i = 0; i < 5; i++){
+    for(var i = 0; i < currentWordNumber; i++){
         var rand = Math.floor(Math.random() * randomText.length);
         currentText.push(randomText[rand]);
     }
@@ -45,12 +61,10 @@ function GenerateRandomText(){
 }
 
 function GenerateRandomQuote(){
-    fetch("/Web Applications/typer/quotes.json")
-    .then(res => res.json())
-    .then(quotes => {
-        var rand = Math.floor(Math.random() * quotes.quotes.length);
-        console.log(quotes.quotes[rand].quote)
-    })
+    
+    var rand = Math.floor(Math.random() * quotes.length);
+    currentText = quotes[rand].toString().split(" ");
+    GenerateHTML();
 }
 
 function OnKeyDown(){
@@ -58,10 +72,9 @@ function OnKeyDown(){
     var text = input.value;
 
     // Start timer
-    if (startTime != 0){
+    if (startTime == 0){
         startTime = performance.now();
     }
-
     if (canType){
 
         // Only do things if not just pressing space 
@@ -87,6 +100,12 @@ function OnKeyDown(){
             }
         }
         
+        // Check to see if we are on the last word and if it is right
+        if (currentText.length-1 == typedText.length && text==currentText[typedText.length]){
+            input.value = input.value + " "
+            NextWord();
+        }
+        
     }
 
     // If there is a space, wipe text
@@ -96,11 +115,11 @@ function OnKeyDown(){
         }
     }
     
+    
 }
 
 function NextWord(){
     typedText.push(input.value);
-
     // Check if typed right
     if (typedText[typedText.length-1] === currentText[typedText.length-1]+" "){
         textArea.childNodes[typedText.length].className = "typing-correct";
@@ -115,7 +134,9 @@ function NextWord(){
 
         // Set time
         var elapsedTime = (performance.now() - startTime)/1000;
-        timeDisplay.textContent = "time: "+Math.round(elapsedTime*100)/100 + "s"
+        wpmDisplay.textContent = "WPM: "+Math.round(correctWords/(elapsedTime/60));
+        accuracyDisplay.textContent = "Accuracy: "+Math.round(correctWords/typedText.length*100);
+        timeDisplay.textContent = "Time: "+Math.round(elapsedTime) + "s";
     }   else {
         textArea.childNodes[typedText.length+1].className = "typing-selected";
     }
@@ -130,9 +151,61 @@ function GenerateHTML(){
     }
 }
 
-function startTimer(){
+function Next(){
+    // Reset Variables
+    correctWords = 0;
+    currentText=[];
+    typedText=[];
+    canType = true;
+    currentWordIndex = 0;
+    elapsedTime = 0;
+    typedWords = 0;
+    wpm = 0;
+    wordsCorrect = 0;
+    startTime = 0;
 
+    // Set new text
+    textArea.innerHTML = " "
+    if (currentMode == 0){
+        GenerateRandomText();
+    }   else {
+        GenerateRandomQuote();
+    }
+    
+    input.value = ""
+    input.focus();
 }
+
+function ChangeMode(num){
+    currentMode = num;
+    switch(num){
+        case 0:
+            wordsButton.className= "menu-bar-text-selected";
+            quotesButton.className = "menu-bar-text";
+            document.getElementById("changeWordNumberBar").style.opacity = 1;
+            break;
+        case 1:
+            wordsButton.className= "menu-bar-text";
+            quotesButton.className = "menu-bar-text-selected";
+            document.getElementById("changeWordNumberBar").style.opacity = 0;
+            break;
+    }
+    Next();
+}
+
+function ChangeWordNumber(num){
+    currentWordNumber = num;
+    for(var i = 0; i < numberButtons.length; i++){
+        if (numberButtons[i].id != num.toString()){
+            numberButtons[i].className = "menu-bar-text";
+        }   else {
+            numberButtons[i].className = "menu-bar-text-selected";
+        }
+    }
+    Next();
+    
+}
+
 
 
 
