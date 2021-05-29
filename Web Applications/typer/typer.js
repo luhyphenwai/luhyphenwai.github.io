@@ -194,16 +194,52 @@ function ChangeMode(num){
 }
 
 function ChangeWordNumber(num){
-    currentWordNumber = num;
-    for(var i = 0; i < numberButtons.length; i++){
-        if (numberButtons[i].id != num.toString()){
-            numberButtons[i].className = "menu-bar-text";
-        }   else {
-            numberButtons[i].className = "menu-bar-text-selected";
+    if (currentMode != 1){
+        currentWordNumber = num;
+        for(var i = 0; i < numberButtons.length; i++){
+            if (numberButtons[i].id != num.toString()){
+                numberButtons[i].className = "menu-bar-text";
+            }   else {
+                numberButtons[i].className = "menu-bar-text-selected";
+            }
         }
+        Next();
     }
-    Next();
+}
     
+
+function ToggleQuoteSuggestion(){
+    if (document.getElementById("suggest").className == "bottom-text"){
+        document.getElementById("suggest").className = "bottom-text-show"
+        document.getElementById("suggestion-area").className = "suggestion-area-show"
+    }   else {
+        document.getElementById("suggest").className = "bottom-text"
+        document.getElementById("suggestion-area").className = "suggestion-area"
+    }
+}
+
+function SuggestQuote(){
+    var input = document.getElementById("suggestionInput")
+    
+    var foundWord
+    fetch("/Web Applications/typer/quoteSuggestions.json")
+    .then(res => res.json())
+    .then(quotes => {
+        for(var i = 0; i < quotes.quotes.length; i++){
+            if (quotes.quotes[i].quote == document.getElementById("suggestionInput").value && !foundWord){
+                foundWord = true;
+            }
+        }
+        if (!foundWord){
+            quotes.quotes.push(input.value);
+            var blob = new Blob([JSON.stringify(quotes)], {type: "text/plain"});
+            const fs = require('fs')
+            fs.writeFile("/Web Applications/typer/quoteSuggestions.json", JSON.stringify(quotes), (err) => {
+                if (err) throw err;
+            })
+        }
+        input.value = ""
+    })
 }
 
 
