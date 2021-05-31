@@ -221,25 +221,19 @@ function ToggleQuoteSuggestion(){
 function SuggestQuote(){
     var input = document.getElementById("suggestionInput")
     
-    var foundWord
-    fetch("/Web Applications/typer/quoteSuggestions.json")
-    .then(res => res.json())
-    .then(quotes => {
-        for(var i = 0; i < quotes.quotes.length; i++){
-            if (quotes.quotes[i].quote == document.getElementById("suggestionInput").value && !foundWord){
-                foundWord = true;
-            }
-        }
-        if (!foundWord){
-            quotes.quotes.push(input.value);
-            var blob = new Blob([JSON.stringify(quotes)], {type: "text/plain"});
-            const fs = require('fs')
-            fs.writeFile("/Web Applications/typer/quoteSuggestions.json", JSON.stringify(quotes), (err) => {
-                if (err) throw err;
-            })
-        }
-        input.value = ""
+    var url = "/Web Applications/typer/typer.php?x="+input.value
+    fetch(url)
+    .then(function (response){
+        console.log(response)
+        return response.text();
     })
+    .then(function (text){
+        console.log(text)
+    })
+    .catch(function (error){
+        console.log(error)
+    })
+    document.a
 }
 
 

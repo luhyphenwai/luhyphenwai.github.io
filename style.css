@@ -118,8 +118,9 @@ table {
 .right-item:hover{
 	margin-top: 32px;
 	font-size: 35px;
-	margin-left: 17px;
+	margin-left: 25px;
 	margin-right: 5px;
+	padding-right: 15px;
 }
 .material-icons.right-item{
 	margin-right: 3.5%;
