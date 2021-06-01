@@ -2,10 +2,11 @@
 <html lang="en-us">
   <!-- Head code, Not displayed on website-->
   <head>
-    <title id="title">hell</title>
+    <title id="title">Lu-Website</title>
     <link rel="shortcut icon" type="image/x-icon" href="/Images/confounded-face.svg" />
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/CSS/firstpage.css">
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +26,7 @@
   <!-- Main body, displayed on website-->
   <body id="body">
     <!-- Top menu bar -->
-    <nav class="topbar" id="topBar">
+    <nav class="topbar" id="topBar" style="animation: fade 2s backwards; animation-delay: 4s;">
       <a class = "left-text" style="cursor: pointer;" onclick="fadeOut('/index.html')" id="leftText"> lu-wai </a>
         <div class="right-box"id="rightBox">
           <a style="cursor: pointer;" onclick="fadeOut('/contacts.html')" class="right-item" id="right1" onmouseover="this.style.marginRight='11px'" onmouseout="this.style.marginRight='15px'">Me</a>
@@ -63,32 +64,54 @@
     
     <div class = "wrapper">
       <!-- Border to separate top menu bar from main site-->
-      <div style="height: 90px;"></div>
+      <div style="height: 100px;"></div>
+
       <!-- Main Body of the site-->
 
       <!-- Title sequence -->
       <div class="section" style="height: 90vh;">
-        <h1 class="title" style="animation: oneIn ease 1.75s;" title="whats popping">Welcome</h1>
-        <h1 class="title" style="animation: twoIn ease 2s; margin-left: 31.5vw;" title="yo">to</h1>
-        <h1 class="title" style="animation: threeIn ease 2s; margin-left:42.5vw;" title="whats up">hell</h1>
-        <h1 class="subtitle" title="this stuff is pretty dope isnt it">hope you enjoy your stay</h1>
-      </div>
-
-      <!-- Sections -->
-      <div class="section" style="background-color:azure;">
-        <div class="section-content" id="section2">
-          <h2 class="section-header" style="color:black;">I'm lu-wai</h2>
-          <div class="flexbox-container">
-            <div>
-              <h3 class="section-subheader">What do I do? </h3>
-              <h3 class="section-description">I do things</h3>
-              <h3 class="section-description">thats about it</h3>
-              <h3 class="section-description">its pretty cool tho</h3>
+        <div class="topleft">Hey, I'm</div>
+        <div class="flexbox-container" style="background-color: white;">
+          <div class="lock">
+            <div class="one">
+              L
             </div>
-            <img class="section-image"src="/Images/me.png" alt="">
+          </div>
+          <div class="lock">
+            <div class="one">
+              u
+            </div>
+          </div>
+          <div class="lock">
+            <div class="one">
+              -
+            </div>
+          </div>
+          
+          <div class="lock">
+            <div class="two">W</div>
+          </div>
+          <div class="lock">
+            <div class="two">a</div>
+          </div>
+          <div class="lock">
+            <div class="two">i</div>
+          </div>
+        </div>
+
+        <div class="bottom-section">
+          
+          <div class="flexbox-container welcome">Welcome</div>
+          <div class="flexbox-container">
+            <span class="material-icons" style="font-size: 50px; cursor: default;">
+            expand_more
+            </span>
           </div>
         </div>
       </div>
+
+      <!-- Sections -->
+      
 
       <div class="section" style="background-image: '/Images/pariag2.PNG';">
         <div class="section-content" id="section3">
@@ -120,6 +143,7 @@
       <!-- Script -->
       <script>
         window.onscroll = function() {
+          scrollFunction();
           section2();
           section3();
         }

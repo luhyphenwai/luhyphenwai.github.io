@@ -221,19 +221,6 @@ function ToggleQuoteSuggestion(){
 function SuggestQuote(){
     var input = document.getElementById("suggestionInput")
     
-    var url = "/Web Applications/typer/typer.php?x="+input.value
-    fetch(url)
-    .then(function (response){
-        console.log(response)
-        return response.text();
-    })
-    .then(function (text){
-        console.log(text)
-    })
-    .catch(function (error){
-        console.log(error)
-    })
-    document.a
 }
 
 
