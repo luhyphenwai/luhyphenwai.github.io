@@ -2,7 +2,7 @@
 window.onscroll = function() {
     scrollFunction();
 };
-
+scrollFunction();
 // Navbar animations
 function scrollFunction(){
     
@@ -66,8 +66,9 @@ function toggleMenu(){
 
 function fadeOut(link){
     document.getElementById("body").className = "fadeOut";
-    setTimeout(switchLink(link), 2000);
+    setTimeout(function() {switchLink(link);}, 1000);
 }
+document.getElementById("body").className = "fadeIn";
 function switchLink(link){
     if (link.charAt(0) == "/"){
         window.location = link;

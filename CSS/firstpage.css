@@ -1,7 +1,10 @@
+html{
+    scroll-behavior: smooth;
+}
 .topleft{
 	font-family: 'Montserrat', sans-serif;
     font-size: 90px;
-    width: 400px;
+    width: 800px;
     
     cursor:default;
 
@@ -50,7 +53,7 @@
     cursor:default;
     margin-top: 300px;
     animation: slideUp 1s;
-    animation-delay: 2s;
+    animation-delay: 1.9s;
     animation-fill-mode: forwards;
 
     transition: color 0.25s, -webkit-text-stroke 0.25s;
@@ -64,16 +67,27 @@
 .welcome{
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    margin-top: 100px;
-    cursor: default;
+    margin-top: -150px;
+    cursor: pointer;
 
-    animation: slideTop 2s backwards;
+    animation: slideTop 2s forwards;
     animation-delay: 3s;
 
-    transition: 0.5s;
+    transition: 1s;
 }
 .welcome:hover{
     margin-bottom: 25px;
+}
+@keyframes bob {
+    0%{
+        margin-bottom: 0px;
+    }
+    50%{
+        margin-bottom: 10px;
+    }   
+    100%{
+        margin-bottom: 0px;
+    }
 }
 @media only screen and (max-width: 1230px){
 	.one{
@@ -101,7 +115,7 @@
         cursor:default;
         margin-top: 300px;
         animation: slideUp 1s;
-        animation-delay: 2s;
+        animation-delay: 1.9s;
         animation-fill-mode: forwards;
     
         transition: color 0.25s, -webkit-text-stroke 0.25s;
@@ -136,7 +150,7 @@
 }
 @keyframes slideLeft {
     0%{
-        margin-left: -500px;
+        margin-left: -700px;
     }
     100%{
         margin-left: 75px;
@@ -160,10 +174,13 @@
     }
 }
 
-/* Section 1 */
+/* Sections */
+
+
 .sectionline {
     background-color: black;
     margin-top: 50px;
+    margin-bottom: 25px;
 
     width: 80vw;
     height: 2px;
@@ -173,9 +190,79 @@
 .sectionline-min {
     background-color: black;
     margin-top: 50px;
+    margin-bottom: 75px;
 
     width: 0vw;
     height: 2px;
 
     transition: 1s;
+}
+.section-title{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    font-size: 80px;
+    font-weight: 600;
+    width: 500px;
+
+    animation: section-slide-left 1s backwards;
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+.section-title:hover{
+    color: black;
+}
+.sidelinks{
+    display: flex;
+    width: 500px;
+    border: 1px solid black ;
+}
+
+.button{
+    display: block;
+	width: 500px;
+	height: 100px;
+	background-color: white;
+	border: 2px solid black;
+    cursor: pointer;
+
+    
+    margin-bottom: 10px;
+	transition: 0.5s;
+}
+.button:hover{
+	background-color: black;
+}
+.button-text{
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+    
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 45px;
+	width: 500px;
+	height: 100px;
+	transition: 0.5s;
+}
+.button-text:hover{
+	color: white;
+}
+@keyframes section-slide-left{
+    0%{
+        margin-right: 500px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+.section-lock{
+    display: block;
+    max-height: 100px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    max-width: 500px;
+    margin-bottom: 10px;;
 }

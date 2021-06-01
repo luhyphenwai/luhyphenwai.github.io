@@ -29,7 +29,7 @@
     <nav class="topbar" id="topBar" style="animation: fade 2s backwards; animation-delay: 4s;">
       <a class = "left-text" style="cursor: pointer;" onclick="fadeOut('/index.html')" id="leftText"> lu-wai </a>
         <div class="right-box"id="rightBox">
-          <a style="cursor: pointer;" onclick="fadeOut('/contacts.html')" class="right-item" id="right1" onmouseover="this.style.marginRight='11px'" onmouseout="this.style.marginRight='15px'">Me</a>
+          <a style="cursor: pointer;" onclick="fadeOut('/me.html')" class="right-item" id="right1">Me</a>
           <a style="cursor: pointer;" onclick="fadeOut('/projects.html')" class="right-item" id="right2">Stuff</a>
           <a style="cursor: pointer;"class="material-icons right-item" onclick="toggleMenu()"id="right3">menu</a>
         </div>
@@ -70,7 +70,7 @@
 
       <!-- Title sequence -->
       <div class="section" style="height: 800px;">
-        <div class="topleft">Hey, I'm</div>
+        <div class="topleft">Welcome, I'm</div>
         <div class="flexbox-container" style="background-color: white;">
           <div class="lock">
             <div class="one">
@@ -101,21 +101,41 @@
 
         <div class="bottom-section">
           
-          <div class="flexbox-container welcome">Welcome</div>
+          <a href="#2" class="flexbox-container welcome">Check me out</a>
           <div class="flexbox-container">
             <span class="material-icons" style="font-size: 50px; cursor: default;">
             expand_more
             </span>
+            <p id="2"></p>
           </div>
         </div>
       </div>
 
       <!-- Sections -->
       
-
-      <div class="section" >
+      <div class="section"  >
         <div class="flexbox-container">
           <div class="sectionline" id="section2line"></div>
+          
+        </div>
+        <div class="flexbox-container" id="section2"style="align-items: center; height: 650px; width: 100%; margin: 0; overflow-x: hidden; transition: 0.5s; opacity: 0;">
+            
+            <a  class="section-title" onclick="fadeOut('/projects.html')">My Stuff</a>
+            <div class="side-links">
+              <a class="button" style="margin-left: 0px;" onclick="fadeOut('/Necromerger/index.html')">
+                <div class="button-text">Necromerger</div>
+              </a>
+              <a href="#"class="button" onclick="fadeOut('/Unity Pathfinding/index.html')">
+                <div class="button-text">Unity Pathfinding</div>
+              </a>
+              <a class="button" onclick="fadeOut('/Web Applications/covid19Tracker.html')">
+                <div class="button-text">COVID-19 Tracker</div>
+              </a>
+              <a class="button" onclick="fadeOut('/Web Applications/typer.html')">
+                <div class="button-text">Typer</div>
+              </a>
+
+            </div>
         </div>
       </div>
 
@@ -129,13 +149,16 @@
         }
         // Fade in
         let line = document.getElementById("section2line");
+        let section = document.getElementById("section2");
         section2();
         function section2(){
-            var scrollArea = 600;
+            var scrollArea = 500;
             if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
               line.className = "sectionline";
+              section.style.opacity = 1;
             } else {
               line.className = "sectionline-min";
+              section.style.opacity = 0;
             }
         }
 
