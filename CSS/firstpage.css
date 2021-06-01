@@ -69,11 +69,15 @@ html{
     font-size: 50px;
     margin-top: -150px;
     cursor: pointer;
+    color: black;
 
     animation: slideTop 2s forwards;
     animation-delay: 3s;
 
     transition: 1s;
+}
+.welcome:visited{
+    color: black;
 }
 .welcome:hover{
     margin-bottom: 25px;
