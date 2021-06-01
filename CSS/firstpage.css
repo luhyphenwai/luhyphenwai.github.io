@@ -79,6 +79,9 @@ html{
 .welcome:link{
     color: black;
 }
+.welcome:any-link{
+    color: black;
+}
 .welcome:hover{
     margin-bottom: 25px;
 }
