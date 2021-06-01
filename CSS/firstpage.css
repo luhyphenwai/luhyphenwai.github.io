@@ -7,7 +7,7 @@
 
     padding-top: 35px;
     margin-left: 75px;
-    padding-bottom: 100px;
+    padding-bottom: 75px;
     animation: slideLeft 1.5s;
     animation-delay: 0.5s;
     animation-fill-mode:backwards;
@@ -64,7 +64,7 @@
 .welcome{
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    margin-top: 125px;
+    margin-top: 100px;
     cursor: default;
 
     animation: slideTop 2s backwards;
@@ -147,7 +147,7 @@
         margin-top: -150px;
     }
     100%{
-        margin-top: 125px;
+        margin-top: 100px;
     }
 }
 @keyframes slideUp{
@@ -158,4 +158,24 @@
         
         margin-top: 0px;
     }
+}
+
+/* Section 1 */
+.sectionline {
+    background-color: black;
+    margin-top: 50px;
+
+    width: 80vw;
+    height: 2px;
+
+    transition: 1s;
+}
+.sectionline-min {
+    background-color: black;
+    margin-top: 50px;
+
+    width: 0vw;
+    height: 2px;
+
+    transition: 1s;
 }

@@ -1,7 +1,6 @@
 
 window.onscroll = function() {
     scrollFunction();
-    
 };
 
 // Navbar animations
@@ -14,7 +13,7 @@ function scrollFunction(){
     let right1 = document.getElementById("right1");
     let right2 = document.getElementById("right2");
     let right3 = document.getElementById("right3");
-    if (document.getElementById("title").textContent != "Lu-Website" || document.body.scrollTop > 240|| document.documentElement.scrollTop > 240) {
+    if (document.getElementById("title").textContent != "Lu-Website" || document.body.scrollTop > 180|| document.documentElement.scrollTop > 180) {
         line.className = "line-min";
         topBar.className = "topbar-min";
         leftItem.className = "left-text-min";

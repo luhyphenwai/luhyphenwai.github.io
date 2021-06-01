@@ -69,7 +69,7 @@
       <!-- Main Body of the site-->
 
       <!-- Title sequence -->
-      <div class="section" style="height: 90vh;">
+      <div class="section" style="height: 800px;">
         <div class="topleft">Hey, I'm</div>
         <div class="flexbox-container" style="background-color: white;">
           <div class="lock">
@@ -113,62 +113,32 @@
       <!-- Sections -->
       
 
-      <div class="section" style="background-image: '/Images/pariag2.PNG';">
-        <div class="section-content" id="section3">
-          <h2 class="section-interactable-text" style="color:black;">Some cool stuff</h2>
-          <div class="flexbox-container">
-            <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/Necromerger/index.html')"id="b3">
-              <div class="section-button-text">
-                Necromerger <br>(March 2021)
-              </div>
-            </a>
-            <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/Unity Pathfinding/index.html')"id="b2">
-              <div class="section-button-text">
-                Unity Pathfinding <br>(April 2021)
-              </div>
-            </a>
-            <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/Web Applications/covid19Tracker.html')"id="b4">
-              <div class="section-button-text">
-                COVID-19 Tracker <br>(April 2021)
-              </div>
-            </a>
-          </div>
+      <div class="section" >
+        <div class="flexbox-container">
+          <div class="sectionline" id="section2line"></div>
         </div>
       </div>
 
-      <div class="section" style="background-color: grey;">
-
-      </div>
 
       <!-- Script -->
+      <script src = "/animations.js"></script>
       <script>
         window.onscroll = function() {
           scrollFunction();
           section2();
-          section3();
         }
         // Fade in
-        let element = document.getElementById("section2");
+        let line = document.getElementById("section2line");
         section2();
         function section2(){
-            var scrollArea = 500;
+            var scrollArea = 600;
             if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
-                element.style.opacity = 1;
+              line.className = "sectionline";
             } else {
-            
-            element.style.opacity = 0;
+              line.className = "sectionline-min";
             }
         }
 
-        function section3(){
-            var scrollArea = 1300;
-            let sec = document.getElementById("section3");
-            if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
-              sec.className ="section-content";
-            }   else {
-              sec.className = "section-hidden-up";
-            }
-        }
       </script>
 
       <!-- Bottom bar -->
@@ -183,7 +153,6 @@
       </div>
 
       
-      <script src = "/animations.js"></script>
     </div>
   </body>
 </html>
