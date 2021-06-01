@@ -76,7 +76,7 @@ html{
 
     transition: 1s;
 }
-.welcome:visited{
+.welcome:link{
     color: black;
 }
 .welcome:hover{
