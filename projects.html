@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title id="title">gamer zone</title>
+        <title id="title">My Stuff</title>
         <link rel="shortcut icon" type="image/x-icon" href="/Images/confounded-face.svg" />
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/CSS/projectspage.css">
         <meta charset="UTF-8">
         <!-- fonts -->
         <!-- google stuff -->
@@ -19,7 +20,7 @@
         <!-- Main body, displayed on website-->
   <body id="body">
     <!-- Top menu bar -->
-    <nav class="topbar" id="topBar" style="animation: fade 2s backwards; animation-delay: 4s;">
+    <nav class="topbar" id="topBar" style="animation: fade 2s backwards; animation-delay: 3s;">
       <a class = "left-text" style="cursor: pointer;" onclick="fadeOut('/index.html')" id="leftText"> lu-wai </a>
         <div class="right-box"id="rightBox">
           <a style="cursor: pointer;" onclick="fadeOut('/me.html')" class="right-item" id="right1">Me</a>
@@ -52,48 +53,96 @@
           <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
         </div>
       </div>
-    
-        <div class = "wrapper">
-            <!-- Border to separate top menu bar from main site-->
-            <div style="height: 100px;"></div>
-            
-            <!-- Main Body of the site-->
-            <div class="section">
-              <div class="section-header">Some real cool things</div>
-              <div class="flexbox-container">
-                <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/Necromerger/index.html')"id="b3">
-                  <div class="section-button-text">
-                    Necromerger <br>(March 2021)
-                  </div>
-                </a>
-                <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/Unity Pathfinding/index.html')"id="b2">
-                  <div class="section-button-text">
-                    Unity Pathfinding <br>(April 2021)
-                  </div>
-                </a>
-                <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/Web Applications/covid19Tracker.html')"id="b4">
-                  <div class="section-button-text">
-                    COVID-19 Tracker <br>(April 2021)
-                  </div>
-                </a>
-                <a style="cursor: pointer;" class="section-button" onclick="fadeOut('/Web Applications/typer.html')"id="b4">
-                  <div class="section-button-text">
-                    Typer <br>(May 2021)
-                  </div>
-                </a>
-              </div>
+
+      
+      <div class = "wrapper">
+        <!-- Border to separate top menu bar from main site-->
+        <div style="height: 100px;"></div>
+        <div class="section">
+          <div class="flexbox-container">
+            <p class="top">Welcome to</p>
+          </div>
+          <div class="flexbox-container" style="overflow-y: hidden; ">
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1s;">M</div>
             </div>
-            <!-- Bottom bar -->
-          <div style="background-color: black; height: 15vh;">
-            <p class="menu-bottombar-text" style="padding-top:5vh; margin: 0;">Find me here</p>
-            <div class="menu-bottombar">
-              <a class="material-icons menu-bottombar-item" style="cursor: pointer;" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
-              <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
-              <img src="/Images/itchio-textless-white.svg" alt="Itch" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
-              <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.1s;">y</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.2s;">&nbsp; </div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.2s;">P</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.3s;">r</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.4s;">o</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.5s;">j</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.6s;">e</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.7s;">c</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.8s;">t</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.9s;">s</div>
+            </div>
+          </div>
+          <div class="bottom-section">
+            <a href="#2" class="flexbox-container bottom-text">Check them out</a>
+            <div class="flexbox-container">
+              <span class="material-icons" style="font-size: 50px; cursor: default;">
+              expand_more
+              </span>
+              <p id="2"></p>
             </div>
           </div>
         </div>
+
+        <div class="section" id="section2">
+
+        </div>
+        <script src = "/animations.js"></script>
+        <script>
+          window.onscroll = function() {
+            scrollFunction();
+            section2();
+          }
+          // Fade in
+          let line = document.getElementById("section2line");
+          let section = document.getElementById("section2");
+          section2();
+          function section2(){
+              var scrollArea = 500;
+              if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+                line.className = "sectionline";
+                section.style.opacity = 1;
+              } else {
+                line.className = "sectionline-min";
+                section.style.opacity = 0;
+              }
+          }
+        </script>
+        <!-- Bottom bar -->
+        <div style="background-color: black; height: 15vh;">
+          <p class="menu-bottombar-text" style="padding-top:5vh; margin: 0;">Find me here</p>
+          <div class="menu-bottombar">
+            <a class="material-icons menu-bottombar-item" style="cursor: pointer;" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+            <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
+            <img src="/Images/itchio-textless-white.svg" alt="Itch" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
+            <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
+          </div>
+        </div>
+      </div>
         
       <script src = "/animations.js" ></script>
     </body>

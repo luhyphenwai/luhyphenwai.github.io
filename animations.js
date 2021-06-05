@@ -1,4 +1,7 @@
 
+
+document.getElementById("body").className = "fadeIn";
+
 window.onscroll = function() {
     scrollFunction();
 };
@@ -68,7 +71,6 @@ function fadeOut(link){
     document.getElementById("body").className = "fadeOut";
     setTimeout(function() {switchLink(link);}, 1000);
 }
-document.getElementById("body").className = "fadeIn";
 function switchLink(link){
     if (link.charAt(0) == "/"){
         window.location = link;

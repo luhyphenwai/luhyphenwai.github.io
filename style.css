@@ -397,14 +397,13 @@ table {
 		opacity: 0;
 	}
 }
-/* Section */
+/* Section button animations */
 .section{
 	margin: 0;
 	height: 800px;
 	z-index: -10;
 	transition: 1s;
 }
-
 .flexbox-container{
 	display: flex;
 	justify-content: center;
