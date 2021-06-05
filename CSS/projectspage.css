@@ -232,10 +232,10 @@ html{
     margin-right: 40px;
 }
 
-img{
+.section-image{
     outline: 2px white solid;
     transition: 0.5s;
 }  
-img:hover{
+.section-image:hover{
     outline: 2px black solid;
 }
