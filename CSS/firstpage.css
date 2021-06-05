@@ -174,7 +174,7 @@ html{
         margin-top: -150px;
     }
     100%{
-        margin-top: 100px;
+        margin-top: 75px;
     }
 }
 @keyframes slideUp{
@@ -192,8 +192,8 @@ html{
 
 .sectionline {
     background-color: black;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-bottom: 0px;
 
     width: 80vw;
     height: 2px;
@@ -202,8 +202,8 @@ html{
 }
 .sectionline-min {
     background-color: black;
-    margin-top: 50px;
-    margin-bottom: 75px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     width: 0vw;
     height: 2px;
