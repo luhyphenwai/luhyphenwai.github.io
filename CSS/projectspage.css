@@ -33,7 +33,7 @@ html{
     font-family: 'Montserrat', sans-serif;
     color: white;
     -webkit-text-stroke: 3px black;
-    font-size: 210px;
+    font-size: 190px;
     font-weight: 600;
     margin-top: 0px;
     padding-left: 4px;
@@ -62,11 +62,11 @@ html{
 .bottom-text:hover{
     margin-bottom: 20px;
 }
-@media only screen and (max-width: 1440px){
+@media only screen and (max-width: 1350px){
     .letter{
         font-family: 'Montserrat', sans-serif;
         color: white;
-        -webkit-text-stroke: 3px black;
+        -webkit-text-stroke: 2px black;
         font-size: 125px;
         font-weight: 600;
         margin-top: 0px;
@@ -137,10 +137,10 @@ html{
 /* Section area */
 .sectionline {
     background-color: black;
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 25px;
 
-    width: 80vw;
+    width: 90vw;
     height: 2px;
 
     transition: 1s;
@@ -154,4 +154,88 @@ html{
     height: 2px;
 
     transition: 1s;
+}
+.section-flexbox{
+    height: 400px;
+    width: 90vw;
+    margin-left: 5vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-title-area{
+    width: 40%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 2.5%;
+
+    outline: 2px white solid;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+.section-title-area:hover{
+    outline: 2px black solid;
+}
+.section-description-area{
+    width: 50%;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background-color: black;
+    border-radius: 10px;
+}
+.section-title{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    font-size: 90px;
+    font-weight: 600;
+    
+    margin-top: 40px;
+    padding: 10px;
+
+    outline: 2px white solid;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+
+    transition: 0.5s;
+}
+.section-title:hover{
+    outline: 2px black solid;
+    color: black;
+}
+.section-date{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 55px;
+}
+.section-description-header{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+
+    margin-bottom: 10px;
+    cursor: default;
+}
+.section-description{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 23px;
+    text-indent: 23px;
+
+    margin-left: 30px;
+    margin-right: 40px;
+}
+
+img{
+    outline: 2px white solid;
+    transition: 0.5s;
+}  
+img:hover{
+    outline: 2px black solid;
 }

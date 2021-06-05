@@ -8,7 +8,7 @@ window.onscroll = function() {
 scrollFunction();
 // Navbar animations
 function scrollFunction(){
-    
+
     let line = document.getElementById("line");
     let topBar = document.getElementById("topBar");
     let leftItem = document.getElementById("leftText");
@@ -16,7 +16,7 @@ function scrollFunction(){
     let right1 = document.getElementById("right1");
     let right2 = document.getElementById("right2");
     let right3 = document.getElementById("right3");
-    if (document.getElementById("title").textContent != "Lu-Website" || document.body.scrollTop > 180|| document.documentElement.scrollTop > 180) {
+    if (document.getElementsByTagName("head").item(0).id != "showMenu" || document.body.scrollTop > 180|| document.documentElement.scrollTop > 180) {
         line.className = "line-min";
         topBar.className = "topbar-min";
         leftItem.className = "left-text-min";
@@ -29,7 +29,7 @@ function scrollFunction(){
         right2.style.pointerEvents = "none";
         right3.className = "material-icons right-item-min";
     }
-    else if (document.getElementById("title").textContent == "Lu-Website"){
+    else if (document.getElementsByTagName("head").item(0).id == "showMenu"){
         line.className = "line";
         topBar.className = "topbar";
         leftItem.className = "left-text";
@@ -42,8 +42,8 @@ function scrollFunction(){
         right2.style.pointerEvents = "";
         right3.className = "material-icons right-item";
     }
-
-    if (document.getElementById("title").textContent != "Lu-Website"){
+    
+    if (document.getElementsByTagName("head").item(0).id != "showMenu"){
         line.className = "line-min";
         topBar.className = "topbar-min";
         leftItem.className = "left-text-min";

@@ -216,7 +216,7 @@ html{
     -webkit-text-stroke: 2px black;
     font-size: 80px;
     font-weight: 600;
-    width: 500px;
+    width: fit-content;
 
 
     cursor: pointer;

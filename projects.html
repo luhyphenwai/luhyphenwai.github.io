@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head id="showMenu">
         <title id="title">My Stuff</title>
         <link rel="shortcut icon" type="image/x-icon" href="/Images/confounded-face.svg" />
         <link rel="stylesheet" href="style.css">
@@ -98,7 +98,7 @@
             </div>
           </div>
           <div class="bottom-section">
-            <a href="#2" class="flexbox-container bottom-text">Check them out</a>
+            <a href="#section2line" class="flexbox-container bottom-text">Check them out</a>
             <div class="flexbox-container">
               <span class="material-icons" style="font-size: 50px; cursor: default;">
               expand_more
@@ -108,30 +108,162 @@
           </div>
         </div>
 
-        <div class="section" id="section2">
-
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section2line"></div>
+          </div>
+          <div id="section2"  style="transition: 1s;">
+            <div class="flexbox-container">
+              <img src="/Images/necromerger.png" alt="Necromerger" style="margin-bottom: -50px; padding-right: 25px; cursor: pointer;" onclick="fadeOut('/Necromerger/index.html')">
+              
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Necromerger/index.html')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">February 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is Necromerger?</div>
+                <div class="section-description"> Necromerger is a game which was made for the Brackeys Game Jame 2021.1. It was made with Unity in one week.</div>
+              </div>
+            </div>
+          </div>
         </div>
+        
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section3line"></div>
+          </div>
+          <div id="section3"  style="transition: 1s;">
+            <div class="flexbox-container">
+              <div class="section-title" onclick="fadeOut('/Unity Pathfinding/index.html')">Unity Pathfinding</div>
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Unity Pathfinding/index.html')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">March 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is Unity Pathfinding?</div>
+                <div class="section-description">Unity Pathfinding is a visualization of several pathfinding algorithms implemented in Unity. It includes a recursive maze generating algorithm.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section4line"></div>
+          </div>
+          <div id="section4"  style="transition: 1s;">
+            <div class="flexbox-container">
+              <div class="section-title" onclick="fadeOut('/Web Applications/covid19Tracker.html')">COVID-19 Tracker</div>
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Web Applications/covid19Tracker.html')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">May 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is the COVID-19 Tracker?</div>
+                <div class="section-description"> COVID-19 Tracker is a web application that displays the total worldwide COVID-19 statistics, as well as COVID-19 statistics per country. It uses a public COVID-19 API.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section5line"></div>
+          </div>
+          <div id="section5"  style="transition: 1s;">
+            <div class="flexbox-container">
+              <div class="section-title" onclick="fadeOut('/Web Applications/typer.html')" style="color: black; font-weight: 100;">Typer</div>
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Web Applications/typer.html')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">May 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is Typer?</div>
+                <div class="section-description">Typer is a small minimalist typing website. It includes typing randomly generated words, as well as typing whole sentances and quotes.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <script src = "/animations.js"></script>
         <script>
           window.onscroll = function() {
             scrollFunction();
             section2();
+            section3();
+            section4();
+            section5();
           }
-          // Fade in
-          let line = document.getElementById("section2line");
-          let section = document.getElementById("section2");
+          let line2 = document.getElementById("section2line");
+          let section2body = document.getElementById("section2");
           section2();
           function section2(){
-              var scrollArea = 500;
+              var scrollArea = 400;
               if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
-                line.className = "sectionline";
-                section.style.opacity = 1;
+                line2.className = "sectionline";
+                section2body.style.opacity = 1;
               } else {
-                line.className = "sectionline-min";
-                section.style.opacity = 0;
+                line2.className = "sectionline-min";
+                section2body.style.opacity = 0;
+              }
+          }
+
+          let line3 = document.getElementById("section3line");
+          let section3body = document.getElementById("section3");
+          section3();
+          function section3(){
+              var scrollArea = 1200;
+              if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+                line3.className = "sectionline";
+                section3body.style.opacity = 1;
+              } else {
+                line3.className = "sectionline-min";
+                section3body.style.opacity = 0;
+              }
+          }
+
+          let line4 = document.getElementById("section4line");
+          let section4body = document.getElementById("section4");
+          section4();
+          function section4(){
+              var scrollArea = 2000;
+              if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+                line4.className = "sectionline";
+                section4body.style.opacity = 1;
+              } else {
+                line4.className = "sectionline-min";
+                section4body.style.opacity = 0;
+              }
+          }
+
+          let line5 = document.getElementById("section5line");
+          let section5body = document.getElementById("section5");
+          section5();
+          function section5(){
+              var scrollArea = 2800;
+              if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+                line5.className = "sectionline";
+                section5body.style.opacity = 1;
+              } else {
+                line5.className = "sectionline-min";
+                section5body.style.opacity = 0;
               }
           }
         </script>
+
+
         <!-- Bottom bar -->
         <div style="background-color: black; height: 15vh;">
           <p class="menu-bottombar-text" style="padding-top:5vh; margin: 0;">Find me here</p>
@@ -143,7 +275,5 @@
           </div>
         </div>
       </div>
-        
-      <script src = "/animations.js" ></script>
     </body>
 </html>
