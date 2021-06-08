@@ -54,7 +54,7 @@ html{
     color: black;
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
     font-size: 40px;
-    margin-top: 75px;
+    margin-top: 100px;
     margin-bottom: 0px;
 
     transition: 0.5s;
@@ -87,7 +87,7 @@ html{
         background-color: white;
     
         margin-top: 5vh;
-        margin-bottom: 75px;
+        margin-bottom: -50px;
         animation: fade 1.5s;
         animation-delay: 0.5s;
         animation-fill-mode:backwards;

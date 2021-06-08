@@ -177,6 +177,14 @@ html{
         margin-top: 50px;
     }
 }
+@keyframes slideTop2{
+    0%{
+        margin-top: -200px;
+    }
+    100%{
+        margin-top: 00px;
+    }
+}
 @keyframes slideUp{
     0%{
         margin-top: 300px;
