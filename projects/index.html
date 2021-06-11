@@ -3,8 +3,8 @@
     <head id="showMenu">
         <title id="title">Lu-Projects</title>
         <link rel="shortcut icon" type="image/x-icon" href="/Images/confounded-face.svg" />
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="/CSS/projectspage.css">
+        <link rel="stylesheet" href="/CSS/style.css">
+        <link rel="stylesheet" href="/projects/projectspage.css">
         <meta charset="UTF-8">
         <!-- fonts -->
         <!-- google stuff -->
@@ -23,8 +23,8 @@
     <nav class="topbar" id="topBar" style="animation: fade 2s backwards; animation-delay: 3s;">
       <a class = "left-text" style="cursor: pointer;" onclick="fadeOut('/')" id="leftText"> lu-wai </a>
         <div class="right-box"id="rightBox">
-          <a style="cursor: pointer;" onclick="fadeOut('/me.html')" class="right-item" id="right1">Me</a>
-          <a style="cursor: pointer;" onclick="fadeOut('/projects.html')" class="right-item" id="right2">Stuff</a>
+          <a style="cursor: pointer;" onclick="fadeOut('/me')" class="right-item" id="right1">Me</a>
+          <a style="cursor: pointer;" onclick="fadeOut('/projects')" class="right-item" id="right2">Stuff</a>
           <a style="cursor: pointer;"class="material-icons right-item" onclick="toggleMenu()"id="right3">menu</a>
         </div>
       <div class="line" id="line"></div>
@@ -38,10 +38,10 @@
         </div>
   
         <div class="menu-main">
-          <a href="#"onclick="fadeOut('/projects.html')" class="menu-section">
+          <a href="#"onclick="fadeOut('/projects')" class="menu-section">
             <div class="menu-section-text">My Stuff</div>
           </a>
-          <a href="#"onclick="fadeOut('/me.html')" class="menu-section">
+          <a href="#"onclick="fadeOut('/me')" class="menu-section">
             <div class="menu-section-text">Me</div>
           </a>
         </div>
@@ -210,7 +210,7 @@
           let section2body = document.getElementById("section2");
           section2();
           function section2(){
-              var scrollArea = 400;
+              var scrollArea = 300;
               if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
                 line2.className = "sectionline";
                 section2body.style.opacity = 1;
@@ -224,7 +224,7 @@
           let section3body = document.getElementById("section3");
           section3();
           function section3(){
-              var scrollArea = 1200;
+              var scrollArea = 1000;
               if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
                 line3.className = "sectionline";
                 section3body.style.opacity = 1;
@@ -238,7 +238,7 @@
           let section4body = document.getElementById("section4");
           section4();
           function section4(){
-              var scrollArea = 2000;
+              var scrollArea = 1600;
               if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
                 line4.className = "sectionline";
                 section4body.style.opacity = 1;
@@ -252,7 +252,7 @@
           let section5body = document.getElementById("section5");
           section5();
           function section5(){
-              var scrollArea = 2800;
+              var scrollArea = 2300;
               if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
                 line5.className = "sectionline";
                 section5body.style.opacity = 1;

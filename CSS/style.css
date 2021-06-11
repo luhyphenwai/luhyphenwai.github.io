@@ -400,7 +400,7 @@ table {
 /* Section button animations */
 .section{
 	margin: 0;
-	height: 800px;
+	height: 700px;
 	z-index: -10;
 	transition: 1s;
 }

@@ -87,7 +87,7 @@ html{
         background-color: white;
     
         margin-top: 5vh;
-        margin-bottom: -50px;
+        margin-bottom: 50px;
         animation: fade 1.5s;
         animation-delay: 0.5s;
         animation-fill-mode:backwards;
@@ -98,11 +98,8 @@ html{
         font-family: 'Montserrat', sans-serif;
         color: black;
         font-size: 30px;
-        margin-top: 20px;
+        margin-top: 00px;
     
-        animation: bob 1.5s;
-        animation-delay: 2.3s;
-        animation-iteration-count: infinite;
     }
 }
 @keyframes fade {
