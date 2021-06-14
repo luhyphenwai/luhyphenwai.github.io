@@ -197,6 +197,28 @@
           </div>
         </div>
 
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section6line"></div>
+          </div>
+          <div id="section6"  style="transition: 1s;">
+            <div class="flexbox-container">
+              <img src="/Images/Title.png" alt="Altair" class="section-image" style="margin-bottom: -50px; padding-right: 15px;cursor: pointer; background-color: black; border-radius: 20px;" onclick="fadeOut('/Altair/')">
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Altair/')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">June 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is Altair?</div>
+                <div class="section-description">Altair is a game made in 48 hours for GMTK Game Jam 2021.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <script src = "/animations.js"></script>
         <script>
           window.onscroll = function() {
@@ -205,6 +227,7 @@
             section3();
             section4();
             section5();
+            section6();
           }
           let line2 = document.getElementById("section2line");
           let section2body = document.getElementById("section2");
@@ -259,6 +282,20 @@
               } else {
                 line5.className = "sectionline-min";
                 section5body.style.opacity = 0;
+              }
+          }
+
+          let line6 = document.getElementById("section6line");
+          let section6body = document.getElementById("section6");
+          section6();
+          function section6(){
+              var scrollArea = 3000;
+              if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+                line6.className = "sectionline";
+                section6body.style.opacity = 1;
+              } else {
+                line6.className = "sectionline-min";
+                section6body.style.opacity = 0;
               }
           }
         </script>

@@ -6,7 +6,7 @@
     <title id="title">Necromerger</title>
         <link rel="shortcut icon" type="image/x-icon" href="/Images/confounded-face.svg" />
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
     <!-- google stuff -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
@@ -19,8 +19,6 @@
     <script>
       UnityLoader.instantiate("unityContainer", "Build/Version 1.5.json");
     </script>
-
-    
   </head>
 
   <body style="text-align: center" class="wrapper" id="body">
@@ -66,9 +64,25 @@
         
         <div id="unityContainer" style="width: 800px; height: 600px; margin: auto;"></div>
       </div>
+      
+      <div style="height: 25px;"></div>
+      <div class="flexbox-container">
+        <iframe frameborder="0" src="https://itch.io/embed/928639?linkback=true&amp;border_width=5" width="560" height="175"><a href="https://luhyphenwai.itch.io/necromerger">Necromerger by luhyphenwai</a></iframe>
+      </div>
     </div>
 
-    <iframe frameborder="0" src="https://itch.io/embed/928639?linkback=true&amp;border_width=5" width="560" height="175"><a href="https://luhyphenwai.itch.io/necromerger">Necromerger by luhyphenwai</a></iframe>
     <script src="/animations.js"></script>
+    
+    <!-- Bottom bar -->
+    <div style="height: 150px;"></div>
+    <div style="background-color: black; height: 15vh;">
+      <p class="menu-bottombar-text" style="padding-top:5vh; margin: 0;">Find me here</p>
+      <div class="menu-bottombar">
+        <a class="material-icons menu-bottombar-item" style="cursor: pointer;" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+        <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
+        <img src="/Images/itchio-textless-white.svg" alt="Itch" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
+        <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
+      </div>
+    </div>
   </body>
 </html>
