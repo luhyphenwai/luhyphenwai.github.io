@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/Images/confounded-face.svg" />
     
     <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/firstpage.css">
+    <link rel="stylesheet" href="/me/me.css">
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,55 +59,231 @@
       </div>
     </div>
 
-    <!-- Intro -->
-    <div class="section">
+    <div class="wrapper">
+      <!-- Intro -->
+      <div class="section">
+        <!-- Border to separate top menu bar from main site-->
+        <div style="height: 250px;"></div>
+        <div class="lock">
+          <div class="flexbox-container" style="overflow-y: hidden;">
+            <div class="letter">
+              T
+            </div>
+            <div class="letter">
+              h
+            </div>
+            <div class="letter">
+              i
+            </div>
+            <div class="letter">
+              s
+            </div>
+            <div class="letter" style="animation-delay: 0.75s;">
+              &nbsp;
+            </div>
+            <div class="letter" style="animation-delay: 0.75s;">
+              i
+            </div>
+            <div class="letter" style="animation-delay: 0.75s;">
+              s
+            </div>
+            <div class="letter" style="animation-delay: 1s;">
+              &nbsp;
+            </div>
+            <div class="letter" style="animation-delay: 1.75s;">
+              M
+            </div>
+            <div class="letter" style="animation-delay: 1.75s;">
+              e
+            </div>
+          </div>
+        </div>
+        
+        <div class="bottom-section">
+          <a href="#2" class="flexbox-container bottom-text">Me</a>
+          <div class="flexbox-container">
+            <span class="material-icons" style="font-size: 50px; cursor: default;">
+            expand_more
+            </span>
+          </div>
+        </div>
+        <div style="position:absolute; bottom: 0px;" id="2"></div>
+        
+      </div>
 
+      <!-- About me section -->
+      <div class="section">
+        <div class="flexbox-container">
+          <div class="sectionline-min" id="section2line"></div>
+        </div>
+        <div id="section2"  style="transition: 1s; opacity: 0;">
+          <div class="flexbox-container">
+            <div class="title">About me</div>
+          </div>
+          <div class="flexbox-container">
+            <div class="text-background">
+              <div class="text">luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong   luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong <br/> I don't want to write this it would be cringe
+              </div>
+            </div>
+            <img src="/Images/me.png" alt="me" style="width: 30vw; height: 30vw; border-radius: 10px">
+          </div>
+        </div>
+      </div>
+
+      <!-- What I'm doing -->
+      <div class="section">
+        <div class="flexbox-container">
+          <div class="sectionline" id="section3line"></div>
+        </div>
+        <div id="section3"  style="transition: 1s;">
+          <div class="flexbox-container">
+            <div class="title">What am I doing right now?</div>
+          </div>
+
+          <div class="flexbox-container">
+            <div class="spotify-section">
+              <img src="/Images/spotify.png" alt="spotify" class="img">
+              <div class="details">Listening to...</div>
+              <div class="head" id="spotify-name">Nothing</div>
+              <div class="details" id="by">By: N/A</div>
+            </div>
+          </div>
+          <div class="flexbox-container">
+            <div class="game-section">
+              <img src="/Images/Discord.png" alt="spotify" class="img">
+              <div class="details">Playing...</div>
+              <div class="head" id="game-name">Nothing</div>
+              <div class="details" id="game">By: N/A</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What do I know? -->
+      
+      <div class="section" style="height: 325px;">
+        <div class="flexbox-container">
+          <div class="sectionline" id="section4line"></div>
+        </div>
+        <div id="section4"  style="transition: 1s;">
+          <div class="flexbox-container" >
+            <div class="stuff" style="font-size: 50px;">I use these</div>
+          </div>
+          <div class="flexbox-container">
+            <img src="/Images/Icons/icons8-html-5-100.png" alt="html" class="icons">
+            <img src="/Images/Icons/icons8-javascript-100.png" alt="javascript" class="icons">
+            <img src="/Images/Icons/icons8-css-filetype-100.png" alt="css" class="icons">
+            <img src="/Images/Icons/icons8-unity-100.png" alt="unity" class="icons">
+            <img src="/Images/Icons/icons8-github-100.png" alt="github" class="icons">
+            <img src="/Images/Icons/icons8-python-100.png" alt="python" class="icons">
+            <img src="/Images/Icons/icons8-java-100.png" alt="java" class="icons">
+          </div>
+          
+          <div class="flexbox-container">
+            <a href=" https://icons8.com" style="margin-top: 25px;">Icons</a>
+          </div>
+          
+        </div>
+      </div>
     </div>
+    
 
-    <!-- About me section -->
-    <div class="section">
-
-    </div>
     <script src = "/animations.js"></script>
     <script>
-      GetSpotify();
-      function GetSpotify(){
-          fetch ("https://api.spotify.com/v1/me/player/currently-playing", {
-              method: "GET",
-              headers: {
-                  "Authorization": "Bearer BQAexeY-4YhXJL7fSJXiuAU326p2UWt-f6GJjkiPx9soz6yyW55cSZ5M8yh9eFXl2i5s6WAuTGTHw9wG7jfzvrekpeqyMDDvXqPdTBJXI0UwBD0T5C5Ha8FqsCrE9gU47p1Aie8NKXE93qMgqiK5hej0XEebZ3bzkotNIcfj"
-              }
+      // Animations
+      window.onscroll = function() {
+        scrollFunction();
+        section2();
+        section3();
+        section4();
+      }
+
+      let line2 = document.getElementById("section2line");
+      let section2body = document.getElementById("section2");
+      section2();
+      function section2(){
+          var scrollArea = 200;
+          if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+            line2.className = "sectionline";
+            section2body.style.opacity = 1;
+          } else {
+            line2.className = "sectionline-min";
+            section2body.style.opacity = 0;
+          }
+      }
+      
+      let line3 = document.getElementById("section3line");
+      let section3body = document.getElementById("section3");
+      function section3(){
+          var scrollArea = 700;
+          if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+            line3.className = "sectionline";
+            section3body.style.opacity = 1;
+          } else {
+            line3.className = "sectionline-min";
+            section3body.style.opacity = 0;
+          }
+      }
+
+      let line4 = document.getElementById("section4line");
+      let section4body = document.getElementById("section4");
+      function section4(){
+          var scrollArea = 1400;
+          if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+            line4.className = "sectionline";
+            section4body.style.opacity = 1;
+          } else {
+            line4.className = "sectionline-min";
+            section4body.style.opacity = 0;
+          }
+      }
+
+      GetPresence();
+      function GetPresence(){
+        fetch ("https://luwai-discordjs-bot.herokuapp.com/", {
+              method: "GET"
           })
           .then (res => {
             console.log(res)
             if (res.status === 200){
               return res.json();
-            } else {
-              const error = new Error ("No Song");
-              error.name = "NoSongPlaying";
-              throw error;
-            }
+            } 
           })
           .then (jason => {
               console.log(jason);
 
-              // Display the current song playing
+              activities = jason.activities;
+              // Check each activity
+              for(let i = 0; i < activities.length; i++){
+                if (activities[i].type === "LISTENING"){
+                  document.getElementById("spotify-name").textContent =activities[i].details;
+                  document.getElementById("by").textContent ="By: "+activities[i].state;
+                } else if (activities[i].type === "PLAYING"){
+                  document.getElementById("game-name").textContent =activities[i].details;
+                  if (activities[i].status === null){
+                    document.getElementById("game").textContent = " "
+                  } else {
+                    document.getElementById("game").textContent ="In "+activities[i].state;
+                  }
+                }
+              }
               
           })
           .catch(error => {
-            if (error.name == "NoSongPlaying"){
-              // Display no song playing
-            }
-            else {
-              console.log(error);
-            }
+            console.log(error);
+            
           });
       }
-
-      GetDiscord();
-      function GetDiscord(){
-        
-      }
     </script>
+    <!-- Bottom bar -->
+    <div style="background-color: black; height: 15vh;">
+      <p class="menu-bottombar-text" style="padding-top:5vh; margin: 0;">Find me here</p>
+      <div class="menu-bottombar">
+        <a class="material-icons menu-bottombar-item" style="cursor: pointer;" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+        <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
+        <img src="/Images/itchio-textless-white.svg" alt="Itch" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
+        <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
+      </div>
+    </div>
   </body>
 </html>

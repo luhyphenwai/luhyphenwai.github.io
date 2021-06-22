@@ -132,26 +132,7 @@ html{
 }
 
 /* Section area */
-.sectionline {
-    background-color: black;
-    margin-top: 25px;
-    margin-bottom: 25px;
 
-    width: 90vw;
-    height: 2px;
-
-    transition: 1s;
-}
-.sectionline-min {
-    background-color: black;
-    margin-top: 50px;
-    margin-bottom: 75px;
-
-    width: 0vw;
-    height: 2px;
-
-    transition: 1s;
-}
 .section-flexbox{
     height: 400px;
     width: 90vw;
