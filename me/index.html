@@ -269,7 +269,7 @@
                   document.getElementById("game").textContent ="In "+activities[i].state;
                   if (document.getElementById("game").textContent === "In null"&& activities[i].name === "Visual Studio Code"){
                     document.getElementById("game").textContent = "In Code"
-                  } else {
+                  } else if (document.getElementById("game").textContent === "In null"){
                     document.getElementById("game").textContent = ""
                   }
                 }
