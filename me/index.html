@@ -120,12 +120,12 @@
           <div class="flexbox-container">
             <div class="title">About me</div>
           </div>
-          <div class="flexbox-container" style="height: 550px">
-            <div class="text-background">
+          <div class="flexbox-container" style="height: 550px;">
+            <div class="text-background" style="width: 50vw; height: 500px;">
               <div class="text">luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong   luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong luwaiwong <br/> I don't want to write this it would be cringe
               </div>
             </div>
-            <img src="/Images/me.png" alt="me" style="width: 30vw; height: 30vw; border-radius: 10px">
+            <img src="/Images/me.png" alt="me" style="width: 30vw; height: 550px; border-radius: 10px">
           </div>
         </div>
       </div>
@@ -260,10 +260,10 @@
                   document.getElementById("by").textContent ="By: "+activities[i].state;
                 } else if (activities[i].type === "PLAYING"){
                   document.getElementById("game-name").textContent =activities[i].details;
-                  if (activities[i].status === null){
-                    document.getElementById("game").textContent = " "
-                  } else {
-                    document.getElementById("game").textContent ="In "+activities[i].state;
+                  
+                  document.getElementById("game").textContent ="In "+activities[i].state;
+                  if (document.getElementById("game").textContent === "In null"){
+                    document.getElementById("game").textContent = "In Code"
                   }
                 }
               }

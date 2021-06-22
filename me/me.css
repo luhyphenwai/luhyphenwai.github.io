@@ -156,6 +156,7 @@ html{
     font-weight: 700;
     margin-left: 220px;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 @media only screen and (max-width: 900px){
     .text{
@@ -163,7 +164,7 @@ html{
         font-family: 'Montserrat', sans-serif;
         color: white;
         font-size: 20px;
-        line-height: 25px;
+        line-height: 22px;
     }
     .title{
         font-family: 'Montserrat', sans-serif;
@@ -215,7 +216,7 @@ html{
         font-size: 30px;
         font-weight: 700;
         margin-left: 170px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 }
 .stuff{
