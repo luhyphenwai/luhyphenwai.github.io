@@ -259,11 +259,18 @@
                   document.getElementById("spotify-name").textContent =activities[i].details;
                   document.getElementById("by").textContent ="By: "+activities[i].state;
                 } else if (activities[i].type === "PLAYING"){
-                  document.getElementById("game-name").textContent =activities[i].details;
+                  if (activities[i].name === "Visual Studio Code"){
+                    document.getElementById("game-name").textContent =activities[i].details;
+                  } else {
+                    document.getElementById("game-name").textContent =activities[i].name;
+                  }
+                  
                   
                   document.getElementById("game").textContent ="In "+activities[i].state;
-                  if (document.getElementById("game").textContent === "In null"){
+                  if (document.getElementById("game").textContent === "In null"&& activities[i].name === "Visual Studio Code"){
                     document.getElementById("game").textContent = "In Code"
+                  } else {
+                    document.getElementById("game").textContent = ""
                   }
                 }
               }
@@ -272,7 +279,7 @@
           .catch(error => {
             console.log(error);
           });
-          setTimeout(GetPresence, 1000);
+          setTimeout(GetPresence, 10000);
       }
       
     </script>
