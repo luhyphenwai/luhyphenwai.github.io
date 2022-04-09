@@ -1,280 +1,275 @@
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-.topleft{
-	font-family: 'Montserrat', sans-serif;
-    font-size: 90px;
-    width: 615px;
-    height: fit-content;
-    
-    cursor:default;
+.topleft {
+  font-family: "Montserrat", sans-serif;
+  font-size: 90px;
+  width: 615px;
+  height: fit-content;
 
-    margin-top: 35px;
-    margin-left: 75px;
-    margin-bottom: 50px;
-    animation: slideLeft 1.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode:backwards;
+  cursor: default;
 
-    transition: 0.5s;
+  margin-top: 35px;
+  margin-left: 75px;
+  margin-bottom: 50px;
+  animation: slideLeft 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+
+  transition: 0.5s;
 }
-.topleft:hover{
-    margin-left: 100px;
-    
-    transition: 0.5s;
+.topleft:hover {
+  margin-left: 100px;
+
+  transition: 0.5s;
 }
-.lock{
-    max-height: 300px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+.lock {
+  max-height: 300px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
-.one{
-	font-family: 'Montserrat', sans-serif;
+.one {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  -webkit-text-stroke: 4px black;
+  font-size: 300px;
+  font-weight: 600;
+
+  cursor: default;
+  margin-top: 300px;
+  animation: slideUp 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+
+  transition: color 0.25s, -webkit-text-stroke 0.25s;
+}
+.one:hover {
+  color: black;
+}
+.two {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  -webkit-text-stroke: 4px black;
+  font-size: 300px;
+  font-weight: 600;
+
+  cursor: default;
+  margin-top: 300px;
+  animation: slideUp 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+
+  transition: color 0.25s, -webkit-text-stroke 0.25s;
+}
+.two:hover {
+  color: black;
+}
+.bottom-section {
+  overflow-y: hidden;
+}
+.bottom-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  margin-top: -150px;
+  cursor: pointer;
+  color: black;
+
+  animation: slideTop 2s forwards;
+  animation-delay: 3s;
+
+  transition: 1s;
+}
+.bottom-text:link {
+  color: black;
+}
+.bottom-text:link {
+  color: black;
+}
+.bottom-text:any-link {
+  color: black;
+}
+.bottom-text:hover {
+  margin-bottom: 25px;
+}
+@keyframes bob {
+  0% {
+    margin-bottom: 0px;
+  }
+  50% {
+    margin-bottom: 10px;
+  }
+  100% {
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 1230px) {
+  .one {
+    font-family: "Montserrat", sans-serif;
     color: white;
     -webkit-text-stroke: 4px black;
-    font-size: 300px;
+    font-size: 200px;
     font-weight: 600;
 
-    cursor:default;
+    cursor: default;
     margin-top: 300px;
     animation: slideUp 1s;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
-    
+
     transition: color 0.25s, -webkit-text-stroke 0.25s;
-}
-.one:hover{
-    color: black;
-}
-.two{
-    font-family: 'Montserrat', sans-serif;
+  }
+  .two {
+    font-family: "Montserrat", sans-serif;
     color: white;
     -webkit-text-stroke: 4px black;
-    font-size: 300px;
+    font-size: 200px;
     font-weight: 600;
-    
-    cursor:default;
+
+    cursor: default;
     margin-top: 300px;
     animation: slideUp 1s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
 
     transition: color 0.25s, -webkit-text-stroke 0.25s;
-}
-.two:hover{
-    color: black;
-}
-.bottom-section{
-    overflow-y: hidden;
-}
-.bottom-text{
-    font-family: 'Montserrat', sans-serif;
+  }
+  .topleft {
+    font-family: "Montserrat", sans-serif;
     font-size: 50px;
-    margin-top: -150px;
-    cursor: pointer;
-    color: black;
+    width: 400px;
 
-    animation: slideTop 2s forwards;
-    animation-delay: 3s;
+    cursor: default;
 
-    transition: 1s;
-}
-.bottom-text:link{
-    color: black;
-}
-.bottom-text:link{
-    color: black;
-}
-.bottom-text:any-link{
-    color: black;
-}
-.bottom-text:hover{
-    margin-bottom: 25px;
-}
-@keyframes bob {
-    0%{
-        margin-bottom: 0px;
-    }
-    50%{
-        margin-bottom: 10px;
-    }   
-    100%{
-        margin-bottom: 0px;
-    }
-}
-@media only screen and (max-width: 1230px){
-	.one{
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        -webkit-text-stroke: 4px black;
-        font-size: 200px;
-        font-weight: 600;
-    
-        cursor:default;
-        margin-top: 300px;
-        animation: slideUp 1s;
-        animation-delay: 1.5s;
-        animation-fill-mode: forwards;
-        
-        transition: color 0.25s, -webkit-text-stroke 0.25s;
-    }
-    .two{
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        -webkit-text-stroke: 4px black;
-        font-size: 200px;
-        font-weight: 600;
-        
-        cursor:default;
-        margin-top: 300px;
-        animation: slideUp 1s;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
-    
-        transition: color 0.25s, -webkit-text-stroke 0.25s;
-    }
-    .topleft{
-        font-family: 'Montserrat', sans-serif;
-        font-size: 50px;
-        width: 400px;
-        
-        cursor:default;
-    
-        padding-top: 35px;
-        margin-left: 75px;
-        padding-bottom: 75px;
-        animation: slideLeft 1.5s;
-        animation-delay: 0.5s;
-        animation-fill-mode:backwards;
-    
-        transition: 0.5s;
-    }
-}
+    padding-top: 35px;
+    margin-left: 75px;
+    padding-bottom: 75px;
+    animation: slideLeft 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
 
+    transition: 0.5s;
+  }
+}
 
 /* Animations */
 @keyframes fade {
-    0%{
-        opacity: 0;
-    } 
-    100%{
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes slideLeft {
-    0%{
-        margin-left: -700px;
-    }
-    100%{
-        margin-left: 75px;
-    }
+  0% {
+    margin-left: -700px;
+  }
+  100% {
+    margin-left: 75px;
+  }
 }
-@keyframes slideTop{
-    0%{
-        margin-top: -150px;
-    }
-    100%{
-        margin-top: 50px;
-    }
+@keyframes slideTop {
+  0% {
+    margin-top: -150px;
+  }
+  100% {
+    margin-top: 50px;
+  }
 }
-@keyframes slideTop2{
-    0%{
-        margin-top: -200px;
-    }
-    100%{
-        margin-top: 00px;
-    }
+@keyframes slideTop2 {
+  0% {
+    margin-top: -200px;
+  }
+  100% {
+    margin-top: 00px;
+  }
 }
-@keyframes slideUp{
-    0%{
-        margin-top: 300px;
-    }
-    100%{
-        
-        margin-top: 0px;
-    }
+@keyframes slideUp {
+  0% {
+    margin-top: 300px;
+  }
+  100% {
+    margin-top: 0px;
+  }
 }
 
 /* Sections */
 
-
 .sectionline {
-    background-color: black;
-    margin-top: 25px;
-    margin-bottom: 0px;
+  background-color: black;
+  margin-top: 25px;
+  margin-bottom: 0px;
 
-    width: 80vw;
-    height: 2px;
+  width: 80vw;
+  height: 2px;
 
-    transition: 1s;
+  transition: 1s;
 }
 .sectionline-min {
-    background-color: black;
-    margin-top: 25px;
-    margin-bottom: 25px;
+  background-color: black;
+  margin-top: 25px;
+  margin-bottom: 25px;
 
-    width: 0vw;
-    height: 2px;
+  width: 0vw;
+  height: 2px;
 
-    transition: 1s;
+  transition: 1s;
 }
-.section-title{
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    -webkit-text-stroke: 2px black;
-    font-size: 80px;
-    font-weight: 600;
-    width: fit-content;
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  -webkit-text-stroke: 2px black;
+  font-size: 80px;
+  font-weight: 600;
+  width: fit-content;
 
+  cursor: pointer;
+  transition: 0.5s;
+}
+.section-title:hover {
+  color: black;
+}
+.sidelinks {
+  display: flex;
+  width: 500px;
+  border: 1px solid black;
+}
 
-    cursor: pointer;
-    transition: 0.5s;
-}
-.section-title:hover{
-    color: black;
-}
-.sidelinks{
-    display: flex;
-    width: 500px;
-    border: 1px solid black ;
-}
+.button {
+  display: block;
+  width: 500px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid black;
+  cursor: pointer;
 
-.button{
-    display: block;
-	width: 500px;
-	height: 100px;
-	background-color: white;
-	border: 2px solid black;
-    cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+.button:hover {
+  background-color: black;
+}
+.button-text {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  color: black;
 
-    
-    margin-bottom: 10px;
-	transition: 0.5s;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 45px;
+  width: 500px;
+  height: 100px;
+  transition: 0.5s;
 }
-.button:hover{
-	background-color: black;
+.button-text:hover {
+  color: white;
 }
-.button-text{
-	display: flex;
-	font-family: 'Montserrat', sans-serif;
-	color: black;
-    
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	font-size: 45px;
-	width: 500px;
-	height: 100px;
-	transition: 0.5s;
-}
-.button-text:hover{
-	color: white;
-}
-.section-lock{
-    display: block;
-    max-height: 100px;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    max-width: 500px;
-    margin-bottom: 10px;;
+.section-lock {
+  display: block;
+  max-height: 100px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  max-width: 500px;
+  margin-bottom: 10px;
 }
