@@ -109,9 +109,9 @@
         </div>
         <div class="section">
           <div class="flexbox-container">
-            <div class="sectionline" id="section3line"></div>
+            <div class="sectionline" id="section1line"></div>
           </div>
-          <div id="section1" style="transition: 1s;">
+          <div id="section1" style="transition: 1s;"> 
             <div class="flexbox-container">
               <div class="section-title" onclick="fadeOut('https://luwaidev.itch.io/hijack')">Hijack</div>
             </div>
@@ -130,7 +130,7 @@
         </div>
         <div class="section">
           <div class="flexbox-container">
-            <div class="sectionline" id="section3line"></div>
+            <div class="sectionline" id="section2line"></div>
           </div>
           <div id="section2" style="transition: 1s;">
             <div class="flexbox-container">
@@ -151,7 +151,7 @@
         </div>
         <div class="section">
           <div class="flexbox-container">
-            <div class="sectionline-min" id="section2line"></div>
+            <div class="sectionline-min" id="section3line"></div>
           </div>
           <div id="section3"  style="transition: 1s;">
             <div class="flexbox-container">
@@ -174,7 +174,7 @@
         
         <div class="section">
           <div class="flexbox-container">
-            <div class="sectionline" id="section3line"></div>
+            <div class="sectionline" id="section4line"></div>
           </div>
           <div id="section4"  style="transition: 1s;">
             <div class="flexbox-container">
@@ -196,7 +196,7 @@
 
         <div class="section">
           <div class="flexbox-container">
-            <div class="sectionline" id="section4line"></div>
+            <div class="sectionline" id="section5line"></div>
           </div>
           <div id="section5"  style="transition: 1s;">
             <div class="flexbox-container">
@@ -218,7 +218,7 @@
 
         <div class="section">
           <div class="flexbox-container">
-            <div class="sectionline" id="section5line"></div>
+            <div class="sectionline" id="section6line"></div>
           </div>
           <div id="section6"  style="transition: 1s;">
             <div class="flexbox-container">
@@ -240,7 +240,7 @@
 
         <div class="section">
           <div class="flexbox-container">
-            <div class="sectionline" id="section6line"></div>
+            <div class="sectionline" id="section7line"></div>
           </div>
           <div id="section7"  style="transition: 1s;">
             <div class="flexbox-container">
@@ -264,6 +264,7 @@
         <script>
           window.onscroll = function() {
             scrollFunction();
+            section1();
             section2();
             section3();
             section4();
@@ -271,11 +272,25 @@
             section6();
             section7();
           }
+          let line1 = document.getElementById("section1line");
+            let section1body = document.getElementById("section1");
+            section1();
+            function section1() {
+              var scrollArea = 600;
+              if (document.body.scrollTop > scrollArea || document.documentElement.scrollTop > scrollArea) {
+                line2.className = "sectionline";
+                section2body.style.opacity = 1;
+              } else {
+                line2.className = "sectionline-min";
+                section2body.style.opacity = 0;
+              }
+            }
+
           let line2 = document.getElementById("section2line");
           let section2body = document.getElementById("section2");
           section2();
           function section2(){
-              var scrollArea = 300;
+              var scrollArea = 600;
               if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
                 line2.className = "sectionline";
                 section2body.style.opacity = 1;

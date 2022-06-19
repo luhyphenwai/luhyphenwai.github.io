@@ -30,8 +30,12 @@ html {
 }
 .one {
   font-family: "Montserrat", sans-serif;
-  color: white;
-  -webkit-text-stroke: 4px black;
+  color: white;text-shadow:
+      4px 4px 0 #000,
+      -4px -4px 0 #000,
+      4px -4px 0 #000,
+      -4px 4px 0 #000,
+      4px 4px 0 #000;
   font-size: 300px;
   font-weight: 600;
 
@@ -41,7 +45,7 @@ html {
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
 
-  transition: color 0.25s, -webkit-text-stroke 0.25s;
+  transition: color 0.25s,;
 }
 .one:hover {
   color: black;
@@ -49,7 +53,12 @@ html {
 .two {
   font-family: "Montserrat", sans-serif;
   color: white;
-  -webkit-text-stroke: 4px black;
+    text-shadow:
+      4px 4px 0 #000,
+      -4px -4px 0 #000,
+      4px -4px 0 #000,
+      -4px 4px 0 #000,
+      4px 4px 0 #000;
   font-size: 300px;
   font-weight: 600;
 
@@ -59,7 +68,7 @@ html {
   animation-delay: 2s;
   animation-fill-mode: forwards;
 
-  transition: color 0.25s, -webkit-text-stroke 0.25s;
+  transition: color 0.25s;
 }
 .two:hover {
   color: black;
@@ -106,7 +115,13 @@ html {
   .one {
     font-family: "Montserrat", sans-serif;
     color: white;
-    -webkit-text-stroke: 4px black;
+    color: white;
+      text-shadow:
+        4px 4px 0 #000,
+        -4px -4px 0 #000,
+        4px -4px 0 #000,
+        -4px 4px 0 #000,
+        4px 4px 0 #000;
     font-size: 200px;
     font-weight: 600;
 
@@ -116,7 +131,7 @@ html {
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
 
-    transition: color 0.25s, -webkit-text-stroke 0.25s;
+    transition: color 0.25s, ;
   }
   .two {
     font-family: "Montserrat", sans-serif;
