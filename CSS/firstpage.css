@@ -10,7 +10,7 @@ html {
   cursor: default;
 
   margin-top: 35px;
-  margin-left: 75px;
+  margin-left: 10vw;
   margin-bottom: 50px;
   animation: slideLeft 1.5s;
   animation-delay: 0.5s;
@@ -18,8 +18,7 @@ html {
 
   transition: 0.5s;
 }
-.topleft:hover {
-  margin-left: 100px;
+.topleft:hover {margin-left: 11vw;
 
   transition: 0.5s;
 }
@@ -45,7 +44,7 @@ html {
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
 
-  transition: color 0.25s,;
+  transition: color 0.25s;
 }
 .one:hover {
   color: black;
@@ -130,7 +129,7 @@ html {
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
 
-    transition: color 0.25s, ;
+    transition: color 0.25s ;
   }
   .two {
     font-family: "Montserrat", sans-serif;
@@ -160,7 +159,7 @@ html {
     cursor: default;
 
     padding-top: 35px;
-    margin-left: 75px;
+    margin-left: 10vw;
     padding-bottom: 75px;
     animation: slideLeft 1.5s;
     animation-delay: 0.5s;
@@ -189,7 +188,7 @@ font-size: 20vw;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
 
-    transition: color 0.25s, ;
+    transition: color 0.25s ;
   }
 
   .two {
@@ -221,7 +220,7 @@ font-size: 20vw;
     cursor: default;
 
     padding-top: 35px;
-    margin-left: 75px;
+    margin-left: 10vw;
     padding-bottom: 75px;
     animation: slideLeft 1.5s;
     animation-delay: 0.5s;
@@ -245,7 +244,7 @@ font-size: 20vw;
     margin-left: -700px;
   }
   100% {
-    margin-left: 75px;
+    margin-left: 10vw;
   }
 }
 @keyframes slideTop {
