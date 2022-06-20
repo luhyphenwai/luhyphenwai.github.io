@@ -109,6 +109,26 @@
         </div>
         <div class="section">
           <div class="flexbox-container">
+            <div class="sectionline" id="section0line"></div>
+          </div>
+          <div id="section0" style="transition: 1s;">
+            <div class="flexbox-container">
+              <div class="section-title" onclick="fadeOut('https://luwaidev.itch.io/the-office')">The Office</div>
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('https://luwaidev.itch.io/the-office')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">Febuary 2022</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is The Office?</div>
+                <div class="section-description">The Office is a moody, spooky horror game made in 3 days for Toronto Game Jam 2022. It has over 3000 views on itch.io and over 1000 downloads.</div>
+              </div>
+            </div>
+          </div>
+        <div class="section">
+          <div class="flexbox-container">
             <div class="sectionline" id="section1line"></div>
           </div>
           <div id="section1" style="transition: 1s;"> 
@@ -116,7 +136,7 @@
               <div class="section-title" onclick="fadeOut('https://luwaidev.itch.io/hijack')">Hijack</div>
             </div>
             <div class="section-flexbox">
-              <a class="section-title-area" onclick="fadeOut('/Unity Pathfinding/')">
+              <a class="section-title-area" onclick="fadeOut('https://luwaidev.itch.io/hijack')">
                 <div class="flexbox-container" style="width: 100%; margin: 0;">
                   <div class="section-date">Febuary 2022</div>
                 </div>
@@ -264,6 +284,7 @@
         <script>
           window.onscroll = function() {
             scrollFunction();
+            section0();
             section1();
             section2();
             section3();
@@ -272,11 +293,24 @@
             section6();
             section7();
           }
+          let line0 = document.getElementById("section1line");
+            let section0body = document.getElementById("section1");
+            section0();
+            function section0() {
+              var scrollArea = 350;
+              if (document.body.scrollTop > scrollArea || document.documentElement.scrollTop > scrollArea) {
+                line1.className = "sectionline";
+                section1body.style.opacity = 1;
+              } else {
+                line1.className = "sectionline-min";
+                section1body.style.opacity = 0;
+              }
+            } 
           let line1 = document.getElementById("section1line");
             let section1body = document.getElementById("section1");
             section1();
             function section1() {
-              var scrollArea = 350;
+              var scrollArea = 900;
               if (document.body.scrollTop > scrollArea || document.documentElement.scrollTop > scrollArea) {
                 line1.className = "sectionline";
                 section1body.style.opacity = 1;
@@ -290,7 +324,7 @@
           let section2body = document.getElementById("section2");
           section2();
           function section2(){
-              var scrollArea = 900;
+              var scrollArea = 1000;
               if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
                 line2.className = "sectionline";
                 section2body.style.opacity = 1;
@@ -304,7 +338,7 @@
           let section3body = document.getElementById("section3");
           section3();
           function section3(){
-              var scrollArea = 1000;
+              var scrollArea = 1400;
               if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
                 line3.className = "sectionline";
                 section3body.style.opacity = 1;
@@ -318,7 +352,7 @@
           let section4body = document.getElementById("section4");
           section4();
           function section4(){
-              var scrollArea = 1400;
+              var scrollArea = 2000;
               if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
                 line4.className = "sectionline";
                 section4body.style.opacity = 1;
@@ -332,7 +366,7 @@
           let section5body = document.getElementById("section5");
           section5();
           function section5(){
-              var scrollArea = 2000;
+              var scrollArea = 2500;
               if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
                 line5.className = "sectionline";
                 section5body.style.opacity = 1;
@@ -375,10 +409,16 @@
         <div style="background-color: black; height: 15vh;">
           <p class="menu-bottombar-text" style="padding-top:5vh; margin: 0;">Find me here</p>
           <div class="menu-bottombar">
-            <a class="material-icons menu-bottombar-item" style="cursor: pointer;" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
-            <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
-            <img src="/Images/itchio-textless-white.svg" alt="Itch" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
-            <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
+            <a class="material-icons menu-bottombar-item" style="cursor: pointer;"
+              onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+            <img src="/Images/instagram.png" alt="Insta" class="bottom-image"
+              onclick="fadeOut('https://www.instagram.com/luwaidev/')">
+            <img src="/Images/itchio-textless-white.svg" alt="Itch" class="bottom-image"
+              onclick="fadeOut('https://luhyphenwai.itch.io/')">
+            <img src="/Images/github.png" alt="Github" class="bottom-image" onclick="fadeOut('https://github.com/luwaidev')">
+            <img src="./Images/twitter.png" alt="Twitter" class="bottom-image" style="color: white;"
+              onclick="fadeOut('https://twitter.com/luwaidev')">
+            </svg>
           </div>
         </div>
       </div>
