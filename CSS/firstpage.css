@@ -357,3 +357,25 @@ font-size: 20vw;
   max-width: 500px;
   margin-bottom: 10px;
 }
+
+.img-container{
+  display: flex;
+  flex-flow:  wrap;
+  align-content: space-around;
+  justify-content: center;
+  height: max-content;
+  margin: 10px;
+}
+.img {
+  border-radius: 10px;
+  display: block;
+  margin: 10px;
+}
+
+.hover-obj{
+  text-align: center;
+}
+
+.hover-obj:hover{
+}
+
