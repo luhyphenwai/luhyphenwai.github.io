@@ -381,7 +381,7 @@ font-size: 20vw;
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
 
   #content-desktop {
     display: none;
@@ -390,4 +390,4 @@ font-size: 20vw;
   #content-mobile {
     display: block;
   }
-}
+} */
