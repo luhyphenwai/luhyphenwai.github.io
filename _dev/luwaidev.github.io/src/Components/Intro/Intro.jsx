@@ -8,14 +8,14 @@ const Intro = (props) => (
         <LeftSection>
           <SubTitle> Hey there, I'm</SubTitle>
           <Title> Lu-Wai Wong</Title>
-          <Text> I make games, 3D model, develop websites, and so much more.</Text>
+          {/* <Text> I make games, 3D model, develop websites, and so much more.</Text> */}
         </LeftSection>
       </Container>
 
       <Container>
         <RightSection>
           <ImageContainer>
-            <Image src={require('../../Images/Hands.png')} alt="Hand 3D model"/>
+            {/* <Image src={require('../../Images/Hands.png')} alt="Hand 3D model"/> */}
           </ImageContainer>
         </RightSection>
       </Container>
