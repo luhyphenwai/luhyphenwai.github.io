@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import * as colors from "../../colors";
+
+/////////// SECTIONS/CONTAINERS ///////////
 
 export const Flexbox = styled.div`
   display: flex;
@@ -29,20 +32,26 @@ export const RightSection = styled.div`
   margin-top: 15vh;
 `;
 
+////////// TEXT //////////
+
 export const Title = styled.h1`
-  font-family: "Source Code Pro", monospace;
+  font-family: "Fredoka One", cursive;
+  color: ${colors.DARK_BLUE};
   font-size: 5vw;
 `;
 export const SubTitle = styled.h2`
-  font-family: "Source Code Pro", monospace;
+  font-family: "Fredoka One", cursive;
+  color: ${colors.DARK_BLUE};
   font-size: 3vw;
 `;
 
 export const Text = styled.p`
-  font-family: "Source Code Pro", monospace;
+  font-family: "Fredoka One", cursive;
+  color: ${colors.DARK_BLUE};
   font-size: 2vw;
 `;
 
+////////// IMAAGES/ICONS //////////
 export const ImageContainer = styled.div`
   background-color: #f7ecde;
   border: 10px solid #54bab9;
@@ -52,5 +61,9 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
+  width: 100%;
+`;
+
+export const Icon = styled.span`
   width: 100%;
 `;
