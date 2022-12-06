@@ -3,6 +3,8 @@ import { Icon } from '@iconify/react'
 import {IconLinks, IconContainer, IconBackground} from "../IntroStyles.js"
 import * as colors from '../../../colors.js'
 
+import {} from "react-awesome-reveal"
+
 const size = "3vw";
 const Links = () => {
     return (

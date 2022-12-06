@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeIn } from "react-animations";
 import * as colors from "../../colors";
 
 /////////// SECTIONS/CONTAINERS ///////////
@@ -39,10 +40,19 @@ export const Section = styled.div`
 ////////// TEXT //////////
 
 export const Title = styled.h1`
+  display: flex;
+  /* font-family: "Fredoka One", cursive;
+  color: ${colors.DARK_BLUE};
+  font-size: 15vw;
+  margin: 0; */
+`;
+export const Letter = styled.h1`
   font-family: "Fredoka One", cursive;
   color: ${colors.DARK_BLUE};
   font-size: 15vw;
   margin: 0;
+
+  animation: 1s ${fadeIn};
 `;
 export const SubTitle = styled.h2`
   font-family: "Fredoka One", cursive;
@@ -122,6 +132,7 @@ export const IconLinks = styled.a`
   margin: 1vw;
   &:hover {
     cursor: pointer;
+    width: 3vw;
   }
 `;
 
