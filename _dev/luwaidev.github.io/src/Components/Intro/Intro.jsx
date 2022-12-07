@@ -10,15 +10,9 @@ import b2 from '../../Icons/Blobs/Ellipse 2.png';
 
 const style = {
   backgroundColor: colors.DARK_YELLOW,
-  zIndex: 2,
+  zIndex: 10,
   // width: "100vw",
   // height: "30vw",
-}
-const style1 = {
-  // backgroundColor: colors.DARK_YELLOW,
-  zIndex: 2,
-  width: "100%",
-  height: "15vw",
 }
 const Intro = (props) => (
   <>
@@ -30,20 +24,20 @@ const Intro = (props) => (
       <Flexbox>
         <Container>
           <Title>
-            <Fade>
+            <Fade style={{zIndex:0}}>
               <Slide direction='down'>
                 <SubTitle> Hi,&nbsp;</SubTitle>
               </Slide>
             </Fade>
             
-            <Fade delay={800}>
-              <Slide delay={800} direction='down'>
+            <Fade delay={800} style={{zIndex:0}}>
+              <Slide delay={800} direction='down' >
                 <SubTitle> I'm</SubTitle>
               </Slide>
             </Fade>
           </Title>
           <Title> 
-            <Zoom cascade damping={0.1} duration={800} delay={1300}>
+            <Zoom cascade damping={0.1} duration={800} delay={1300} style={{zIndex:1}}>
               <Letter> L</Letter>
               <Letter> u</Letter>
               <Letter> -</Letter>
@@ -58,24 +52,35 @@ const Intro = (props) => (
       <Flexbox>
         <SubTextContainer>
           <LeftSubText>
-            <SubTitle>Human Being</SubTitle>
-            <SubTitle>Game Developer</SubTitle>
+            <Fade delay={2000}>
+              <Slide delay={2000} direction='down' >
+                <SubTitle>Human Being</SubTitle>
+              </Slide>
+            </Fade>
+            
+            <Fade delay={2750}>
+              <Slide delay={2750} direction='down' >
+                <SubTitle>Game Developer</SubTitle>
+              </Slide>
+            </Fade>
           </LeftSubText>
           <RightSubText>
-            <SubTitle>uoft '26</SubTitle>
+            <Fade delay={3500}>
+              <Slide delay={3500} direction='down' >
+                <SubTitle>uoft '26</SubTitle>
+              </Slide>
+            </Fade>
           </RightSubText>
         </SubTextContainer>
       </Flexbox>
-        <Blob1 src={b1}/>
-        <Blob2 src={b2}/>
+      
+    
     </Section>
     
+      <Blob1 style={{zIndex:-1}} src={b1} /> 
+      <Blob2 style={{zIndex:-21}} src={b2} />
     
     {/* <SVGComponent /> */}
-
-    <div style={style1}>
-
-    </div>
 
     {/* ABOUT ME SECTION */}
     <Section style={style}>

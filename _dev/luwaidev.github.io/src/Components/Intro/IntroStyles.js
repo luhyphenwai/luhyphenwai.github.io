@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
 import * as colors from "../../colors";
 
@@ -10,6 +10,7 @@ export const Flexbox = styled.div`
   width: 100%;
   height: fit-content;
   justify-content: center;
+  z-index: 1;
 `;
 
 export const Container = styled.div`
@@ -22,12 +23,15 @@ export const SubTextContainer = styled.div`
   width: 53.6%;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 `;
 export const LeftSubText = styled.div`
   justify-content: left;
+  z-index: 1;
 `;
 export const RightSubText = styled.div`
   justify-content: right;
+  z-index: 1;
 `;
 
 export const Section = styled.div`
@@ -36,6 +40,7 @@ export const Section = styled.div`
   margin: 0;
   margin-left: -10px;
   padding: 0;
+  z-index: 1;
 `;
 ////////// TEXT //////////
 
@@ -59,12 +64,15 @@ export const SubTitle = styled.h2`
   color: ${colors.DARK_BLUE};
   font-size: 2vw;
   margin: 0;
+  z-index: 1;
 `;
 
 export const Text = styled.p`
   font-family: "Fredoka One", cursive;
   color: ${colors.DARK_BLUE};
   font-size: 2vw;
+
+  z-index: 1;
 `;
 
 ////////// IMAAGES/ICONS //////////
@@ -90,10 +98,30 @@ export const Blob = styled.div`
   /* transform: rotate(0deg); */
   top: -600vh;
   left: -75vh;
-  z-index: -1;
+  z-index: -10;
   margin: 0;
   padding: 0;
   overflow: hidden;
+`;
+
+const blob1In = keyframes`
+  from {
+  top: 150vh;
+  }
+
+  to {
+  top: 20vh;
+  }
+`;
+
+const blob2In = keyframes`
+  from {
+  top: 150vh;
+  }
+
+  to {
+  top: 40vh;
+  }
 `;
 
 export const Blob1 = styled.img`
@@ -110,6 +138,8 @@ export const Blob1 = styled.img`
   margin: 0;
   padding: 0;
   overflow: hidden;
+
+  animation: 1.5s ${blob1In};
 `;
 export const Blob2 = styled.img`
   size: fit-content;
@@ -125,6 +155,7 @@ export const Blob2 = styled.img`
   margin: 0;
   padding: 0;
   overflow: hidden;
+  animation: 1.5s ${blob2In};
 `;
 
 export const IconLinks = styled.a`
@@ -137,11 +168,12 @@ export const IconLinks = styled.a`
 `;
 
 export const IconContainer = styled.a`
-  width: 98vw;
+  width: 100vw;
   position: fixed;
   justify-content: center;
   display: flex;
   top: 3vh;
+  z-index: 100;
   /* margin-top: 24px; */
 `;
 
@@ -152,12 +184,18 @@ export const IconBackground = styled.div`
 
   justify-content: center;
 
+  align-items: center;
+
   display: flex;
   height: 10vh;
   border-radius: 5vw;
+
+  z-index: 100;
 `;
 
 // About Me
 export const ABHeader = styled.div`
   margin-left: 10vw;
+
+  z-index: 1;
 `;

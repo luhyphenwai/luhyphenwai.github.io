@@ -6,7 +6,6 @@ import Intro from "./Components/Intro/Intro";
 
 function App() {
   // Set background color
-  document.body.style = "background: #FFEEDD";
 
   return (
     <div className="background">

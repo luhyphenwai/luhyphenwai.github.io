@@ -1,6 +1,14 @@
-html,
+
 body {
-    margin: 0;
+    background: #FFEEDD;
+    /* margin: 0; */
     height: 100%;
-    overflow: hidden
+    overflow-x: hidden;
+    overflow-y: hidden;
+    animation: body 10s;
+}
+
+@keyframes body {
+    from{overflow-y: hidden}
+    to {overflow-y: scroll}
 }
