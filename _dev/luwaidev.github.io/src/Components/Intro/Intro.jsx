@@ -1,8 +1,8 @@
 import React from 'react'
-import {Section, Flexbox,Container, Title, SubTitle, SubTextContainer,LeftSubText, RightSubText, Blob1, Blob2, ABHeader, Letter} from "./IntroStyles.js"
+import {Section, Flexbox,Container, Title, SubTitle, SubTextContainer,LeftSubText, RightSubText, Blob1, Blob2, ABHeader, Letter, TextSection} from "./IntroStyles.js"
 import Links from './Subcomponents/Links.jsx'
 import * as colors from '../../colors.js'
-import {Bounce, Fade, Slide, Zoom} from "react-awesome-reveal"
+import {AttentionSeeker, Bounce, Fade, Flip, JackInTheBox, Slide, Zoom} from "react-awesome-reveal"
 
 // IMAGES/ICONS
 import b1 from '../../Icons/Blobs/Ellipse 1.png';
@@ -26,7 +26,7 @@ const Intro = (props) => (
           <Title>
             <Fade style={{zIndex:0}}>
               <Slide direction='down'>
-                <SubTitle> Hi,&nbsp;</SubTitle>
+                <SubTitle> Hi, &nbsp;</SubTitle>
               </Slide>
             </Fade>
             
@@ -46,32 +46,28 @@ const Intro = (props) => (
               <Letter> i</Letter>
             </Zoom>
           </Title>
+          <SubTextContainer>
+            <LeftSubText>
+              <Fade delay={2000} direction='down'>
+                  <SubTitle>Student</SubTitle>
+              </Fade>
+              
+              <Fade delay={2750}direction='down'>
+                  <SubTitle>Developer</SubTitle>
+              </Fade>
+            </LeftSubText>
+            <RightSubText>
+              <AttentionSeeker effect="rubberBand" delay={5000} style={{zIndex:0}}>
+              <Fade delay={2000} direction='down'>
+                  <SubTitle>uoft '26</SubTitle>
+              </Fade>
+              </AttentionSeeker>
+            </RightSubText>
+        </SubTextContainer>
         </Container>
       </Flexbox>
       
       <Flexbox>
-        <SubTextContainer>
-          <LeftSubText>
-            <Fade delay={2000}>
-              <Slide delay={2000} direction='down' >
-                <SubTitle>Human Being</SubTitle>
-              </Slide>
-            </Fade>
-            
-            <Fade delay={2750}>
-              <Slide delay={2750} direction='down' >
-                <SubTitle>Game Developer</SubTitle>
-              </Slide>
-            </Fade>
-          </LeftSubText>
-          <RightSubText>
-            <Fade delay={3500}>
-              <Slide delay={3500} direction='down' >
-                <SubTitle>uoft '26</SubTitle>
-              </Slide>
-            </Fade>
-          </RightSubText>
-        </SubTextContainer>
       </Flexbox>
       
     
@@ -81,11 +77,22 @@ const Intro = (props) => (
       <Blob2 style={{zIndex:-21}} src={b2} />
     
     {/* <SVGComponent /> */}
-
+    <div style={{height: "15vh"}}></div>
     {/* ABOUT ME SECTION */}
     <Section style={style}>
       <ABHeader>
-        <SubTitle>I like making cool things with code</SubTitle>
+        <TextSection>
+          <Fade direction='down'>
+           <SubTitle>I like making cool things with&nbsp;</SubTitle>
+          </Fade>
+          <JackInTheBox delay={1000}>
+            <Bounce delay={1000}>
+              <SubTitle style={{color: colors.RED}}> code </SubTitle>
+            </Bounce>
+          </JackInTheBox>
+        </TextSection>
+
+
         <SubTitle>making games</SubTitle>
         <SubTitle>3D Modeling and making art</SubTitle>
         

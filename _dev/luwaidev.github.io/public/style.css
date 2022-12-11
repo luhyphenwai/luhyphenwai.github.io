@@ -4,8 +4,9 @@ body {
     /* margin: 0; */
     height: 100%;
     overflow-x: hidden;
-    overflow-y: hidden;
-    animation: body 10s;
+    overflow-y: scroll;
+    animation-name: body;
+    animation-duration: 10s;
 }
 
 @keyframes body {

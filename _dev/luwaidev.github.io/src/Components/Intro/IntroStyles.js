@@ -16,11 +16,11 @@ export const Flexbox = styled.div`
 export const Container = styled.div`
   justify-content: center;
   width: fit-content;
-  height: 20%;
-  margin-top: 20vh;
+  height: fit-content;
+  margin-top: -10vh;
 `;
 export const SubTextContainer = styled.div`
-  width: 53.6%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   z-index: 1;
@@ -41,6 +41,9 @@ export const Section = styled.div`
   margin-left: -10px;
   padding: 0;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 ////////// TEXT //////////
 
@@ -54,7 +57,7 @@ export const Title = styled.h1`
 export const Letter = styled.h1`
   font-family: "Fredoka One", cursive;
   color: ${colors.DARK_BLUE};
-  font-size: 15vw;
+  font-size: 17.5vw;
   margin: 0;
 
   animation: 1s ${fadeIn};
@@ -73,6 +76,10 @@ export const Text = styled.p`
   font-size: 2vw;
 
   z-index: 1;
+`;
+
+export const TextSection = styled.div`
+  display: flex;
 `;
 
 ////////// IMAAGES/ICONS //////////
@@ -105,21 +112,25 @@ export const Blob = styled.div`
 `;
 
 const blob1In = keyframes`
-  from {
+  0% {
   top: 150vh;
   }
-
-  to {
+50% {
+  top: 150vh;
+  }
+  100% {
   top: 20vh;
   }
 `;
 
 const blob2In = keyframes`
-  from {
+  0% {
   top: 150vh;
   }
-
-  to {
+50% {
+  top: 150vh;
+  }
+  100% {
   top: 40vh;
   }
 `;
@@ -139,7 +150,8 @@ export const Blob1 = styled.img`
   padding: 0;
   overflow: hidden;
 
-  animation: 1.5s ${blob1In};
+  animation: 2.5s ${blob1In};
+  animation-timing-function: cubic-bezier(0.55, 0.33, 0.08, 0.96);
 `;
 export const Blob2 = styled.img`
   size: fit-content;
@@ -155,16 +167,27 @@ export const Blob2 = styled.img`
   margin: 0;
   padding: 0;
   overflow: hidden;
-  animation: 1.5s ${blob2In};
+  animation: 2.5s ${blob2In};
+  animation-timing-function: cubic-bezier(0.55, 0.33, 0.08, 0.96);
 `;
 
 export const IconLinks = styled.a`
   width: 3vw;
-  margin: 1vw;
+  font-size: 3vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 0.5vw;
+  margin-bottom: 0vw;
   &:hover {
     cursor: pointer;
     width: 3vw;
+    font-size: 3.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 0vw;
+    margin-bottom: -0.8vw;
   }
+  transition: 0.15s ease-in;
 `;
 
 export const IconContainer = styled.a`
@@ -181,14 +204,15 @@ export const IconBackground = styled.div`
   background-color: ${colors.LIGHT_YELLOW};
 
   width: fit-content;
+  height: fit-content;
 
   justify-content: center;
 
   align-items: center;
 
   display: flex;
-  height: 10vh;
   border-radius: 5vw;
+  padding: 0;
 
   z-index: 100;
 `;

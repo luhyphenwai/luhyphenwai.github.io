@@ -1,5 +1,4 @@
 // import "./App.scss";
-import * as colors from "./colors.js";
 
 // Components
 import Intro from "./Components/Intro/Intro";
