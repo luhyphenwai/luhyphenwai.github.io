@@ -171,55 +171,14 @@ export const Blob2 = styled.img`
   animation-timing-function: cubic-bezier(0.55, 0.33, 0.08, 0.96);
 `;
 
-export const IconLinks = styled.a`
-  width: 3vw;
-  font-size: 3vw;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  margin-top: 0.5vw;
-  margin-bottom: 0vw;
-  &:hover {
-    cursor: pointer;
-    width: 3vw;
-    font-size: 3.5vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-top: 0vw;
-    margin-bottom: -0.8vw;
-  }
-  transition: 0.15s ease-in;
-`;
-
-export const IconContainer = styled.a`
-  width: 100vw;
-  position: fixed;
-  justify-content: center;
-  display: flex;
-  top: 3vh;
-  z-index: 100;
-  /* margin-top: 24px; */
-`;
-
-export const IconBackground = styled.div`
-  background-color: ${colors.LIGHT_YELLOW};
-
-  width: fit-content;
-  height: fit-content;
-
-  justify-content: center;
-
-  align-items: center;
-
-  display: flex;
-  border-radius: 5vw;
-  padding: 0;
-
-  z-index: 100;
-`;
-
 // About Me
 export const ABHeader = styled.div`
   margin-left: 10vw;
 
   z-index: 1;
 `;
+
+export const Project = styled.div``;
+export const PFrontImg = styled.img``;
+
+export const PBackImg = styled.img``;
