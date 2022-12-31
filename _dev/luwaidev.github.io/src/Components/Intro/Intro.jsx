@@ -49,13 +49,13 @@ const Intro = (props) => (
     <Projects/>
 
     {/* CURRENT SKILLS AND INTERESTS */}
-    <Section style={style}>
+    {/* <Section style={style}>
       <ABHeader>
         <SubTitle>I know how to use these </SubTitle>
         <SubTitle>But right now I'm really interested in </SubTitle>
         <SubTitle>3D Modeling and making art</SubTitle>
       </ABHeader>
-    </Section>
+    </Section> */}
 
   </>
 );

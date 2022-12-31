@@ -173,12 +173,44 @@ export const Blob2 = styled.img`
 
 // About Me
 export const ABHeader = styled.div`
-  margin-left: 10vw;
-
-  z-index: 1;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  z-index: 100;
 `;
 
-export const Project = styled.div``;
-export const PFrontImg = styled.img``;
+export const Project = styled.div`
+  width: 35vw;
+  height: 30vw;
+  &:hover {
+    color: transparent;
+    cursor: pointer;
+  }
+  margin-left: 45vw;
+`;
+export const PFrontImg = styled.img`
+  position: absolute;
+  z-index: 10;
+  width: 35.5vw;
+  height: 30.5vw;
+  border-radius: 10px;
+  background-color: white;
+  &:hover {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  transition: 1s;
+`;
 
-export const PBackImg = styled.img``;
+export const PBackImg = styled.img`
+  position: absolute;
+  z-index: 5;
+  width: 35vw;
+  height: 30vw;
+  border-radius: 10px;
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+  transition: 1s;
+`;
