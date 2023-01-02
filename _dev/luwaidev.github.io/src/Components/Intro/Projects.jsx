@@ -10,29 +10,28 @@ import { motion, useScroll, useSpring, useTransform} from "framer-motion";
 
 import UnityPathfindingImg from '../../Images/Screenshots/Unity Pathfinding.png'
 
-function getMax(num){
-    if (num > 1){
-        return 1;
-    }
-    else{
-        return num;
-    }
-}
+// function getMax(num){
+//     if (num > 1){
+//         return 1;
+//     }
+//     else{
+//         return num;
+//     }
+// }
 
 export default function Projects(){
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
-        target: ref,
         offset: ["200px", "0px"]
     });
-    const y = useTransform(useSpring(scrollYProgress), latest => getMax(latest/4 + 0.75))
+    const y = useTransform((scrollYProgress), latest => (latest))
 
     
     return (
         <>
         <div ref={ref} style={{position: "absolute", marginTop: "200px"}}></div>
           <Section >
-            <ABHeader as={motion.div} style={{top:scrollYProgress}}>
+            <ABHeader as={motion.div} style={{y:y}}>
               <TextSection >
                 {/* <Fade direction='left'> */}
                 <SubTitle>I like making cool things with&nbsp;</SubTitle>
