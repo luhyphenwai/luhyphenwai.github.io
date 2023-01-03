@@ -173,33 +173,22 @@ export const Blob2 = styled.img`
 
 // About Me
 export const ABHeader = styled.div`
-  position: fixed;
-  top: 100px;
-  left: 100px;
+  /* position: fixed; */
+  /* top: 100px;
+  left: 100px; */
+  margin-left: 11vw;
   z-index: 100;
+  /* margin-bottom: 200vh; */
 `;
 
-export const Project = styled.div`
-  width: 35vw;
-  height: 30vw;
-  &:hover {
-    color: transparent;
-    cursor: pointer;
-  }
-  margin-left: 45vw;
-`;
 export const PFrontImg = styled.img`
   position: absolute;
   z-index: 10;
-  width: 35.5vw;
-  height: 30.5vw;
+  width: 35vw;
+  height: 30vw;
   border-radius: 10px;
   background-color: white;
-  &:hover {
-    background-color: transparent;
-    cursor: pointer;
-  }
-  transition: 1s;
+  transition: 0.3s;
 `;
 
 export const PBackImg = styled.img`
@@ -211,6 +200,83 @@ export const PBackImg = styled.img`
   &:hover {
     color: white;
     cursor: pointer;
+
+    width: 38.5vw;
+    height: 33vw;
   }
-  transition: 1s;
+  transition: 0.3s;
+`;
+export const PTextBacking = styled.div`
+  position: absolute;
+  width: 35vw;
+  height: 30vw;
+  z-index: 10;
+
+  background-color: black;
+  opacity: 0%;
+  border-radius: 10px;
+
+  transition: 0.3s;
+`;
+
+export const PHeader = styled.h2`
+  position: absolute;
+  z-index: 11;
+  width: 35vw;
+  height: 30vw;
+
+  font-size: 3.5vw;
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+  color: ${colors.DARK_BLUE};
+  opacity: 0%;
+  /* margin-top: 3%;
+  margin-left: 5vw; */
+
+  /* &:hover {
+    opacity: 100%;
+    z-index: 10;
+  } */
+  transition: 0.3s;
+  /* transition-delay: 0.2s; */
+`;
+
+export const Project = styled.div`
+  position: absolute;
+  width: 35vw;
+  height: 30vw;
+  overflow: hidden;
+  margin-left: 1.25vw;
+
+  &:hover {
+    color: transparent;
+    cursor: pointer;
+
+    width: 38.5vw;
+    height: 33vw;
+    margin-left: 0vw;
+  }
+  /* margin-left: 45vw; */
+
+  &:hover ${PHeader} {
+    opacity: 100%;
+    z-index: 10;
+    width: 38.5vw;
+    height: 33vw;
+    /* margin-top: 3%; */
+  }
+  &:hover ${PTextBacking} {
+    opacity: 70%;
+    z-index: 10;
+
+    width: 38.5vw;
+    height: 33vw;
+  }
+
+  &:hover ${PFrontImg} {
+    width: 38.5vw;
+    height: 33vw;
+  }
+
+  transition: 0.3s;
 `;

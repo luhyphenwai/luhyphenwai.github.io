@@ -2,7 +2,7 @@ import React from 'react'
 import { useRef } from 'react';
 
 
-import {Section,SubTitle, ABHeader,  TextSection, Project, PFrontImg, PBackImg} from "./IntroStyles.js"
+import {Section,SubTitle, ABHeader,  TextSection, Project, PFrontImg, PBackImg, PTextBacking, PHeader} from "./IntroStyles.js"
 import * as colors from '../../colors.js'
 
 import {Bounce, Fade, Flip, JackInTheBox} from "react-awesome-reveal"
@@ -19,41 +19,51 @@ import UnityPathfindingImg from '../../Images/Screenshots/Unity Pathfinding.png'
 //     }
 // }
 
+const background = {
+  backgroundColor: colors.DARK_YELLOW,
+  zIndex: -1,
+  position: "absolute",
+  width: "200vw",
+  height: "400vh",
+  // marginLeft:"-10vw"
+  // borderRadius: " 40% 40% 0 0",
+  top: "200vh",
+  left: "0"
+}
 export default function Projects(){
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        offset: ["200px", "0px"]
-    });
-    const y = useTransform((scrollYProgress), latest => (latest))
 
     
     return (
         <>
-        <div ref={ref} style={{position: "absolute", marginTop: "200px"}}></div>
-          <Section >
-            <ABHeader as={motion.div} style={{y:y}}>
+          <div style={background} ></div>
+          <Section style={{height:"300vh", display:"block"}}>
+            <ABHeader>
               <TextSection >
-                {/* <Fade direction='left'> */}
-                <SubTitle>I like making cool things with&nbsp;</SubTitle>
-                {/* </Fade> */}
-                <JackInTheBox delay={1000}>
-                  <Bounce delay={1000}>
+                <Fade>
+                  <SubTitle>I like making cool things with&nbsp;</SubTitle>
+                </Fade>
+                <JackInTheBox delay={500}>
+                  <Bounce delay={500}>
                     <SubTitle style={{color: colors.RED}}> code </SubTitle>
                   </Bounce>
                 </JackInTheBox>
               </TextSection>
             </ABHeader>
 
-            <Project>
-                <PFrontImg />
-                <PBackImg src={UnityPathfindingImg}/>
-            </Project>
+            <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "10vw", marginTop: "10vh"}}>
+              <Project>
+                  <PFrontImg src={UnityPathfindingImg}/>
+                  <PBackImg />
+                  <PTextBacking/>
+                  <PHeader>Unity Pathfinding <br/> Visualizer</PHeader>
+              </Project>
+            </div>
 
-
+{/* 
             <SubTitle>making games</SubTitle>
             <SubTitle>3D Modeling and making art</SubTitle>
             
-            <SubTitle>and doing hackathons</SubTitle>
+            <SubTitle>and doing hackathons</SubTitle> */}
           </Section>
         </>
     );

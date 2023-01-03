@@ -12,7 +12,7 @@ const SideMenu = () => {
             <NavCirc>
                 
                 <BearImg src= {bear}/>
-                <NavMenuButton id='nav'>bruh</NavMenuButton>
+                {/* <NavMenuButton id='nav'>bruh</NavMenuButton> */}
             </NavCirc>
         </NavButton>
     );

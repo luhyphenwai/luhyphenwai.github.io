@@ -91,16 +91,17 @@ export const BearImg = styled.img`
 `;
 
 export const NavCirc = styled.div`
-  &:hover {
+  /* &:hover {
     cursor: pointer;
 
     width: 200vw;
     height: 200vw;
-  }
+    border-radius: 50vw;
+  } */
 
-  &::hover > * {
+  /* &::hover > * {
     background-color: ${colors.DARK_BLUE};
-  }
+  } */
 
   &:hover ${BearImg} {
     cursor: pointer;
@@ -111,13 +112,14 @@ export const NavCirc = styled.div`
   overflow: hidden;
   white-space: nowrap;
 
-  background-color: ${colors.DARK_YELLOW};
+  /* background-color: ${colors.DARK_YELLOW}; */
   z-index: 88;
   position: fixed;
   bottom: -11vh;
   right: -12vh;
   width: 30vh;
   height: 30vh;
+  border-radius: 15vh;
 
   transition: 0.4s;
   transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);

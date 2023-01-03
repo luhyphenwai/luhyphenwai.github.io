@@ -25,15 +25,18 @@ const style = {
 
 const background = {
   backgroundColor: colors.DARK_YELLOW,
-  zIndex: 1,
+  zIndex: -1,
   position: "absolute",
   width: "100vw",
   height: "100vh",
-  top: "143vh"
+  borderRadius: " 20vw 20vw 0 0",
+  top: "110vh",
+  left:"0"
 }
+
 const Intro = (props) => (
   <>
-  {/* <SideMenu></SideMenu> */}
+  <SideMenu></SideMenu>
   <Links></Links>
       
     {/* INTRO SECTION */}
