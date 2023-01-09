@@ -188,7 +188,7 @@ export const PFrontImg = styled.img`
   height: 30vw;
   border-radius: 10px;
   background-color: white;
-  transition: 0.3s;
+  transition: 0.5s;
 `;
 
 export const PBackImg = styled.img`
@@ -204,7 +204,7 @@ export const PBackImg = styled.img`
     width: 38.5vw;
     height: 33vw;
   }
-  transition: 0.3s;
+  transition: 0.5s;
 `;
 export const PTextBacking = styled.div`
   position: absolute;
@@ -216,7 +216,7 @@ export const PTextBacking = styled.div`
   opacity: 0%;
   border-radius: 10px;
 
-  transition: 0.3s;
+  transition: 0.5s;
 `;
 
 export const PHeader = styled.h2`
@@ -237,11 +237,34 @@ export const PHeader = styled.h2`
     opacity: 100%;
     z-index: 10;
   } */
-  transition: 0.3s;
-  /* transition-delay: 0.2s; */
+  transition: 0.5s;
+  /* transition-delay: opacity 0.3s; */
+`;
+export const PText = styled.h2`
+  position: absolute;
+  z-index: 11;
+  width: 35vw;
+  height: 30vw;
+
+  font-size: 1.5vw;
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+  color: ${colors.DARK_BLUE};
+  opacity: 0%;
+  /* margin: 20%; */
+  /* padding: 10%; */
+  margin-top: 35%;
+  overflow: wrap;
+
+  /* &:hover {
+    opacity: 100%;
+    z-index: 10;
+  } */
+  transition: 0.5s;
+  /* transition-delay: opacity 0.3s; */
 `;
 
-export const Project = styled.div`
+export const Project = styled.a`
   position: absolute;
   width: 35vw;
   height: 30vw;
@@ -265,6 +288,15 @@ export const Project = styled.div`
     height: 33vw;
     /* margin-top: 3%; */
   }
+
+  &:hover ${PText} {
+    opacity: 100%;
+    z-index: 10;
+    width: 38.5vw;
+    height: 33vw;
+    /* margin-top: 3%; */
+  }
+
   &:hover ${PTextBacking} {
     opacity: 70%;
     z-index: 10;
@@ -278,5 +310,5 @@ export const Project = styled.div`
     height: 33vw;
   }
 
-  transition: 0.3s;
+  transition: 0.5s;
 `;
