@@ -1,21 +1,30 @@
 import React from 'react';
 import { Slide , Fade} from "react-awesome-reveal"
-import { BearImg, NavButton, NavCirc, NavMenuButton } from "./SubStyles"
+import { BearImg, NavContainer, NavCirc, NavMenuButton, NavButton } from "./SubStyles"
 
 import bear from "../../Icons/bear.png"
 
-const SideMenu = () => {
+export default function SideMenu (){
+    const [show, setShow] = React.useState(false);
+
+    const handleClick = () => {
+        setShow(!show);
+        console.log(show);
+    };
     return (
-        <NavButton >
-            {/* <Fade direction='down' > */}
-            {/* </Fade> */}
-            <NavCirc>
+        <NavContainer OnClick={() => handleClick()} >
+            {/* <NavButton  onClick={ () => handleClick()}>
+
+            </NavButton> */}
+            <NavCirc selected={show}>
                 
-                <BearImg src= {bear}/>
-                {/* <NavMenuButton id='nav'>bruh</NavMenuButton> */}
+                {/* <NavMenuButton id='nav'>show</NavMenuButton> */}
             </NavCirc>
-        </NavButton>
+            <BearImg onClick={ () => handleClick()} src= {bear}/>
+            {/* <button onClick={() => handleClick()} style={{position: 'fixed', top:'100px'}}>bruh</button> */}
+        </NavContainer>
+        
     );
 };
 
-export default SideMenu;
+// export default SideMenu;

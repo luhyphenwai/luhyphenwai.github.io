@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { fadeIn } from "react-animations";
 import * as colors from "../../colors";
 
@@ -49,7 +49,27 @@ export const IconBackground = styled.div`
 `;
 
 // NAV MENU
-export const NavButton = styled.div`
+const circleAnimation = keyframes`
+    0% {width: 30vw; height: 30vw; border-radius: 15vw;}
+    100% {width: 200vw; height: 200vw; border-radius: 50vw;}
+    `;
+
+export const NavContainer = styled.div`
+  /* background-color: ${colors.DARK_YELLOW}; */
+  z-index: 100;
+  position: fixed;
+  bottom: -11vh;
+  right: -5.5vw;
+  width: 25vh;
+  height: 27vh;
+  /* rotate: -30deg; */
+
+  overflow: hidden;
+  transition: 0.4s;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+`;
+
+export const NavButton = styled.button`
   &:hover {
     cursor: pointer;
 
@@ -61,7 +81,7 @@ export const NavButton = styled.div`
   /* background-color: ${colors.DARK_YELLOW}; */
   z-index: 100;
   position: fixed;
-  bottom: -11vh;
+  bottom: 0vh;
   right: -5.5vw;
   width: 25vh;
   height: 27vh;
@@ -103,16 +123,16 @@ export const NavCirc = styled.div`
     background-color: ${colors.DARK_BLUE};
   } */
 
-  &:hover ${BearImg} {
+  /* &:hover ${BearImg} {
     cursor: pointer;
     width: 31vh;
     height: 30vh;
     rotate: -40deg;
-  }
+  } */
   overflow: hidden;
   white-space: nowrap;
 
-  /* background-color: ${colors.DARK_YELLOW}; */
+  background-color: ${colors.DARK_YELLOW};
   z-index: 88;
   position: fixed;
   bottom: -11vh;
@@ -122,7 +142,22 @@ export const NavCirc = styled.div`
   border-radius: 15vh;
 
   transition: 0.4s;
-  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  animation: ${(props) => (props.selected ? styles : "")};
+`;
+const flash = keyframes`
+  from {
+      opacity: 0;
+      }
+
+      to {
+      opacity: 1;
+      }
+`;
+const styles = css`
+  /* background-color: pink; */
+  animation: ${flash} 0.3s linear 3;
 `;
 
 export const NavMenuButton = styled.div`
