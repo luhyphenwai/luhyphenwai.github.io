@@ -270,6 +270,7 @@ export const Project = styled.a`
   height: 30vw;
   overflow: hidden;
   margin-left: 1.25vw;
+  z-index: 10;
 
   &:hover {
     color: transparent;

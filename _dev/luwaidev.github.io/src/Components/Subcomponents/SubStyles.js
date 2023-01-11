@@ -96,12 +96,12 @@ export const BearImg = styled.img`
   width: 15vw;
   &:hover {
     cursor: pointer;
-    width: 31vh;
-    height: 30vh;
+    /* width: 31vh;
+    height: 30vh; */
     rotate: -40deg;
   }
   rotate: -30deg;
-  z-index: 1001;
+  z-index: 1002;
   position: fixed;
   bottom: -11vh;
   right: -12vh;
@@ -136,7 +136,7 @@ export const NavCirc = styled.div`
   white-space: nowrap;
 
   background-color: ${colors.DARK_YELLOW};
-  z-index: 1000;
+  z-index: ${(props) => (props.selected ? "1000" : "-100")};
   position: fixed;
   bottom: ${(props) => (props.selected ? "-261vh" : "-11vh")};
   right: ${(props) => (props.selected ? "-262vh" : "-12vh")};
@@ -144,7 +144,7 @@ export const NavCirc = styled.div`
   height: ${(props) => (props.selected ? "500vh" : "0vw")};
   border-radius: ${(props) => (props.selected ? "250vh" : "0vw")};
 
-  transition: 0.5s;
+  transition: 0.2s;
   transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 
   animation: ${(props) => (props.selected ? styles : "")};
@@ -177,7 +177,70 @@ export const NavMenuButton = styled.div`
 `;
 
 export const MenuContainer = styled.div`
+  z-index: ${(props) => (props.selected ? "1001" : "-100")};
+  position: fixed;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
+  top: ${(props) => (props.selected ? "0vh" : "-100vh")};
+  left: 0;
+
+  padding: auto;
+`;
+
+export const MenuButton = styled.a`
+  z-index: ${(props) => (props.selected ? "1001" : "-100")};
+  background-color: ${colors.LIGHT_YELLOW};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 10vw;
+  height: 10vw;
+  margin: 3vw;
+  margin-top: ${(props) => (props.selected ? "0" : "-1vh")};
+
+  opacity: ${(props) => (props.selected ? "100%" : "0%")};
+  transition: 0.2s;
+  border-radius: 3vw;
+
+  padding: auto;
+
+  text-align: center;
+
+  font-family: "Fredoka One", cursive;
+  font-size: 3vw;
+  color: ${colors.DARK_BLUE};
+
+  &:hover {
+    cursor: pointer;
+    width: 12vw;
+    height: 12vw;
+    margin: 2vw;
+    margin-top: -1vw;
+  }
+
+  /* transition-delay: 0.4s; */
+`;
+export const MailButton = styled.a`
+  z-index: ${(props) => (props.selected ? "1001" : "-100")};
+  background-color: ${colors.LIGHT_YELLOW};
+  width: 15vw;
+  height: 8vh;
+  position: fixed;
+  bottom: 2.5vh;
+  left: 42.5vw;
+
+  font-family: "Fredoka One", cursive;
+  font-size: 2vw;
+  color: ${colors.DARK_BLUE};
+  /* display: table-cell; */
+  line-height: 8vh;
+  text-align: center;
+  /* vertical-align: middle; */
+  opacity: ${(props) => (props.selected ? "100%" : "0%")};
+  border-radius: 3vw;
 `;
