@@ -16,10 +16,7 @@ export default function SideMenu (){
             {/* <NavButton  onClick={ () => handleClick()}>
 
             </NavButton> */}
-            <NavCirc selected={show}>
-                
-                {/* <NavMenuButton id='nav'>show</NavMenuButton> */}
-            </NavCirc>
+            <NavCirc selected={show}/>
             <BearImg onClick={ () => handleClick()} src= {bear}/>
             {/* <button onClick={() => handleClick()} style={{position: 'fixed', top:'100px'}}>bruh</button> */}
         </NavContainer>

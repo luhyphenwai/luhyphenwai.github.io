@@ -49,9 +49,10 @@ export const IconBackground = styled.div`
 `;
 
 // NAV MENU
-const circleAnimation = keyframes`
-    0% {width: 30vw; height: 30vw; border-radius: 15vw;}
-    100% {width: 200vw; height: 200vw; border-radius: 50vw;}
+const BearAppear = keyframes`
+    0% {rotate: -90deg; bottom: -20vh}
+    80% {rotate: -90deg; bottom: -20vh}
+    100% {rotate: -30deg; bottom: -11vh}
     `;
 
 export const NavContainer = styled.div`
@@ -100,7 +101,7 @@ export const BearImg = styled.img`
     rotate: -40deg;
   }
   rotate: -30deg;
-  z-index: 100;
+  z-index: 1001;
   position: fixed;
   bottom: -11vh;
   right: -12vh;
@@ -108,6 +109,8 @@ export const BearImg = styled.img`
   height: 30vh;
   transition: 0.4s;
   transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: ${BearAppear} 3.5s ease-in-out;
+  /* animation-delay: 2s; */
 `;
 
 export const NavCirc = styled.div`
@@ -133,16 +136,16 @@ export const NavCirc = styled.div`
   white-space: nowrap;
 
   background-color: ${colors.DARK_YELLOW};
-  z-index: 88;
+  z-index: 1000;
   position: fixed;
-  bottom: -11vh;
-  right: -12vh;
-  width: 30vh;
-  height: 30vh;
-  border-radius: 15vh;
+  bottom: ${(props) => (props.selected ? "-261vh" : "-11vh")};
+  right: ${(props) => (props.selected ? "-262vh" : "-12vh")};
+  width: ${(props) => (props.selected ? "500vh" : "0vh")};
+  height: ${(props) => (props.selected ? "500vh" : "0vw")};
+  border-radius: ${(props) => (props.selected ? "250vh" : "0vw")};
 
-  transition: 0.4s;
-  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 
   animation: ${(props) => (props.selected ? styles : "")};
 `;
@@ -171,4 +174,10 @@ export const NavMenuButton = styled.div`
 
   transition: 0.4s;
   transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+`;
+
+export const MenuContainer = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 100vh;
 `;
