@@ -9,6 +9,7 @@ import {Bounce, Fade, Flip, JackInTheBox} from "react-awesome-reveal"
 import { motion, useScroll, useSpring, useTransform} from "framer-motion";
 
 import UnityPathfindingImg from '../../Images/Screenshots/Unity Pathfinding.png'
+import TyperImg from '../../Images/Screenshots/typer.png'
 
 // function getMax(num){
 //     if (num > 1){
@@ -64,8 +65,8 @@ export default function Projects(){
 
             
             <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "52.5vw", marginTop: "45vh"}}>
-              <Project>
-                  <PFrontImg src={UnityPathfindingImg}/>
+              <Project href="../Projects/Unity Pathfinding/index.html">
+                  <PFrontImg src={TyperImg}/>
                   <PBackImg />
                   <PTextBacking/>
                   <PHeader>Typer</PHeader>
