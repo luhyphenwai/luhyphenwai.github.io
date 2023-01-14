@@ -51,7 +51,7 @@ export default function Projects(){
             </ABHeader>
 
             <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "7vw", marginTop: "10vh"}}>
-              <Project href="../Projects/Unity Pathfinding">
+              <Project href="../Projects/Unity Pathfinding/index.html">
                   <PFrontImg src={UnityPathfindingImg}/>
                   <PBackImg />
                   <PTextBacking/>
