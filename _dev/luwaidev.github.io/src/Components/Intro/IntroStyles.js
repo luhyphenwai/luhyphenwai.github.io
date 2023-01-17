@@ -69,6 +69,13 @@ export const SubTitle = styled.h2`
   margin: 0;
   z-index: 1;
 `;
+export const SubHeader = styled.h1`
+  font-family: "Fredoka One", cursive;
+  color: ${colors.DARK_BLUE};
+  font-size: 2.5vw;
+  margin: 0;
+  z-index: 1;
+`;
 
 export const Text = styled.p`
   font-family: "Fredoka One", cursive;
@@ -171,12 +178,29 @@ export const Blob2 = styled.img`
   animation-timing-function: cubic-bezier(0.55, 0.33, 0.08, 0.96);
 `;
 
+export const ArrowDown = styled.a`
+  margin-top: 3vh;
+  font-size: 4vw;
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  width: 10vw;
+
+  &:hover {
+    margin-top: 4vh;
+    cursor: pointer;
+  }
+  &:hover {
+    /* margin-top: 4vh; */
+  }
+  transition: 0.2s;
+`;
 // About Me
 export const ABHeader = styled.div`
   /* position: fixed; */
   /* top: 100px;
   left: 100px; */
-  margin-left: 11vw;
+  margin-left: 5vw;
   z-index: 100;
   /* margin-bottom: 200vh; */
 `;
@@ -312,4 +336,43 @@ export const Project = styled.a`
   }
 
   transition: 0.5s;
+`;
+
+///////////////////// ME ///////////////////////
+export const MeContainer = styled.div`
+  margin-left: -1vw;
+  width: 101vw;
+  height: 90vh;
+  background-color: ${colors.DARK_YELLOW};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const MeHeader = styled.h1`
+  font-family: "Fredoka One", cursive;
+  font-size: 3vw;
+  text-align: center;
+  color: ${colors.DARK_BLUE};
+`;
+export const MeDesc = styled.p`
+  font-family: "Fredoka One", cursive;
+  font-size: 1.25vw;
+  text-align: left;
+  padding: 3vw;
+  padding-top: 0;
+  color: ${colors.DARK_BLUE};
+`;
+export const MeBack = styled.div`
+  background-color: ${colors.LIGHT_YELLOW};
+  width: 50vw;
+  height: 65vh;
+  margin-top: -5vh;
+  border-radius: 5%;
+`;
+
+export const MeImg = styled.img`
+  margin-left: 5vw;
+  height: 63vh;
+  border-radius: 5%;
 `;

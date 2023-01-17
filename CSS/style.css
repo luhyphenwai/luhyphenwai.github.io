@@ -61,6 +61,7 @@ table {
 .wrapper{
 	width: 100%;
 	margin-left: 0%;
+	/* overflow-y: hidden; */
 }
 
 /* Main navbar */
@@ -523,4 +524,72 @@ p{
 }
 canvas{
     border: 1px solid black;
+}
+.bear_img{ 
+	width: 15vw;
+
+
+	rotate: -30deg;
+	z-index: 1002;
+	position: fixed;
+	bottom: -11vh;
+	right: -12vh;
+	width: 30vh;
+	height: 30vh;
+	transition: 0.4s;
+	transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+	/* animation: ${BearAppear} 3.5s ease-in-out; */
+	/* animation-delay: 2s; */
+}
+.bear_img:hover {
+	cursor: pointer;
+		/* width: 31vh;
+	    height: 30vh; */
+		rotate: -40deg;
+}
+
+.blob1{ 
+	size: fit-content;
+	width: 150vw;
+	/* height: 300vh; */
+	position: absolute;
+	justify-content: center;
+	display: flex;
+	transform: rotate(6deg);
+	top: 40vh;
+	left: -25vw;
+	z-index: -1;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+/* animation: 2.5s ${blob1In};
+animation-timing-function: cubic-bezier(0.55, 0.33, 0.08, 0.96); */
+}
+.blob2{ size: fit-content;
+width: 150vw;
+/* height: 300vh; */
+position: absolute;
+justify-content: center;
+display: flex;
+/* transform: rotate(0deg); */
+top: 50vh;
+left:50vh;
+z-index: -2;
+margin: 0;
+padding: 0;
+overflow: hidden;
+/* animation: 2.5s ${blob2In};
+animation-timing-function: cubic-bezier(0.55, 0.33, 0.08, 0.96); */
+}
+
+.title{
+	font-family: "Fredoka One", cursive;
+	color: #5690BF;
+	font-size: 5vw;
+}
+.descriptionText {
+	font-family: "Fredoka One", cursive;
+	color: #5690BF;
+	font-size: 1.6vw;
 }

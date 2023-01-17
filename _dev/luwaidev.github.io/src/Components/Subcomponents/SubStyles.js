@@ -135,16 +135,16 @@ export const NavCirc = styled.div`
   overflow: hidden;
   white-space: nowrap;
 
-  background-color: ${colors.DARK_YELLOW};
+  background-color: ${colors.LIGHT_BLUE};
   z-index: ${(props) => (props.selected ? "1000" : "-100")};
   position: fixed;
-  bottom: ${(props) => (props.selected ? "-261vh" : "-11vh")};
-  right: ${(props) => (props.selected ? "-262vh" : "-12vh")};
-  width: ${(props) => (props.selected ? "500vh" : "0vh")};
-  height: ${(props) => (props.selected ? "500vh" : "0vw")};
+  bottom: ${(props) => (props.selected ? "-761vh" : "-11vh")};
+  right: ${(props) => (props.selected ? "-762vh" : "-12vh")};
+  width: ${(props) => (props.selected ? "1000vh" : "0vh")};
+  height: ${(props) => (props.selected ? "1000vh" : "0vw")};
   border-radius: ${(props) => (props.selected ? "250vh" : "0vw")};
 
-  transition: 0.2s;
+  transition: 1s;
   transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 
   animation: ${(props) => (props.selected ? styles : "")};
@@ -169,42 +169,53 @@ export const NavMenuButton = styled.div`
   position: fixed;
   top: 11vh;
   left: 12vh;
-  width: 30vh;
-  height: 30vh;
+  width: 40vh;
+  height: 40vh;
 
-  transition: 0.4s;
+  transition: 0.25s;
   transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 `;
 
 export const MenuContainer = styled.div`
-  z-index: ${(props) => (props.selected ? "1001" : "-100")};
+  z-index: ${(props) => (props.selected ? "1001" : "1001")};
+  background-color: ${colors.LIGHT_YELLOW};
   position: fixed;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  top: ${(props) => (props.selected ? "0vh" : "-100vh")};
+  justify-content: left;
+  flex-direction: column;
+  align-items: left;
+  /* margin-left: 5vw; */
+  margin-left: ${(props) => (props.selected ? "5vw" : "-15vw")};
+  margin-top: 15vh;
+  width: 30vw;
+  height: 70vh;
+  top: ${(props) => (props.selected ? "0vh" : "0vh")};
+  opacity: ${(props) => (props.selected ? "100%" : "0%")};
   left: 0;
+
+  border-radius: 3vw;
+  transition: 0.4s;
 
   padding: auto;
 `;
 
 export const MenuButton = styled.a`
-  z-index: ${(props) => (props.selected ? "1001" : "-100")};
-  background-color: ${colors.LIGHT_YELLOW};
+  z-index: ${(props) => (props.selected ? "1001" : "1001")};
+  /* background-color: ${colors.LIGHT_YELLOW}; */
 
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 10vw;
-  height: 10vw;
-  margin: 3vw;
-  margin-top: ${(props) => (props.selected ? "0" : "-1vh")};
-
+  /* align-items: center; */
+  justify-content: left;
+  text-decoration: none;
+  width: 15vw;
+  height: 5vw;
+  /* margin: 1vw; */
+  margin-left: 3vw;
+  margin-top: ${(props) => (props.selected ? "3vh" : "3vh")};
+  /* margin-top: "3vh"; */
   opacity: ${(props) => (props.selected ? "100%" : "0%")};
-  transition: 0.2s;
+  transition: 0.3s;
+
   border-radius: 3vw;
 
   padding: auto;
@@ -217,22 +228,25 @@ export const MenuButton = styled.a`
 
   &:hover {
     cursor: pointer;
-    width: 12vw;
-    height: 12vw;
-    margin: 2vw;
-    margin-top: -1vw;
+    /* width: 18vw;
+    height: 18vw;
+    margin: 2vw; */
+    /* margin-top: -1vw; */
+    font-size: 3.5vw;
+    margin-left: 4vw;
   }
 
   /* transition-delay: 0.4s; */
 `;
 export const MailButton = styled.a`
-  z-index: ${(props) => (props.selected ? "1001" : "-100")};
+  z-index: ${(props) => (props.selected ? "1001" : "1001")};
   background-color: ${colors.LIGHT_YELLOW};
   width: 15vw;
   height: 8vh;
   position: fixed;
   bottom: 2.5vh;
   left: 42.5vw;
+  top: ${(props) => (props.selected ? "90vh" : "105vh")};
 
   font-family: "Fredoka One", cursive;
   font-size: 2vw;
@@ -240,7 +254,22 @@ export const MailButton = styled.a`
   /* display: table-cell; */
   line-height: 8vh;
   text-align: center;
-  /* vertical-align: middle; */
+
+  margin-top: ${(props) => (props.selected ? "0" : "-1vh")};
   opacity: ${(props) => (props.selected ? "100%" : "0%")};
+  transition: 0.4s;
+
+  align-items: center;
+  justify-content: center;
   border-radius: 3vw;
+  &:hover {
+    cursor: pointer;
+    width: 18vw;
+    height: 10vh;
+    /* display: table-cell; */
+    line-height: 10vh;
+    left: 41.5vw;
+    bottom: 1.5vh;
+    top: 89vh};
+  }
 `;

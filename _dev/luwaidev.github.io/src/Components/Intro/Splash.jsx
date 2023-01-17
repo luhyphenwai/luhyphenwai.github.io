@@ -1,7 +1,8 @@
 import React from 'react'
-import {Section, Flexbox,Container, Title, SubTitle, SubTextContainer,LeftSubText, RightSubText, Blob1, Blob2, ABHeader, Letter, TextSection} from "./IntroStyles.js"
+import {Section, Flexbox,Container, Title, SubTitle, SubTextContainer,LeftSubText, RightSubText, Blob1, Blob2, ABHeader, Letter, TextSection, ArrowDown} from "./IntroStyles.js"
 import * as colors from '../../colors.js'
 
+import { Icon } from '@iconify/react'
 import {AttentionSeeker, Bounce, Fade, Flip, JackInTheBox, Slide, Zoom} from "react-awesome-reveal"
 
 const Splash = (props) => (
@@ -51,7 +52,15 @@ const Splash = (props) => (
               </Fade>
               </AttentionSeeker>
             </RightSubText>
-        </SubTextContainer>
+          </SubTextContainer>
+            <Flexbox style={{position:'absolute', width: "62vw"}}>
+              <Fade direction='down' delay={3500} duration={1000}>
+                  <ArrowDown>
+                    <Icon icon="material-symbols:arrow-downward-rounded" color={colors.DARK_BLUE} /> 
+                  </ArrowDown>
+              </Fade>
+            </Flexbox>
+          
         </Container>
       </Flexbox>
       

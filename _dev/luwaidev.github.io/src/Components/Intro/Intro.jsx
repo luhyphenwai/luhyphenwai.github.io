@@ -7,6 +7,7 @@ import Links from '../Subcomponents/Links.jsx'
 import SideMenu from "../Subcomponents/SideMenu.jsx"
 import Splash from './Splash.jsx'
 import Projects from './Projects.jsx'
+import Me from './Me.jsx'
 import * as colors from '../../colors.js'
 
 import {} from "react-awesome-reveal"
@@ -29,8 +30,8 @@ const background = {
   position: "absolute",
   width: "100vw",
   height: "100vh",
-  borderRadius: " 20vw 20vw 0 0",
-  top: "110vh",
+  borderRadius: " 0vw 30vw 0 0",
+  top: "100vh",
   left:"0"
 }
 
@@ -59,6 +60,7 @@ const Intro = (props) => (
         <SubTitle>3D Modeling and making art</SubTitle>
       </ABHeader>
     </Section> */}
+    <Me/>
 
   </>
 );
