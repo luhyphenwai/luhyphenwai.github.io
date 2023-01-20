@@ -366,13 +366,13 @@ export const MeDesc = styled.p`
 export const MeBack = styled.div`
   background-color: ${colors.LIGHT_YELLOW};
   width: 50vw;
-  height: 65vh;
+  height: 35vw;
   margin-top: -5vh;
   border-radius: 5%;
 `;
 
 export const MeImg = styled.img`
   margin-left: 5vw;
-  height: 63vh;
+  height: 35vw;
   border-radius: 5%;
 `;
