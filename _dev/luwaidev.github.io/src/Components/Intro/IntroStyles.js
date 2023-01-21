@@ -213,6 +213,7 @@ export const PFrontImg = styled.img`
   border-radius: 10px;
   background-color: white;
   transition: 0.5s;
+  object-fit: cover;
 `;
 
 export const PBackImg = styled.img`
@@ -228,6 +229,7 @@ export const PBackImg = styled.img`
     width: 38.5vw;
     height: 33vw;
   }
+  object-fit: cover;
   transition: 0.5s;
 `;
 export const PTextBacking = styled.div`
@@ -338,15 +340,30 @@ export const Project = styled.a`
   transition: 0.5s;
 `;
 
+export const DisplayImg = styled.img`
+  position: absolute;
+  width: 35vw;
+  margin-left: 1.25vw;
+  border-radius: 4%;
+  &:hover {
+    width: 37.5vw;
+    margin-left: 0vw;
+  }
+
+  transition: 0.5s;
+`;
+
 ///////////////////// ME ///////////////////////
 export const MeContainer = styled.div`
   margin-left: -1vw;
   width: 101vw;
   height: 90vh;
+  margin-bottom: -10vh;
   background-color: ${colors.DARK_YELLOW};
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;
 `;
 
 export const MeHeader = styled.h1`

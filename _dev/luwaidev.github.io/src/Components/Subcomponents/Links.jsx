@@ -36,23 +36,35 @@ export default function Links(){
             <IconContainer as={motion.div} >
                 <IconBackground as={motion.div} style={{ scale: y }}>
                     <Fade direction='down' duration={600} delay={2200} dampen={0.1} cascade triggerOnce>
-                        <IconLinks as={motion.div}  href="https://luwaidev.itch.io/">
-                            <Icon icon="simple-icons:itchdotio" color={colors.DARK_BLUE} /> 
-                        </IconLinks>
-                        <IconLinks as={motion.div}  href='https://twitter.com/luwaidev'>
-                            <Icon icon="ri:twitter-fill" color={colors.DARK_BLUE}  />
-                        </IconLinks>
-                        <IconLinks as={motion.div}  href='https://github.com'>
-                            <Icon icon="mdi:github" color={colors.DARK_BLUE}  />
-                        </IconLinks>
+                        <a href="https://luwaidev.itch.io/" target="_blank" rel="noopener noreferrer">
+                            <IconLinks as={motion.div}  href="https://luwaidev.itch.io/">
+                                <Icon icon="simple-icons:itchdotio" color={colors.DARK_BLUE} /> 
+                            </IconLinks>
+                        </a>
+                        <a href="https://twitter.com/luwaidev" target="_blank" rel="noopener noreferrer">
+                            <IconLinks as={motion.div}  href='https://twitter.com/luwaidev'>
+                                <Icon icon="ri:twitter-fill" color={colors.DARK_BLUE}  />
+                            </IconLinks> 
+                        </a>
                         
-                        <IconLinks as={motion.div}  href='https://www.instagram.com/luwaidev/'>
-                            <Icon icon="ri:instagram-line" color={colors.DARK_BLUE} />
-                        </IconLinks>
+                        <a href="https://github.com/luwaidev" target="_blank" rel="noopener noreferrer">
+                            <IconLinks as={motion.div}  href='https://github.com'>
+                                <Icon icon="mdi:github" color={colors.DARK_BLUE}  />
+                            </IconLinks>
+                        </a>
                         
-                        <IconLinks as={motion.div} href='https://www.linkedin.com/in/lu-wai-wong-27a2661b7/'>
-                            <Icon icon="mdi:linkedin" color={colors.DARK_BLUE} />    
-                        </IconLinks>
+                        <a href="https://www.instagram.com/luwaidev/" target="_blank" rel="noopener noreferrer">
+                            <IconLinks as={motion.div}  href='https://www.instagram.com/luwaidev/'>
+                                <Icon icon="ri:instagram-line" color={colors.DARK_BLUE} />
+                            </IconLinks>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/lu-wai-wong-27a2661b7/" target="_blank" rel="noopener noreferrer">
+                                
+                            <IconLinks as={motion.div} href='https://www.linkedin.com/in/lu-wai-wong-27a2661b7/'>
+                                <Icon icon="mdi:linkedin" color={colors.DARK_BLUE} />    
+                            </IconLinks>
+                        </a>
                     </Fade>
                     
                 </IconBackground>

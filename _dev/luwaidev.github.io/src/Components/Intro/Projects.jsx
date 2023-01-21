@@ -2,7 +2,7 @@ import React from 'react'
 import { useRef } from 'react';
 
 
-import {Section,SubTitle, ABHeader,  TextSection, Project, PFrontImg, PBackImg, PTextBacking, PHeader, PText, SubHeader} from "./IntroStyles.js"
+import {Section,SubTitle, ABHeader,  TextSection, Project, PFrontImg, PBackImg, PTextBacking, PHeader, PText, SubHeader, DisplayImg} from "./IntroStyles.js"
 import * as colors from '../../colors.js'
 
 import {Bounce, Fade, Flip, JackInTheBox, Zoom} from "react-awesome-reveal"
@@ -15,6 +15,13 @@ import SimImg from '../../Images/Screenshots/SIMULATION.png'
 import ReturnImg from '../../Images/Screenshots/RETURN.gif'
 import hijakImg from '../../Images/Screenshots/hijack.gif'
 import b2 from '../../Icons/Blobs/Ellipse 2.png';
+import f9 from '../../Images/3D Models/LP Falcon 9 in Clouds Square.png'
+import beach from '../../Images/3D Models/Demo.png'
+import liminal from '../../Images/3D Models/liminal with doors.png'
+import circles from '../../Images/3D Models/12 Circles.png'
+import starship from '../../Images/3D Models/cover.png'
+import heAR from '../../Images/Screenshots/heAR.png'
+import escapAR from '../../Images/Screenshots/escapar.gif'
 
 // function getMax(num){
 //     if (num > 1){
@@ -30,7 +37,7 @@ const background = {
   zIndex: -1,
   position: "absolute",
   width: "200vw",
-  height: "400vh",
+  height: "200vh",
   // marginLeft:"-10vw"
   // borderRadius: " 40% 40% 0 0",
   top: "200vh",
@@ -41,7 +48,7 @@ const background2 = {
   zIndex: -1,
   position: "absolute",
   width: "100vw",
-  height: "200vh",
+  height: "400vh",
   // marginLeft:"-10vw"
   // borderRadius: " 40% 40% 0 0",
   top: "280vh",
@@ -64,7 +71,7 @@ export default function Projects(){
           <div style={background} ></div>
           <img style={blob} src={b2} alt={blob}/>
           <div style={background2} ></div>
-          <Section style={{height:"300vh", display:"block"}}>
+          <Section style={{height:"fit-content", display:"block"}}>
             <ABHeader>
               <TextSection >
                 <Fade direction='left' triggerOnce={true}>
@@ -144,7 +151,7 @@ export default function Projects(){
             </div>
             </Fade>
             
-            <Fade  delay={1000} duration={1000} damping={0.85} cascade={true} triggerOnce={true}>
+            <Fade  delay={2000} duration={1000} damping={0.85} cascade={true} triggerOnce={true}>
               <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "6vw", marginTop: "100vh"}}>
               <Project href="https://luwaidev.itch.io/the-office">
                   <PFrontImg src={ReturnImg}/>
@@ -170,9 +177,73 @@ export default function Projects(){
             </div>
             </Fade>
              
-              {/* <SubTitle>3D Modeling and making art</SubTitle>
-              
-              <SubTitle>and doing hackathons</SubTitle> */}
+            <div style={{height: "180vh"}}></div>
+            <div style={{marginLeft:"10vw"}}>
+              <JackInTheBox  triggerOnce={true}>
+                <Bounce triggerOnce={true}>
+                  <SubTitle>3D Modeling and making art</SubTitle>
+                </Bounce>
+              </JackInTheBox>
+            </div>
+            <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "50vw", marginTop: "20vh"}}>
+              <DisplayImg src={f9} href="https://twitter.com/luwaidev">
+
+              </DisplayImg>
+            </div>
+
+            <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "6vw", marginTop: "10vh"}}>
+              <DisplayImg src={starship } href="https://twitter.com/luwaidev">
+
+              </DisplayImg>
+            </div>
+             <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "6vw", marginTop: "55vh"}}>
+              <DisplayImg src={liminal} href="https://twitter.com/luwaidev">
+
+              </DisplayImg>
+            </div>
+            <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "50vw", marginTop: "100vh"}}>
+              <DisplayImg src={beach} href="https://twitter.com/luwaidev">
+
+              </DisplayImg>
+            </div>
+<div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "6vw", marginTop: "100vh"}}>
+              <DisplayImg src={circles} href="https://twitter.com/luwaidev">
+
+              </DisplayImg>
+            </div>
+
+            <div style={{height: "180vh"}}></div>
+            <div style={{marginLeft:"60vw"}}>
+              <JackInTheBox  triggerOnce={true}>
+                <Bounce triggerOnce={true}>
+                  <SubTitle>and doing hackathons</SubTitle>
+                </Bounce>
+              </JackInTheBox>
+            </div>
+
+               <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "50vw", marginTop: "10vh"}}>
+              <Project href="https://devpost.com/software/escapar">
+                  <PFrontImg src={escapAR}/>
+                  <PBackImg />
+                  <PTextBacking/>
+                  <PHeader>EscapAR</PHeader>
+                  <PText>
+                    A multiplayer AR escape room <br/> made for Hack Western 9. 
+                  </PText>
+              </Project>
+            </div>
+             <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "6vw", marginTop: "10vh"}}>
+              <Project href="https://devpost.com/software/hear-1pibsd">
+                  <PFrontImg src={heAR}/>
+                  <PBackImg />
+                  <PTextBacking/>
+                  <PHeader>heAR</PHeader>
+                  <PText>
+                    An app using AR and NLP to <br/>summarize, translate and analyze <br/>conversations  and lectures made for <br/> Hack the North 2022. 
+                  </PText>
+              </Project>
+            </div>
+            <div style={{height: "80vh"}}></div>
           </Section>
         </>
     );

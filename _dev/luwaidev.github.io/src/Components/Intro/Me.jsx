@@ -20,35 +20,21 @@ import b1 from '../../Icons/Blobs/Ellipse 1.png';
 //     }
 // }
 
-const background = {
-  backgroundColor: colors.DARK_YELLOW,
-  zIndex: -1,
-  position: "absolute",
-  width: "200vw",
-  height: "400vh",
-  // marginLeft:"-10vw"
-  // borderRadius: " 40% 40% 0 0",
-  top: "200vh",
-  left: "0"
-}
-const background2 = {
-  backgroundColor: colors.LIGHT_BLUE,
-  zIndex: -1,
-  position: "absolute",
-  width: "200vw",
-  height: "400vh",
-  // marginLeft:"-10vw"
-  // borderRadius: " 40% 40% 0 0",
-  top: "280vh",
-  left: "0"
-}
 
 const blob ={
   position : "absolute",
   zIndex: -1,
   rotate: "170deg",
   width: "150vw",
-  top:"370vh",
+  top:"620vh",
+  left:"-10vw"
+}
+const blob2 ={
+  position : "absolute",
+  zIndex: -1,
+  rotate: "170deg",
+  width: "250vh",
+  top:"580vh",
   left:"-10vw"
 }
 export default function Me(){
@@ -59,6 +45,7 @@ export default function Me(){
         <MeContainer>
           
           {/* <img style={blob} src={b1} alt={blob}/> */}
+          <img style={blob2} src={b1} alt={blob2}/>
           <Bounce duration={1500}> <MeBack>
             {/* <Zoom  cascade={true}  delay={800} duration={800}> */}
               <MeHeader>About Me</MeHeader>
