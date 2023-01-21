@@ -1,0 +1,15 @@
+
+body {
+    background: #FFEEDD;
+    /* margin: 0; */
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    animation-name: body;
+    animation-duration: 10s;
+}
+
+@keyframes body {
+    from{overflow-y: hidden}
+    to {overflow-y: scroll}
+}
