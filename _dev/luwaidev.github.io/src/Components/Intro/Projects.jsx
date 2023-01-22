@@ -36,7 +36,7 @@ const background = {
   backgroundColor: colors.DARK_YELLOW,
   zIndex: -1,
   position: "absolute",
-  width: "200vw",
+  width: "100vw",
   height: "200vh",
   // marginLeft:"-10vw"
   // borderRadius: " 40% 40% 0 0",

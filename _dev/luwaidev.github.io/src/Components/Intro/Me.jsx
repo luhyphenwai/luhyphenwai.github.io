@@ -34,8 +34,9 @@ const blob2 ={
   zIndex: -1,
   rotate: "170deg",
   width: "250vh",
-  top:"580vh",
-  left:"-10vw"
+  top:"595vh",
+  left:"-10vw",
+  overflow: "hidden"
 }
 export default function Me(){
 
