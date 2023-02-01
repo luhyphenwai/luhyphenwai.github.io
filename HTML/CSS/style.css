@@ -1,0 +1,595 @@
+/* Copied code to reset stylesheet */
+html, body, div, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Own style sheet*/
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+	src: local('Material Icons'),
+	  local('MaterialIcons-Regular'),
+	  url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+	  url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+	  url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+/* Own classes*/
+.wrapper{
+	width: 100%;
+	margin-left: 0%;
+	/* overflow-y: hidden; */
+}
+
+/* Main navbar */
+.topbar {
+	width: 100%;
+	height: 100px;
+	background-color : white;
+    position: fixed;
+	z-index: 100;
+	transition: 0.5s;
+}
+.left-text{
+	font-family: 'Montserrat', sans-serif;
+	color:  black;
+	font-size: 30px;
+	display: block;
+	text-decoration: none;
+
+	margin-top: 35px;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	margin-left: 2%;
+	float: left;
+	
+	transition: 0.5s;
+}
+.left-text:hover {
+	
+	margin-top: 32.5px;
+	margin-left: 1.5%;
+	font-size: 35px;
+}
+.right-box{
+	display: flex;
+	justify-content:flex-end;
+	height: 100px;
+	transition: height 0.5s;
+}
+.right-item{
+	font-family: 'Montserrat', sans-serif;
+	font-size:30px;
+	display: block;
+	color: black;
+	text-decoration: none;
+
+	
+	margin-top: 35px;
+	margin-bottom: 30px;
+	margin-left: 15px;
+	padding-right: 6px;
+	margin-right: 6px;
+	transition: 0.5s;
+}
+.right-item:hover{
+	margin-top: 32px;
+	font-size: 35px;
+	margin-left: 17px;
+	padding-right: 6px;
+}
+.material-icons.right-item{
+	margin-right: 3.5%;
+	font-size: 36px;
+	margin-top: 32px;
+	margin-left: 30px;
+	margin-bottom: 33px;
+}
+.material-icons.right-item:hover{
+	margin-top: 30px;
+	margin-right: 3.5%;
+	margin-left: 30px;
+	font-size: 42px;
+}
+
+.line {
+	background-color: black;
+	width: 95%;
+	height: 2px;
+	margin-left: 2.5%;
+
+	transition: 0.5s;
+}
+
+/* Minimized nav */
+.topbar-min {
+	width: 100%;
+	height: 75px;
+	background-color : white;
+    position: fixed;
+	transition: height 0.5s;
+	z-index: 100;
+	transition: 0.5s;
+}
+.left-text-min{
+	font-family: 'Montserrat', sans-serif;
+	color:  black;
+	font-size: 25px;
+	display: block;
+	text-decoration: none;
+
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding: 0 15px;
+	margin-left: 1.75%;
+	float: left;
+	
+	transition: 0.5s;
+}
+.left-text-min:hover {
+	
+	margin-top: 22.5px;
+	margin-left: 1.5%;
+	font-size: 30px;
+}
+.right-box-min{
+	display: flex;
+	justify-content:flex-end;
+	height: 75px;
+	transition: 0.5s;
+}
+.right-item-min{
+	font-family: 'Montserrat', sans-serif;
+	font-size:25px;
+	display: block;
+	color: black;
+	text-decoration: none;
+
+	
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-right: 3%;
+	padding: 0, 20px;
+	
+	transition: 0.5s;
+}
+.right-item-min:hover{
+	font-size: 35px;
+}
+.material-icons.right-item-min{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 26px;
+}
+.material-icons.right-item-min:hover{
+	margin-right: 2.75%;
+	margin-top: 20px;
+	font-size: 36px;
+}
+
+.line-min {
+	background-color: black;
+	width: 100%;
+	height: 2px;
+	transition: 0.5s;
+}
+
+.titleText{
+	margin-top: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+.descriptionText{
+	margin-top: 20;
+}
+
+.section{
+	width:100%; 
+	height: 600px;; 
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.main{
+	background-color: aliceblue;
+	height: 100%;
+	width: 70%;
+}
+
+/* Side Menu */
+.menu {
+	position: fixed;
+	margin-left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+
+	overflow-x: hidden;
+	transition: margin-left 0.5s, width 0.5s;
+	z-index: 100;
+}
+.menu-hidden{
+	position: fixed;
+	margin-left: 100%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	
+	overflow-x: hidden;
+	transition: 0.5s;
+	z-index: 100;
+}
+.material-icons.menu-toggle{
+	width: 36px;
+	height: 36px;
+	font-size: 36px;
+	text-decoration: none;
+	display: block;
+	color: white;
+	
+	transition: 0.5s;
+}
+
+.material-icons.menu-toggle:hover{
+	color: white;
+	transform: rotate(180deg);
+	
+	transition: 0.5s;
+}
+
+.menu-topbar{
+	display: flex;
+	justify-content: space-between;
+	width: 95vw;
+	margin-top: 2.5vh;
+	margin-left: 2vw;
+	height: 10vh;
+}
+.topleft-text{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	color: white;
+}
+.topleft-text:visited{
+	color: white;
+}
+
+.menu-main{
+	display: flex;
+	justify-content: center;
+	width: 90vw;
+	height: 70vh;
+	margin-left: 5vw;
+}
+.menu-section{
+	width: 35%;
+	height: 35%;
+	margin: 2%;
+	background-color: white;
+	outline: 2px solid white;
+
+	transition: 0.5s;
+}
+.menu-section:hover{
+	background-color: black;
+}
+.menu-section-text{
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 45px;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+}
+.menu-section-text:hover{
+	color: white;
+}
+
+.menu-bottombar{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 5vh;
+}
+.menu-bottombar-text{
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 7.5vh;
+	height: 2.5vh;
+	width: 100%;
+}
+.material-icons.menu-bottombar-item{
+	font-size: 48px;
+	height: 48px;
+	width: 48px;
+	color: white;
+	transition: 0.1s;
+}
+.menu-bottombar-item{
+	font-size: 48px;
+	height: 48px;
+	width: 48px;
+	color: white;
+}
+.bottom-image{
+	color: white;
+	margin: 4px;
+	min-width: 40px;
+	min-height: 40px;
+	cursor: pointer;
+}
+
+
+/* animations */
+.sectionline {
+    background-color: black;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    width: 90vw;
+    height: 2px;
+
+    transition: 1s;
+}
+.sectionline-min {
+    background-color: black;
+    margin-top: 50px;
+    margin-bottom: 75px;
+
+    width: 0vw;
+    height: 2px;
+
+    transition: 1s;
+}
+.fadeIn{
+	animation: fadeIn ease 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+.fadeOut{
+	animation: fadeOut ease 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+/* Section button animations */
+.section{
+	margin: 0;
+	height: 700px;
+	z-index: -10;
+	transition: 1s;
+}
+.flexbox-container{
+	display: flex;
+	justify-content: center;
+	width: 95vw;
+	margin-left: 2.5vw;
+}
+.section-button{
+	width: 35%;
+	height: 225px;
+	margin: 2%;
+	background-color: white;
+	outline: 2px solid white;
+
+	transition: 0.5s;
+}
+.section-button:hover{
+	background-color: black;
+}
+.section-button-text{
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	opacity: 1;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 45px;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+}
+.section-button-text-black{
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	opacity: 0;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 45px;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+}
+.section-button-text:hover{
+	color: white;
+}
+
+/* Tag stylsheets */
+
+body {
+	animation: fadeInAnimation ease 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	overflow-x: hidden;
+}
+
+
+a{
+	text-decoration: none;
+}
+a:visited{
+	color: black;
+}
+
+p{
+	
+	
+	font-family: 'Montserrat', sans-serif;
+}
+
+img{
+	float: left;
+	max-width:100%;
+	max-height: 100%;
+}
+
+h1{
+	
+	font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+	font-weight: 800;
+	padding: 0 20px;
+	text-align: center;
+}
+h2{
+	
+	font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+	font-weight: 600;
+	padding: 0 20px;
+	text-align: center;
+}
+
+p{
+	font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+canvas{
+    border: 1px solid black;
+}
+.bear_img{ 
+	width: 15vw;
+
+
+	rotate: -30deg;
+	z-index: 1002;
+	position: fixed;
+	bottom: -11vh;
+	right: -12vh;
+	width: 30vh;
+	height: 30vh;
+	transition: 0.4s;
+	transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+	/* animation: ${BearAppear} 3.5s ease-in-out; */
+	/* animation-delay: 2s; */
+}
+.bear_img:hover {
+	cursor: pointer;
+		/* width: 31vh;
+	    height: 30vh; */
+		rotate: -40deg;
+}
+
+.blob1{ 
+	size: fit-content;
+	width: 150vw;
+	/* height: 300vh; */
+	position: absolute;
+	justify-content: center;
+	display: flex;
+	transform: rotate(6deg);
+	top: 40vh;
+	left: -25vw;
+	z-index: -1;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+/* animation: 2.5s ${blob1In};
+animation-timing-function: cubic-bezier(0.55, 0.33, 0.08, 0.96); */
+}
+.blob2{ size: fit-content;
+width: 150vw;
+/* height: 300vh; */
+position: absolute;
+justify-content: center;
+display: flex;
+/* transform: rotate(0deg); */
+top: 50vh;
+left:50vh;
+z-index: -2;
+margin: 0;
+padding: 0;
+overflow: hidden;
+/* animation: 2.5s ${blob2In};
+animation-timing-function: cubic-bezier(0.55, 0.33, 0.08, 0.96); */
+}
+
+.title{
+	font-family: "Fredoka One", cursive;
+	color: #5690BF;
+	font-size: 5vw;
+}
+.descriptionText {
+	font-family: "Fredoka One", cursive;
+	color: #5690BF;
+	font-size: 1.6vw;
+}
