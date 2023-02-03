@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.js": "/static/js/main.45154d77.js",
-    "static/media/12 Circles.png": "/static/media/12 Circles.d3b79a98c775c52f7a6e.png",
-    "static/media/LP Falcon 9 in Clouds Square.png": "/static/media/LP Falcon 9 in Clouds Square.7265301585fb2aa0e132.png",
-    "static/media/Demo.png": "/static/media/Demo.9a9d9ef4ad5188b4c224.png",
-    "static/media/liminal with doors.png": "/static/media/liminal with doors.f6c9f5a9f5e98c63f9fb.png",
-    "static/media/cover.png": "/static/media/cover.8e2ea4ae21d3bab72ee5.png",
-    "static/media/escapar.gif": "/static/media/escapar.f271bdd2b994c0d13049.gif",
-    "static/media/hijack.gif": "/static/media/hijack.7b5d05e10c375493eaed.gif",
-    "static/media/SIMULATION.png": "/static/media/SIMULATION.1b8c5b652328696fc7fd.png",
-    "static/media/luwai.png": "/static/media/luwai.4d2051dc6af0d0b57642.png",
-    "static/media/bear.png": "/static/media/bear.9c516a8fce48287d50d7.png",
-    "static/media/The Office.jpg": "/static/media/The Office.049244c080f3ea0a0e9d.jpg",
-    "static/media/Ellipse 1.png": "/static/media/Ellipse 1.4a9e5e92afd6a8ad295c.png",
-    "static/media/Unity Pathfinding.png": "/static/media/Unity Pathfinding.0a1d0b9f40df9d9941a1.png",
-    "static/media/Ellipse 2.png": "/static/media/Ellipse 2.fc810ebe55a4e994e4d4.png",
-    "static/media/RETURN.gif": "/static/media/RETURN.4df9996b666e0a951a7c.gif",
-    "static/media/heAR.png": "/static/media/heAR.46b8c5fcbdcbc79e423e.png",
-    "static/media/typer.png": "/static/media/typer.b782b865f3a028ecd31f.png",
-    "index.html": "/index.html",
-    "main.45154d77.js.map": "/static/js/main.45154d77.js.map"
+    "main.js": "/react-gh-pages/static/js/main.b9141852.js",
+    "static/media/12 Circles.png": "/react-gh-pages/static/media/12 Circles.d3b79a98c775c52f7a6e.png",
+    "static/media/LP Falcon 9 in Clouds Square.png": "/react-gh-pages/static/media/LP Falcon 9 in Clouds Square.7265301585fb2aa0e132.png",
+    "static/media/Demo.png": "/react-gh-pages/static/media/Demo.9a9d9ef4ad5188b4c224.png",
+    "static/media/liminal with doors.png": "/react-gh-pages/static/media/liminal with doors.f6c9f5a9f5e98c63f9fb.png",
+    "static/media/cover.png": "/react-gh-pages/static/media/cover.8e2ea4ae21d3bab72ee5.png",
+    "static/media/escapar.gif": "/react-gh-pages/static/media/escapar.f271bdd2b994c0d13049.gif",
+    "static/media/hijack.gif": "/react-gh-pages/static/media/hijack.7b5d05e10c375493eaed.gif",
+    "static/media/SIMULATION.png": "/react-gh-pages/static/media/SIMULATION.1b8c5b652328696fc7fd.png",
+    "static/media/luwai.png": "/react-gh-pages/static/media/luwai.4d2051dc6af0d0b57642.png",
+    "static/media/bear.png": "/react-gh-pages/static/media/bear.9c516a8fce48287d50d7.png",
+    "static/media/The Office.jpg": "/react-gh-pages/static/media/The Office.049244c080f3ea0a0e9d.jpg",
+    "static/media/Ellipse 1.png": "/react-gh-pages/static/media/Ellipse 1.4a9e5e92afd6a8ad295c.png",
+    "static/media/Unity Pathfinding.png": "/react-gh-pages/static/media/Unity Pathfinding.0a1d0b9f40df9d9941a1.png",
+    "static/media/Ellipse 2.png": "/react-gh-pages/static/media/Ellipse 2.fc810ebe55a4e994e4d4.png",
+    "static/media/RETURN.gif": "/react-gh-pages/static/media/RETURN.4df9996b666e0a951a7c.gif",
+    "static/media/heAR.png": "/react-gh-pages/static/media/heAR.46b8c5fcbdcbc79e423e.png",
+    "static/media/typer.png": "/react-gh-pages/static/media/typer.b782b865f3a028ecd31f.png",
+    "index.html": "/react-gh-pages/index.html",
+    "main.b9141852.js.map": "/react-gh-pages/static/js/main.b9141852.js.map"
   },
   "entrypoints": [
-    "static/js/main.45154d77.js"
+    "static/js/main.b9141852.js"
   ]
 }
