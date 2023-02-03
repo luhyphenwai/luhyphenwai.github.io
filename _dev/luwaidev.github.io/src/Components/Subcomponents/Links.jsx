@@ -59,9 +59,9 @@ export default function Links(){
                             </IconLinks>
                         </a>
                         
-                        <a href="https://www.linkedin.com/in/lu-wai-wong-27a2661b7/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/luwai/" target="_blank" rel="noopener noreferrer">
                                 
-                            <IconLinks as={motion.div} href='https://www.linkedin.com/in/lu-wai-wong-27a2661b7/'>
+                            <IconLinks as={motion.div} href='https://www.linkedin.com/in/luwai/'>
                                 <Icon icon="mdi:linkedin" color={colors.DARK_BLUE} />    
                             </IconLinks>
                         </a>

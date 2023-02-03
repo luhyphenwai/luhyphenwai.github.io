@@ -60,6 +60,11 @@ export default function SideMenu (){
                     Projects
                     </MenuButton>
                 {/* </Link> */}
+
+                <MenuButton href="https://luwai.notion.site/Lu-Wai-Wong-a29649de041e498c953c2525684dba36"selected={showObj}  target="_blank" rel="noopener noreferrer">
+                    {/* <Icon style={{fontSize:"8vw"}}icon="material-symbols:home" color={colors.DARK_BLUE}></Icon> */}
+                    Resume
+                    </MenuButton>
                 
             </MenuContainer>
 

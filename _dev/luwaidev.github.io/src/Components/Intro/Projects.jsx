@@ -126,7 +126,7 @@ export default function Projects(){
             
 
             <Fade  delay={1000} duration={1000} damping={0.85} cascade={true} triggerOnce={true}>
-              <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "6vw", marginTop: "30vh"}}>
+              <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "6vw", marginTop: "10vh"}}>
               <Project href="https://luwaidev.itch.io/the-office">
                   <PFrontImg src={OfficeImg}/>
                   <PBackImg />
@@ -149,41 +149,39 @@ export default function Projects(){
                   </PText>
               </Project>
             </div>
-            </Fade>
             
-            <Fade  delay={2000} duration={1000} damping={0.85} cascade={true} triggerOnce={true}>
-              <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "6vw", marginTop: "100vh"}}>
-              <Project href="https://luwaidev.itch.io/the-office">
-                  <PFrontImg src={ReturnImg}/>
-                  <PBackImg />
-                  <PTextBacking/>
-                  <PHeader>RETURN</PHeader>
-                  <PText>
-                    A 2D Platformer where you control time<br/>made for a jam about time
-                  </PText>
-              </Project>
-            </div>
+                <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "6vw", marginTop: "85vh"}}>
+                <Project href="https://luwaidev.itch.io/the-office">
+                    <PFrontImg src={ReturnImg}/>
+                    <PBackImg />
+                    <PTextBacking/>
+                    <PHeader>RETURN</PHeader>
+                    <PText>
+                      A 2D Platformer where you control time<br/>made for a jam about time
+                    </PText>
+                </Project>
+              </div>
 
-             <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "50vw", marginTop: "85vh"}}>
-              <Project href="https://luwaidev.itch.io/simulation">
-                  <PFrontImg src={hijakImg}/>
-                  <PBackImg />
-                  <PTextBacking/>
-                  <PHeader>Hijack</PHeader>
-                  <PText>
-                    A neon sci fi isometric turn based strategy game <br/> where you can hack the enemy units. 
-                  </PText>
-              </Project>
-            </div>
+                <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "50vw", marginTop: "85vh"}}>
+                <Project href="https://luwaidev.itch.io/simulation">
+                    <PFrontImg src={hijakImg}/>
+                    <PBackImg />
+                    <PTextBacking/>
+                    <PHeader>Hijack</PHeader>
+                    <PText>
+                      A neon sci fi isometric turn based strategy game <br/> where you can hack the enemy units. 
+                    </PText>
+                </Project>
+              </div>
             </Fade>
              
             <div style={{height: "180vh"}}></div>
             <div style={{marginLeft:"10vw"}}>
-              <JackInTheBox  triggerOnce={true}>
-                <Bounce triggerOnce={true}>
+              <Fade  triggerOnce={true}>
+                {/* <Bounce triggerOnce={true}> */}
                   <SubTitle>3D Modeling and making art</SubTitle>
-                </Bounce>
-              </JackInTheBox>
+                {/* </Bounce> */}
+              </Fade>
             </div>
             <div style={{ position: "absolute",width: "40vw", height: "40vw", marginLeft: "50vw", marginTop: "20vh"}}>
               <DisplayImg src={f9} href="https://twitter.com/luwaidev">
