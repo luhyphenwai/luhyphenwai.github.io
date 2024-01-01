@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+    <head id="showMenu">
+        <title id="title">Lu-Projects</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/Images/confounded-face.svg" />
+        <link rel="stylesheet" href="/CSS/style.css">
+        <link rel="stylesheet" href="/projects/projectspage.css">
+        <meta charset="UTF-8">
+        <!-- fonts -->
+        <!-- google stuff -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+
+        <link href='https://css.gg/instagram.css' rel='stylesheet'>
+        <meta name="viewport" content="width=1024">
+    </head>
+    <body>
+        <!-- Top menu bar -->
+        <!-- Main body, displayed on website-->
+  <body id="body">
+    <!-- Top menu bar -->
+    <nav class="topbar" id="topBar" style="animation: fade 2s backwards; animation-delay: 3s;">
+      <a class = "left-text" style="cursor: pointer;" onclick="fadeOut('/')" id="leftText"> lu-wai </a>
+        <div class="right-box"id="rightBox">
+          <a style="cursor: pointer;" onclick="fadeOut('/me')" class="right-item" id="right1">Me</a>
+          <a style="cursor: pointer;" onclick="fadeOut('/projects')" class="right-item" id="right2">Stuff</a>
+          <a style="cursor: pointer;"class="material-icons right-item" onclick="toggleMenu()"id="right3">menu</a>
+        </div>
+      <div class="line" id="line"></div>
+    </nav>
+  
+      <!-- Sidebar menu -->
+      <div class="menu-hidden" id="menu">
+        <div class="menu-topbar">
+          <a href="#" onclick="fadeOut('/')"class="topleft-text">lu-wai</a>
+          <a href="#"class="material-icons menu-toggle" onclick="toggleMenu()">close</a>
+        </div>
+  
+        <div class="menu-main">
+          <a href="#"onclick="fadeOut('/projects')" class="menu-section">
+            <div class="menu-section-text">My Stuff</div>
+          </a>
+          <a href="#"onclick="fadeOut('/me')" class="menu-section">
+            <div class="menu-section-text">Me</div>
+          </a>
+        </div>
+        <p class="menu-bottombar-text">Find me here</p>
+        <div class="menu-bottombar">
+          <a class="material-icons menu-bottombar-item" href="#" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+          <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
+          <img src="/Images/itchio-textless-white.svg" alt="Insta" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
+          <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
+        </div>
+      </div>
+
+      
+      <div class = "wrapper">
+        <!-- Border to separate top menu bar from main site-->
+        <div style="height: 100px;"></div>
+        <div class="section">
+          <div class="flexbox-container">
+            <p class="top">Welcome to</p>
+          </div>
+          <div class="flexbox-container" style="overflow-y: hidden; ">
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1s;">M</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.1s;">y</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.2s;">&nbsp; </div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.2s;">P</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.3s;">r</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.4s;">o</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.5s;">j</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.6s;">e</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.7s;">c</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.8s;">t</div>
+            </div>
+            <div class="lock">
+              <div class="letter" style="animation-delay: 1.9s;">s</div>
+            </div>
+          </div>
+          <div class="bottom-section">
+            <a href="#2" class="flexbox-container bottom-text">Check them out</a>
+            <div class="flexbox-container">
+              <span class="material-icons" style="font-size: 50px; cursor: default;">
+              expand_more
+              </span>
+            </div>
+          </div>
+          <p id="2" style="position: absolute; bottom: 75px;"></p>
+        </div>
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section0line"></div>
+          </div>
+          <div id="section0" style="transition: 1s;">
+            <div class="flexbox-container">
+              <div class="section-title" onclick="fadeOut('https://luwaidev.itch.io/the-office')">The Office</div>
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('https://luwaidev.itch.io/the-office')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">Febuary 2022</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is The Office?</div>
+                <div class="section-description">The Office is a moody, spooky horror game made in 3 days for Toronto Game Jam 2022. It has over 3000 views on itch.io and over 1000 downloads.</div>
+              </div>
+            </div>
+          </div>
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section1line"></div>
+          </div>
+          <div id="section1" style="transition: 1s;"> 
+            <div class="flexbox-container">
+              <div class="section-title" onclick="fadeOut('https://luwaidev.itch.io/hijack')">Hijack</div>
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('https://luwaidev.itch.io/hijack')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">Febuary 2022</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is Hijack?</div>
+                <div class="section-description">Hijack is a turn based stratagy game made in 3-4 days for Brackeys Game Jam 2022. It's since been polished up with some juicy effects and music.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section2line"></div>
+          </div>
+          <div id="section2" style="transition: 1s;">
+            <div class="flexbox-container">
+              <div class="section-title" onclick="fadeOut('https://luwaidev.itch.io/simulation')">Simulation</div>
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Unity Pathfinding/')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">December 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is Simulation?</div>
+                <div class="section-description">Simulation is a 3D first person shooter made in around a week for the 7DFPS Jam. It's my first game made in 3D</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline-min" id="section3line"></div>
+          </div>
+          <div id="section3"  style="transition: 1s;">
+            <div class="flexbox-container">
+              <img src="/Images/necromerger.png" alt="Necromerger" class="section-image" style="margin-bottom: -50px; padding-right: 25px; cursor: pointer;" onclick="fadeOut('/Necromerger/')">
+              
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Necromerger/')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">February 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is Necromerger?</div>
+                <div class="section-description"> Necromerger is a game which was made for the Brackeys Game Jame 2021.1. It was made with Unity in one week.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section4line"></div>
+          </div>
+          <div id="section4"  style="transition: 1s;">
+            <div class="flexbox-container">
+              <div class="section-title" onclick="fadeOut('/Unity Pathfinding/')">Unity Pathfinding</div>
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Unity Pathfinding/')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">March 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is Unity Pathfinding?</div>
+                <div class="section-description">Unity Pathfinding is a visualization of several pathfinding algorithms implemented in Unity. It includes a recursive maze generating algorithm.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section5line"></div>
+          </div>
+          <div id="section5"  style="transition: 1s;">
+            <div class="flexbox-container">
+              <div class="section-title" onclick="fadeOut('/Web Applications/covid19Tracker.html')">COVID-19 Tracker</div>
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Web Applications/covid19Tracker.html')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">May 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is the COVID-19 Tracker?</div>
+                <div class="section-description"> COVID-19 Tracker is a web application that displays the total worldwide COVID-19 statistics, as well as COVID-19 statistics per country. It uses a public COVID-19 API.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section6line"></div>
+          </div>
+          <div id="section6"  style="transition: 1s;">
+            <div class="flexbox-container">
+              <div class="section-title" onclick="fadeOut('/Web Applications/typer.html')" style="color: black; font-weight: 100;">Typer</div>
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Web Applications/typer.html')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">May 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is Typer?</div>
+                <div class="section-description">Typer is a small minimalist typing website. It includes typing randomly generated words, as well as typing whole sentances and quotes.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="flexbox-container">
+            <div class="sectionline" id="section7line"></div>
+          </div>
+          <div id="section7"  style="transition: 1s;">
+            <div class="flexbox-container">
+              <img src="/Images/Title.png" alt="Altair" class="section-image" style="margin-bottom: -50px; padding-right: 15px;cursor: pointer; background-color: black; border-radius: 20px;" onclick="fadeOut('/Altair/')">
+            </div>
+            <div class="section-flexbox">
+              <a class="section-title-area" onclick="fadeOut('/Altair/')">
+                <div class="flexbox-container" style="width: 100%; margin: 0;">
+                  <div class="section-date">June 2021</div>
+                </div>
+              </a>
+              <div class="section-description-area">
+                <div class="section-description-header">What is Altair?</div>
+                <div class="section-description">Altair is a game made in 48 hours for GMTK Game Jam 2021.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src = "/animations.js"></script>
+        <script>
+          window.onscroll = function() {
+            scrollFunction();
+            section0();
+            section1();
+            section2();
+            section3();
+            section4();
+            section5();
+            section6();
+            section7();
+          }
+          let line0 = document.getElementById("section1line");
+            let section0body = document.getElementById("section1");
+            section0();
+            function section0() {
+              var scrollArea = 350;
+              if (document.body.scrollTop > scrollArea || document.documentElement.scrollTop > scrollArea) {
+                line1.className = "sectionline";
+                section1body.style.opacity = 1;
+              } else {
+                line1.className = "sectionline-min";
+                section1body.style.opacity = 0;
+              }
+            } 
+          let line1 = document.getElementById("section1line");
+            let section1body = document.getElementById("section1");
+            section1();
+            function section1() {
+              var scrollArea = 900;
+              if (document.body.scrollTop > scrollArea || document.documentElement.scrollTop > scrollArea) {
+                line1.className = "sectionline";
+                section1body.style.opacity = 1;
+              } else {
+                line1.className = "sectionline-min";
+                section1body.style.opacity = 0;
+              }
+            }
+
+          let line2 = document.getElementById("section2line");
+          let section2body = document.getElementById("section2");
+          section2();
+          function section2(){
+              var scrollArea = 1000;
+              if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+                line2.className = "sectionline";
+                section2body.style.opacity = 1;
+              } else {
+                line2.className = "sectionline-min";
+                section2body.style.opacity = 0;
+              }
+          }
+
+          let line3 = document.getElementById("section3line");
+          let section3body = document.getElementById("section3");
+          section3();
+          function section3(){
+              var scrollArea = 1400;
+              if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+                line3.className = "sectionline";
+                section3body.style.opacity = 1;
+              } else {
+                line3.className = "sectionline-min";
+                section3body.style.opacity = 0;
+              }
+          }
+
+          let line4 = document.getElementById("section4line");
+          let section4body = document.getElementById("section4");
+          section4();
+          function section4(){
+              var scrollArea = 2000;
+              if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+                line4.className = "sectionline";
+                section4body.style.opacity = 1;
+              } else {
+                line4.className = "sectionline-min";
+                section4body.style.opacity = 0;
+              }
+          }
+
+          let line5 = document.getElementById("section5line");
+          let section5body = document.getElementById("section5");
+          section5();
+          function section5(){
+              var scrollArea = 2500;
+              if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+                line5.className = "sectionline";
+                section5body.style.opacity = 1;
+              } else {
+                line5.className = "sectionline-min";
+                section5body.style.opacity = 0;
+              }
+          }
+
+          let line6 = document.getElementById("section6line");
+          let section6body = document.getElementById("section6");
+          section6();
+          function section6(){
+              var scrollArea = 3000;
+              if (document.body.scrollTop > scrollArea|| document.documentElement.scrollTop > scrollArea){
+                line6.className = "sectionline";
+                section6body.style.opacity = 1;
+              } else {
+                line6.className = "sectionline-min";
+                section6body.style.opacity = 0;
+              }
+          }
+          let line7 = document.getElementById("section6line");
+            let section7body = document.getElementById("section6");
+            section6();
+            function section7() {
+              var scrollArea = 3400;
+              if (document.body.scrollTop > scrollArea || document.documentElement.scrollTop > scrollArea) {
+                line7.className = "sectionline";
+                section7body.style.opacity = 1;
+              } else {
+                line7.className = "sectionline-min";
+                section7body.style.opacity = 0;
+              }
+            }
+        </script>
+
+
+        <!-- Bottom bar -->
+        <div style="background-color: black; height: 15vh;">
+          <p class="menu-bottombar-text" style="padding-top:5vh; margin: 0;">Find me here</p>
+          <div class="menu-bottombar">
+            <a class="material-icons menu-bottombar-item" style="cursor: pointer;"
+              onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+            <img src="/Images/instagram.png" alt="Insta" class="bottom-image"
+              onclick="fadeOut('https://www.instagram.com/luwaidev/')">
+            <img src="/Images/itchio-textless-white.svg" alt="Itch" class="bottom-image"
+              onclick="fadeOut('https://luhyphenwai.itch.io/')">
+            <img src="/Images/github.png" alt="Github" class="bottom-image" onclick="fadeOut('https://github.com/luwaidev')">
+            <img src="/Images/twitter.png" alt="Twitter" class="bottom-image" style="color: white;"
+              onclick="fadeOut('https://twitter.com/luwaidev')">
+            </svg>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
