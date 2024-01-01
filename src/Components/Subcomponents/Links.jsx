@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react'
-import {IconLinks, IconContainer, IconBackground} from "./SubStyles"
+import { SideLinks, SideLinkBackground, SideLinkContainer} from "./SubStyles"
 import * as colors from '../../colors.js'
 
 import { useRef } from 'react';
@@ -31,44 +31,46 @@ export default function Links(){
         offset: ["200px", "0px"]
     });
     const y = useTransform(useSpring(scrollYProgress), latest => getMax(latest/4 + 0.75))
+    // const y = 1
+
     return (
         <div>
-            <IconContainer as={motion.div} >
-                <IconBackground as={motion.div} style={{ scale: y }}>
-                    <Fade direction='down' duration={600} delay={2200} dampen={0.1} cascade triggerOnce>
+            <SideLinkContainer as={motion.div} >
+                <SideLinkBackground as={motion.div} style={{ scale: y}}>
+                    <Fade direction='right' duration={1000} delay={4000} dampen={0.1} cascade triggerOnce>
                         <a href="https://luwaidev.itch.io/" target="_blank" rel="noopener noreferrer">
-                            <IconLinks as={motion.div}  href="https://luwaidev.itch.io/">
-                                <Icon icon="simple-icons:itchdotio" color={colors.DARK_BLUE} /> 
-                            </IconLinks>
+                            <SideLinks as={motion.div}  href="https://luwaidev.itch.io/">
+                                <Icon icon="simple-icons:itchdotio" color={colors.TEXT} /> 
+                            </SideLinks>
                         </a>
                         <a href="https://twitter.com/luwaidev" target="_blank" rel="noopener noreferrer">
-                            <IconLinks as={motion.div}  href='https://twitter.com/luwaidev'>
-                                <Icon icon="ri:twitter-fill" color={colors.DARK_BLUE}  />
-                            </IconLinks> 
+                            <SideLinks as={motion.div}  href='https://twitter.com/luwaidev'>
+                                <Icon icon="akar-icons:x-fill" color={colors.TEXT}  />
+                            </SideLinks> 
                         </a>
                         
-                        <a href="https://github.com/luwaidev" target="_blank" rel="noopener noreferrer">
-                            <IconLinks as={motion.div}  href='https://github.com'>
-                                <Icon icon="mdi:github" color={colors.DARK_BLUE}  />
-                            </IconLinks>
+                        <a href="https://github.com/luwaiwong" target="_blank" rel="noopener noreferrer">
+                            <SideLinks as={motion.div}  href='https://github.com'>
+                                <Icon icon="mdi:github" color={colors.TEXT}  />
+                            </SideLinks>
                         </a>
                         
                         <a href="https://www.instagram.com/luwaidev/" target="_blank" rel="noopener noreferrer">
-                            <IconLinks as={motion.div}  href='https://www.instagram.com/luwaidev/'>
-                                <Icon icon="ri:instagram-line" color={colors.DARK_BLUE} />
-                            </IconLinks>
+                            <SideLinks as={motion.div}  href='https://www.instagram.com/luwaidev/'>
+                                <Icon icon="ri:instagram-line" color={colors.TEXT} />
+                            </SideLinks>
                         </a>
                         
                         <a href="https://www.linkedin.com/in/luwai/" target="_blank" rel="noopener noreferrer">
                                 
-                            <IconLinks as={motion.div} href='https://www.linkedin.com/in/luwai/'>
-                                <Icon icon="mdi:linkedin" color={colors.DARK_BLUE} />    
-                            </IconLinks>
+                            <SideLinks as={motion.div} href='https://www.linkedin.com/in/luwai/'>
+                                <Icon icon="mdi:linkedin" color={colors.TEXT} />    
+                            </SideLinks>
                         </a>
                     </Fade>
                     
-                </IconBackground>
-            </IconContainer>
+                </SideLinkBackground>
+            </SideLinkContainer>
              <div ref={ref} style={{position: "absolute", marginTop: "200px"}}>
                 {/* <figure className="progress">
                 <svg id="progress" width="75" height="75" viewBox="0 0 100 100">

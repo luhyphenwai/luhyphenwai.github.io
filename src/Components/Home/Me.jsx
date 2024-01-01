@@ -45,8 +45,6 @@ export default function Me(){
         <>
         <MeContainer>
           
-          {/* <img style={blob} src={b1} alt={blob}/> */}
-          <img style={blob2} src={b1} alt={blob2}/>
           <Bounce duration={1500}> <MeBack>
             {/* <Zoom  cascade={true}  delay={800} duration={800}> */}
               <MeHeader>About Me</MeHeader>

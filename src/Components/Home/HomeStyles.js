@@ -2,6 +2,18 @@ import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
 import * as colors from "../../colors";
 
+const BOLD_FONT = "Rubik Mono One";
+const REGULAR_FONT = "Space Mono";
+
+export const UnderConstructionText = styled.h1`
+  font-family: ${BOLD_FONT};
+  color: ${colors.TEXT};
+  font-size: 3vw;
+  margin: 0;
+  padding-top: 75vh;
+  padding-left: 10vw;
+`;
+
 /////////// SECTIONS/CONTAINERS ///////////
 
 export const Flexbox = styled.div`
@@ -13,65 +25,48 @@ export const Flexbox = styled.div`
   z-index: 1;
 `;
 
-export const Container = styled.div`
-  justify-content: center;
-  width: fit-content;
-  height: fit-content;
-  margin-top: -10vh;
-`;
-export const SubTextContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
-`;
-export const LeftSubText = styled.div`
-  justify-content: left;
-  z-index: 1;
-`;
-export const RightSubText = styled.div`
-  justify-content: right;
-  z-index: 1;
-`;
-
 export const Section = styled.div`
   width: 100vw;
-  height: 110vh;
+  height: 100vh;
+
   margin: 0;
-  margin-left: -10px;
+  margin-left: 0vw;
   padding: 0;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: ${colors.BACKGROUND};
+  overflow: hidden;
 `;
 ////////// TEXT //////////
 
 export const Title = styled.h1`
   display: flex;
-  /* font-family: "Fredoka One", cursive;
+  font-family: ${BOLD_FONT};
   color: ${colors.DARK_BLUE};
   font-size: 15vw;
   margin: 0; */
 `;
-export const Letter = styled.h1`
-  font-family: "Fredoka One", cursive;
-  color: ${colors.DARK_BLUE};
-  font-size: 17.5vw;
-  margin: 0;
 
-  animation: 1s ${fadeIn};
+export const BoldSubTitle = styled.h2`
+  font-family: ${BOLD_FONT};
+  color: ${colors.TEXT};
+  font-size: 4vw;
+  margin: 0;
+  z-index: 1;
 `;
+
 export const SubTitle = styled.h2`
-  font-family: "Fredoka One", cursive;
-  color: ${colors.DARK_BLUE};
-  font-size: 2vw;
+  font-family: ${REGULAR_FONT};
+  color: ${colors.TEXT};
+  font-size: 3vw;
   margin: 0;
   z-index: 1;
 `;
 export const SubHeader = styled.h1`
   font-family: "Fredoka One", cursive;
-  color: ${colors.DARK_BLUE};
+  color: ${colors.TEXT};
   font-size: 2.5vw;
   margin: 0;
   z-index: 1;
@@ -79,7 +74,7 @@ export const SubHeader = styled.h1`
 
 export const Text = styled.p`
   font-family: "Fredoka One", cursive;
-  color: ${colors.DARK_BLUE};
+  color: ${colors.TEXT};
   font-size: 2vw;
 
   z-index: 1;
@@ -102,242 +97,18 @@ export const Image = styled.img`
   width: 100%;
 `;
 
-export const Blob = styled.div`
-  size: fit-content;
-  width: 300vh;
-  /* height: 300vh; */
-  position: absolute;
-  justify-content: center;
-  display: flex;
-  /* transform: rotate(0deg); */
-  top: -600vh;
-  left: -75vh;
-  z-index: -10;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-`;
-
-const blob1In = keyframes`
-  0% {
-  top: 150vh;
-  }
-50% {
-  top: 150vh;
-  }
-  100% {
-  top: 20vh;
-  }
-`;
-
-const blob2In = keyframes`
-  0% {
-  top: 150vh;
-  }
-50% {
-  top: 150vh;
-  }
-  100% {
-  top: 40vh;
-  }
-`;
-
-export const Blob1 = styled.img`
-  size: fit-content;
-  width: 150vw;
-  /* height: 300vh; */
-  position: absolute;
-  justify-content: center;
-  display: flex;
-  /* transform: rotate(0deg); */
-  top: 20vh;
-  left: -50vw;
-  z-index: -1;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-
-  animation: 2.5s ${blob1In};
-  animation-timing-function: cubic-bezier(0.55, 0.33, 0.08, 0.96);
-`;
-export const Blob2 = styled.img`
-  size: fit-content;
-  width: 150vw;
-  /* height: 300vh; */
-  position: absolute;
-  justify-content: center;
-  display: flex;
-  /* transform: rotate(0deg); */
-  top: 40vh;
-  left: 0vh;
-  z-index: -2;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  animation: 2.5s ${blob2In};
-  animation-timing-function: cubic-bezier(0.55, 0.33, 0.08, 0.96);
-`;
-
 export const ArrowDown = styled.a`
-  margin-top: 3vh;
-  font-size: 4vw;
-  /* position: absolute; */
+  margin-top: 0vh;
+  font-size: 5vw;
+
   display: flex;
   justify-content: center;
   width: 10vw;
 
   &:hover {
-    margin-top: 4vh;
-    cursor: pointer;
-  }
-  &:hover {
-    /* margin-top: 4vh; */
+    margin-top: 1vh;
   }
   transition: 0.2s;
-`;
-// About Me
-export const ABHeader = styled.div`
-  /* position: fixed; */
-  /* top: 100px;
-  left: 100px; */
-  margin-left: 5vw;
-  z-index: 100;
-  /* margin-bottom: 200vh; */
-`;
-
-export const PFrontImg = styled.img`
-  position: absolute;
-  z-index: 10;
-  width: 35vw;
-  height: 30vw;
-  border-radius: 10px;
-  background-color: white;
-  transition: 0.5s;
-  object-fit: cover;
-`;
-
-export const PBackImg = styled.img`
-  position: absolute;
-  z-index: 5;
-  width: 35vw;
-  height: 30vw;
-  border-radius: 10px;
-  &:hover {
-    color: white;
-    cursor: pointer;
-
-    width: 38.5vw;
-    height: 33vw;
-  }
-  object-fit: cover;
-  transition: 0.5s;
-`;
-export const PTextBacking = styled.div`
-  position: absolute;
-  width: 35vw;
-  height: 30vw;
-  z-index: 10;
-
-  background-color: black;
-  opacity: 0%;
-  border-radius: 10px;
-
-  transition: 0.5s;
-`;
-
-export const PHeader = styled.h2`
-  position: absolute;
-  z-index: 11;
-  width: 35vw;
-  height: 30vw;
-
-  font-size: 3.5vw;
-  font-family: "Fredoka One", cursive;
-  text-align: center;
-  color: ${colors.DARK_BLUE};
-  opacity: 0%;
-  /* margin-top: 3%;
-  margin-left: 5vw; */
-
-  /* &:hover {
-    opacity: 100%;
-    z-index: 10;
-  } */
-  transition: 0.5s;
-  /* transition-delay: opacity 0.3s; */
-`;
-export const PText = styled.h2`
-  position: absolute;
-  z-index: 11;
-  width: 35vw;
-  height: 30vw;
-
-  font-size: 1.5vw;
-  font-family: "Fredoka One", cursive;
-  text-align: center;
-  color: ${colors.DARK_BLUE};
-  opacity: 0%;
-  /* margin: 20%; */
-  /* padding: 10%; */
-  margin-top: 35%;
-  overflow: wrap;
-
-  /* &:hover {
-    opacity: 100%;
-    z-index: 10;
-  } */
-  transition: 0.5s;
-  /* transition-delay: opacity 0.3s; */
-`;
-
-export const Project = styled.a`
-  position: absolute;
-  width: 35vw;
-  height: 30vw;
-  overflow: hidden;
-  margin-left: 1.25vw;
-  z-index: 10;
-
-  &:hover {
-    color: transparent;
-    cursor: pointer;
-
-    width: 38.5vw;
-    height: 33vw;
-    margin-left: 0vw;
-  }
-  /* margin-left: 45vw; */
-
-  &:hover ${PHeader} {
-    opacity: 100%;
-    z-index: 10;
-    width: 38.5vw;
-    height: 33vw;
-    /* margin-top: 3%; */
-  }
-
-  &:hover ${PText} {
-    opacity: 100%;
-    z-index: 10;
-    width: 38.5vw;
-    height: 33vw;
-    /* margin-top: 3%; */
-  }
-
-  &:hover ${PTextBacking} {
-    opacity: 70%;
-    z-index: 10;
-
-    width: 38.5vw;
-    height: 33vw;
-  }
-
-  &:hover ${PFrontImg} {
-    width: 38.5vw;
-    height: 33vw;
-  }
-
-  transition: 0.5s;
 `;
 
 export const DisplayImg = styled.img`
@@ -351,6 +122,76 @@ export const DisplayImg = styled.img`
   }
 
   transition: 0.5s;
+`;
+////////// LANDING PAGE //////////
+
+// Holds the "Hi, I'm" text
+export const IntroSubheaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 1vh;
+  left: 1vw;
+`;
+
+// Individual letters for animation
+export const Letter = styled.h1`
+  font-family: ${BOLD_FONT};
+  color: ${colors.TEXT};
+  font-size: 14vw;
+  margin: 0;
+
+  animation: 1s ${fadeIn};
+  overflow: hidden;
+`;
+
+// Holds both words for name
+export const NameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20xvh;
+  left: 1vw;
+`;
+// Holds the "Letters" text
+export const FirstNameContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: -2vw;
+  margin-bottom: -2vh;
+`;
+export const LastNameContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: -2vh;
+`;
+// Hold left and right text
+
+export const LeftLandingSubText = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 1vw;
+  z-index: 1;
+`;
+export const RightLandingSubText = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 1vw;
+  z-index: 1;
+`;
+
+// Holds the down arrow
+export const LandingArrowContainer = styled.a`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 4vw;
+  height: 5vh;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 ///////////////////// ME ///////////////////////

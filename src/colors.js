@@ -3,3 +3,6 @@ export const DARK_BLUE = "#5690BF";
 export const LIGHT_YELLOW = "#FFEEDD";
 export const DARK_YELLOW = "#FDD85D";
 export const RED = "#cc293c";
+
+export const BACKGROUND = "#1E1E1E";
+export const TEXT = "#98A4C1";

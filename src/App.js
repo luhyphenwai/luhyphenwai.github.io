@@ -5,13 +5,17 @@ import Home from "./Components/Home/Home";
 import Projects from "./Components/Projects/Projects";
 import { BrowserRouter, Routes, Router, Switch, Route } from "react-router-dom";
 
-// import "./App.css";
+import "./App.css";
 
 function App() {
   // Set background color
 
   return (
-    <div className="background">
+    <div>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Mono&display=swap');
+      </style>
       {/* <Intro /> */}
       <BrowserRouter>
         <Routes>

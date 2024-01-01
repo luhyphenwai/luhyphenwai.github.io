@@ -1,14 +1,34 @@
 import React from 'react';
 import { Slide , Fade} from "react-awesome-reveal"
-import { BearImg, NavContainer, NavCirc, NavMenuButton, MailButton, MenuContainer, MenuButton } from "./SubStyles"
+import { MenuBackground, MenuButton, MenuButtonContainer, MenuContainer, SideMenuButton } from "./SubStyles"
 import { Icon } from '@iconify/react'
 
+import { useRef } from 'react';
+import { motion, useScroll, useSpring, useTransform} from "framer-motion";
+
 import * as colors from '../../colors.js'
-import bear from "../../Icons/bear.png"
 
 import { Outlet, Link } from "react-router-dom";
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
+
+
+const size = "3vw";
+const hoverSize = "3vw";
+const iconStyle = {
+    fontSize: size,
+    "&:hover": {
+        fontSize: hoverSize,
+    },
+}
+function getMax(num){
+    if (num > 1){
+        return 1;
+    }
+    else{
+        return num;
+    }
+}
 async function handleClick(showMenu,setShowMenu, showObj, setShowObj){
 
     if (!showMenu) disableBodyScroll(document.querySelector('body'));
@@ -19,7 +39,7 @@ async function handleClick(showMenu,setShowMenu, showObj, setShowObj){
         setShowObj(true);
     }   else {
         setShowObj(false);
-        await new Promise(resolve => setTimeout(resolve, 600));
+        await new Promise(resolve => setTimeout(resolve, 400));
         setShowMenu(false);
     }
     // setShow(!show);
@@ -32,44 +52,31 @@ export default function SideMenu (){
     const [showMenu, setShowMenu] = React.useState(false);
     const [showObj, setShowObj] = React.useState(false);
 
-    // const handleClick = () => {
-    //     setShow(!show);
-    //     console.log(show);
-        
 
-    //     if (!show) disableBodyScroll(document.querySelector('body'));
-    //     else enableBodyScroll(document.querySelector('body'));
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["500px", "200px"]
+    });
+    const y = useTransform(useSpring(scrollYProgress), latest => getMax(latest/4 + 0.75))
 
-    // };
     return (
-        <NavContainer OnClick={() => handleClick(showMenu, setShowMenu, showObj, setShowObj)} >
-            <NavCirc selected={showMenu}/>
-            <BearImg onClick={ () =>handleClick(showMenu, setShowMenu, showObj, setShowObj)} src= {bear}/>
-
-            <MenuContainer selected={showObj}>
-                {/* <Link to="/"> */}
-                    <MenuButton href="/" selected={showObj}>
-                    {/* <Icon style={{fontSize:"8vw"}}icon="material-symbols:home" color={colors.DARK_BLUE}></Icon> */}
-                    Home
-                    </MenuButton>
-                {/* </Link> */}
-                
-                {/* <Link to="/Projects"> */}
-                    <MenuButton href="/Projects"selected={showObj}>
-                    {/* <Icon style={{fontSize:"8vw"}}icon="material-symbols:home" color={colors.DARK_BLUE}></Icon> */}
-                    Projects
-                    </MenuButton>
-                {/* </Link> */}
-
-                <MenuButton href="https://luwai.notion.site/Lu-Wai-Wong-a29649de041e498c953c2525684dba36"selected={showObj}  target="_blank" rel="noopener noreferrer">
-                    {/* <Icon style={{fontSize:"8vw"}}icon="material-symbols:home" color={colors.DARK_BLUE}></Icon> */}
-                    Resume
-                    </MenuButton>
-                
-            </MenuContainer>
-
-            <MailButton selected={showObj}>Contact Me!</MailButton>
-        </NavContainer>
+        <>
+            {/* Hamburguer Menu Button */}
+            <SideMenuButton as={motion.div} onClick={() => handleClick(showMenu, setShowMenu, showObj, setShowObj)} style={{scale:y}}>
+                <Fade delay={5000}>
+                    <Icon icon="mdi:menu" /> 
+                </Fade>
+            </SideMenuButton>   
+            
+            {/* <MenuContainer> */}
+                <MenuBackground visible={showMenu}>
+                    <MenuButtonContainer visible={showObj}>
+                        <MenuButton visible={showObj}>Home</MenuButton>
+                    </MenuButtonContainer>
+                </MenuBackground>
+            {/* </MenuContainer> */}
+        </>
         
     );
 };
