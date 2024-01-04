@@ -38,8 +38,8 @@ export default function Links(){
             <SideLinkContainer as={motion.div} >
                 <SideLinkBackground as={motion.div} style={{ scale: y}}>
                     <Fade direction='right' duration={1000} delay={4000} dampen={0.1} cascade triggerOnce>
-                        <a href="https://luwaidev.itch.io/" target="_blank" rel="noopener noreferrer">
-                            <SideLinks as={motion.div}  href="https://luwaidev.itch.io/">
+                        <a href="https://luwai.itch.io/" target="_blank" rel="noopener noreferrer">
+                            <SideLinks as={motion.div}  href="https://luwai.itch.io/">
                                 <Icon icon="simple-icons:itchdotio" color={colors.TEXT} /> 
                             </SideLinks>
                         </a>
@@ -72,23 +72,9 @@ export default function Links(){
                 </SideLinkBackground>
             </SideLinkContainer>
              <div ref={ref} style={{position: "absolute", marginTop: "200px"}}>
-                {/* <figure className="progress">
-                <svg id="progress" width="75" height="75" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
-                    <motion.circle
-                    cx="50"
-                    cy="50"
-                    r="30"
-                    pathLength="1"
-                    className="indicator"
-                    style={{ pathLength: scrollYProgress }}
-                    />
-                </svg>
-                </figure> */}
+                
             </div>
             
         </div>
     );
 }
-
-// export default Links;

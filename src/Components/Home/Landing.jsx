@@ -1,5 +1,5 @@
 import React from 'react'
-import {Section, Flexbox, Title, SubTitle,LeftLandingSubText, RightLandingSubText,  Letter,  ArrowDown, BoldSubTitle, IntroSubheaderContainer, LandingArrowContainer, NameContainer, FirstNameContainer, LastNameContainer} from "./HomeStyles.js"
+import {Section, Flexbox, Title, SubTitle,LeftLandingSubText, RightLandingSubText,  Letter,  ArrowDown, BoldSubTitle, IntroSubheaderContainer, LandingArrowContainer, NameContainer, FirstNameContainer, LastNameContainer, SectionCentered} from "./HomeStyles.js"
 import * as colors from '../../colors.js'
 
 import { Icon } from '@iconify/react'
@@ -7,25 +7,21 @@ import {AttentionSeeker, Bounce, Fade, Flip, JackInTheBox, Slide, Zoom} from "re
 
 const Landing = (props) => (
   <>
-    <Section>
+    <SectionCentered>
       
       {/* INTRO SECTION */}
       <IntroSubheaderContainer>
-          <Fade style={{zIndex:0}}>
-              <Slide direction='down'>
+          <Fade style={{zIndex:0}} direction={'down'} triggerOnce={true}>
                 <BoldSubTitle> Hi, &nbsp;</BoldSubTitle>
-              </Slide>
             </Fade>
             
-            <Fade delay={800} style={{zIndex:0}}>
-              <Slide delay={800} direction='down' >
+            <Fade delay={800} direction={'down'} style={{zIndex:0}} triggerOnce={true}>
                 <BoldSubTitle> I'm</BoldSubTitle>
-              </Slide>
             </Fade>
       </IntroSubheaderContainer>
       <NameContainer>
         <FirstNameContainer> 
-          <Fade cascade damping={0.1} duration={800} delay={1500} style={{zIndex:1}} direction={'up'} >
+          <Fade cascade damping={0.1} duration={800} delay={1500} style={{zIndex:1}} direction={'up'} triggerOnce={true}>
             <Letter> L</Letter>
             <Letter> u</Letter>
             <Letter> -</Letter>
@@ -35,7 +31,7 @@ const Landing = (props) => (
           </Fade>
         </FirstNameContainer>
         <LastNameContainer> 
-          <Fade cascade damping={0.1} duration={800} delay={2500} style={{zIndex:1}} direction={'up'}>
+          <Fade cascade damping={0.1} duration={800} delay={2500} style={{zIndex:1}} direction={'up'} triggerOnce={true}>
             <Letter> W</Letter>
             <Letter> o</Letter>
             <Letter> n</Letter>
@@ -46,31 +42,31 @@ const Landing = (props) => (
 
 
       <LeftLandingSubText>
-        <Fade delay={4000} direction='down'>
+        <Fade delay={4000} direction='down' triggerOnce={true}>
             <SubTitle>Stats & CS</SubTitle>
         </Fade>
         
-        <Fade delay={4800}direction='down'>
+        <Fade delay={4800}direction='down' triggerOnce={true}>
             <SubTitle>Developer</SubTitle>
         </Fade>
       </LeftLandingSubText>
 
       <RightLandingSubText>
         <AttentionSeeker effect="rubberBand" delay={7000} style={{zIndex:0}}>
-        <Fade delay={5600} direction='down'>
+        <Fade delay={5600} direction='down' triggerOnce={true}>
             <SubTitle>uoft '26</SubTitle>
         </Fade>
         </AttentionSeeker>
       </RightLandingSubText>
       
-      <LandingArrowContainer href="#Section2">
-        <Fade direction='down' delay={6400} duration={1000}>
+      <LandingArrowContainer href="#1">
+        <Fade direction='down' delay={6400} duration={1000} triggerOnce={true}>
             <ArrowDown>
               <Icon icon="mdi:arrow-down" color={colors.TEXT} /> 
             </ArrowDown>
         </Fade>
       </LandingArrowContainer>
-    </Section>
+    </SectionCentered>
   </>
 );
 

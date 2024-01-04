@@ -15,6 +15,8 @@ function App() {
       <style>
         @import
         url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Mono&display=swap');
+        @import
+        url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
       </style>
       {/* <Intro /> */}
       <BrowserRouter>

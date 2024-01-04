@@ -3,11 +3,11 @@ import React from 'react'
 import Links from '../Subcomponents/Links.jsx'
 import SideMenu from "../Subcomponents/SideMenu.jsx"
 import Landing from './Landing.jsx'
-import Projects from './HomeProjects.jsx'
+import HomeProjects from './HomeProjects.jsx'
 import Me from './Me.jsx'
 import * as colors from '../../colors.js'
 
-import { Section, UnderConstructionText } from "./HomeStyles.js"
+import { BufferSection, Section, SeperationLine, UnderConstructionText } from "./HomeStyles.js"
 
 import {} from "react-awesome-reveal"
 
@@ -25,6 +25,8 @@ const background = {
   left:"0"
 }
 
+
+
 const Home = (props) => (
   <>
     <SideMenu/>
@@ -33,24 +35,15 @@ const Home = (props) => (
     {/* INTRO SECTION */}
     <Landing/>
       
+    <BufferSection/>
     
-    {/* <SVGComponent /> */}
-    <div style={background} id='Section2'>
+    <HomeProjects/>
+    
+    {/* Under Construction Section */}
+    <div style={background} id='Section3x'>
       <UnderConstructionText> 🚧 under construction 🚧</UnderConstructionText>
     </div>
 
-    {/* ABOUT ME SECTION */}
-    {/* <Projects/> */}
-
-    {/* CURRENT SKILLS AND INTERESTS */}
-    {/* <Section style={style}>
-      <ABHeader>
-        <SubTitle>I know how to use these </SubTitle>
-        <SubTitle>But right now I'm really interested in </SubTitle>
-        <SubTitle>3D Modeling and making art</SubTitle>
-      </ABHeader>
-    </Section> */}
-    {/* <Me/> */}
 
   </>
 );

@@ -55,7 +55,7 @@ export const SideLinks = styled.a`
     width: 3vw;
     font-size: 5vw;
     margin-left: 1vw;
-    margin-right: 3vw;
+    margin-right: 2.5vw;
     margin-top: 0.5vw;
     margin-bottom: 0vw;
   }

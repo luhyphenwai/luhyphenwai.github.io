@@ -3,7 +3,7 @@ import { fadeIn } from "react-animations";
 import * as colors from "../../colors";
 
 const BOLD_FONT = "Rubik Mono One";
-const REGULAR_FONT = "Space Mono";
+const REGULAR_FONT = "Source Code Pro";
 
 export const UnderConstructionText = styled.h1`
   font-family: ${BOLD_FONT};
@@ -26,6 +26,7 @@ export const Flexbox = styled.div`
 `;
 
 export const Section = styled.div`
+  position: relative;
   width: 100vw;
   height: 100vh;
 
@@ -33,11 +34,45 @@ export const Section = styled.div`
   margin-left: 0vw;
   padding: 0;
   z-index: 1;
+
+  background-color: ${colors.BACKGROUND};
+  overflow: hidden;
+`;
+
+export const SectionLong = styled.div`
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+
+  margin: 0;
+  margin-left: 0vw;
+  padding: 0;
+  z-index: 1;
+
+  background-color: ${colors.BACKGROUND};
+  overflow: hidden;
+`;
+export const SectionCentered = styled.div`
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  margin-left: 0vw;
+  padding: 0;
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+
   background-color: ${colors.BACKGROUND};
   overflow: hidden;
+`;
+
+export const BufferSection = styled.div`
+  height: 10vh;
 `;
 ////////// TEXT //////////
 
@@ -123,6 +158,15 @@ export const DisplayImg = styled.img`
 
   transition: 0.5s;
 `;
+
+export const SeperationLine = styled.div`
+  position: static;
+  width: 80vw;
+  height: 3px;
+  margin-left: 1vw;
+  background-color: ${colors.TEXT};
+  border-radius: 5px;
+`;
 ////////// LANDING PAGE //////////
 
 // Holds the "Hi, I'm" text
@@ -150,7 +194,6 @@ export const NameContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 20xvh;
   left: 1vw;
 `;
 // Holds the "Letters" text
@@ -169,14 +212,14 @@ export const LastNameContainer = styled.div`
 
 export const LeftLandingSubText = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 1vh;
   left: 1vw;
   z-index: 1;
 `;
 export const RightLandingSubText = styled.div`
   position: absolute;
-  bottom: 0;
-  right: 1vw;
+  bottom: 1vh;
+  right: 2vw;
   z-index: 1;
 `;
 
@@ -194,43 +237,131 @@ export const LandingArrowContainer = styled.a`
   }
 `;
 
-///////////////////// ME ///////////////////////
-export const MeContainer = styled.div`
-  margin-left: -1vw;
-  width: 101vw;
-  height: 90vh;
-  margin-bottom: -10vh;
-  background-color: ${colors.DARK_YELLOW};
+////////// PROJECTS //////////
+export const ProjectHeaderContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-y: hidden;
+  flex-direction: column;
+  margin-left: 1vw;
+  margin-top: 1vh;
 `;
 
-export const MeHeader = styled.h1`
-  font-family: "Fredoka One", cursive;
+export const ProjectContainer = styled.div`
+  display: flex;
+
+  // height: 150vh;
+  height: fit-content;
+  width: 90vw;
+
+  margin-left: 1vw;
+  margin-top: 1vh;
+  border-radius: 20px;
+
+  overflow: hidden;
+  background-color: ${colors.BACKGROUND_DARK};
+`;
+
+export const ProjectColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  width: 45vw;
+  padding: 2vw;
+  padding-bottom: 0vw;
+`;
+
+export const Project = styled.a`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  position: relative;
+
+  width: 41vw;
+  height: auto;
+  margin-bottom: 2vw;
+
+  border-radius: 20px;
+  background-color: ${colors.BACKGROUND};
+  &:hover {
+    cursor: pointer;
+    // background-color: ${colors.DARK_BLUE};
+  }
+
+  z-index: 100;
+
+  transition: 0.4s;
+`;
+
+export const ProjectImage = styled.img`
+  border-radius: 20px;
+
+  width: 100%;
+  // height: 100%;
+
+  background-color: ${colors.BACKGROUND};
+
+  ${Project}:hover & {
+    cursor: pointer;
+    opacity: 0.4;
+  }
+
+  opacity: 1;
+  transition: 0.4s;
+`;
+export const ProjectImageWhite = styled.img`
+  border-radius: 20px;
+
+  width: 100%;
+  // height: 100%;
+
+  background-color: ${colors.BACKGROUND};
+
+  ${Project}:hover & {
+    cursor: pointer;
+    opacity: 0.4;
+  }
+
+  opacity: 1;
+  transition: 0.4s;
+`;
+
+export const ProjectTitle = styled.h3`
+  font-family: ${REGULAR_FONT};
   font-size: 3vw;
-  text-align: center;
-  color: ${colors.DARK_BLUE};
+  font-decoration: underline;
+
+  color: ${colors.TEXT};
+
+  position: absolute;
+  top: -2vh;
+  left: 1vw;
+
+  opacity: 0;
+
+  ${Project}:hover & {
+    opacity: 1;
+  }
+  transition: 0.4s;
 `;
-export const MeDesc = styled.p`
-  font-family: "Fredoka One", cursive;
-  font-size: 1.25vw;
-  text-align: left;
-  padding: 3vw;
-  padding-top: 0;
-  color: ${colors.DARK_BLUE};
-`;
-export const MeBack = styled.div`
-  background-color: ${colors.LIGHT_YELLOW};
-  width: 50vw;
-  height: 35vw;
-  margin-top: -5vh;
-  border-radius: 5%;
+export const ProjectText = styled.div`
+  font-family: ${REGULAR_FONT};
+  font-size: 2vw;
+  font-decoration: underline;
+
+  color: ${colors.TEXT};
+  position: absolute;
+  top: 5vw;
+  margin: 1vw;
+
+  opacity: 0;
+
+  ${Project}:hover & {
+    opacity: 1;
+  }
+
+  transition: 0.4s;
 `;
 
-export const MeImg = styled.img`
-  margin-left: 5vw;
-  height: 35vw;
-  border-radius: 5%;
-`;
+export const ProjectTech = styled.div``;
