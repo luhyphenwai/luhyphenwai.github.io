@@ -320,7 +320,7 @@ export const ProjectImageWhite = styled.img`
 
   ${Project}:hover & {
     cursor: pointer;
-    opacity: 0.4;
+    opacity: 0.1;
   }
 
   opacity: 1;
@@ -345,6 +345,23 @@ export const ProjectTitle = styled.h3`
   }
   transition: 0.4s;
 `;
+export const ProjectTitleLine = styled.div`
+  position: absolute;
+  top: 6vw;
+  left: 1vw;
+  width: 39vw;
+  height: 3px;
+  background-color: ${colors.TEXT};
+  border-radius: 5px;
+
+  opacity: 0;
+
+  ${Project}:hover & {
+    opacity: 1;
+  }
+  transition: 0.4s;
+`;
+
 export const ProjectText = styled.div`
   font-family: ${REGULAR_FONT};
   font-size: 2vw;
@@ -352,7 +369,7 @@ export const ProjectText = styled.div`
 
   color: ${colors.TEXT};
   position: absolute;
-  top: 5vw;
+  top: 7vw;
   margin: 1vw;
 
   opacity: 0;
@@ -364,4 +381,93 @@ export const ProjectText = styled.div`
   transition: 0.4s;
 `;
 
-export const ProjectTech = styled.div``;
+export const ProjectTags = styled.div`
+  font-family: ${REGULAR_FONT};
+  font-size: 2vw;
+  font-decoration: underline;
+
+  color: ${colors.TEXT};
+  position: absolute;
+  bottom: 1vw;
+  margin: 1vw;
+  width: 50%;
+
+  opacity: 0;
+
+  ${Project}:hover & {
+    opacity: 1;
+  }
+
+  transition: 0.4s;
+`;
+
+export const ProjectLinks = styled.div`
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+
+  flex-direction: row;
+  justify-content: flex-end;
+`;
+
+export const ProjectLink = styled.a`
+  font-family: ${REGULAR_FONT};
+  font-size: 4vw;
+  color: ${colors.TEXT};
+  margin-left: 1vw;
+
+  z-index: 200;
+  &:hover {
+    cursor: pointer;
+    font-size: 5vw;
+  }
+
+  opacity: 0;
+
+  ${Project}:hover & {
+    opacity: 1;
+  }
+
+  transition: 0.4s;
+`;
+
+export const ProjectEndText = styled.div`
+  font-family: ${REGULAR_FONT};
+  font-size: 2vw;
+
+  color: ${colors.TEXT};
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  position: relative;
+
+  width: 37vw;
+  height: 100%;
+  margin-bottom: 2vw;
+
+  padding: 2vw;
+
+  border-radius: 20px;
+  background-color: ${colors.BACKGROUND};
+
+  ${Project}:hover & {
+    opacity: 1;
+  }
+  z-index: 0;
+
+  transition: 0.4s;
+`;
+
+export const ProjectEndIcon = styled.a`
+  position: absolute;
+  bottom: 2vw;
+  left: 4.5vw;
+
+  flex-direction: row;
+  justify-content: flex-end;
+
+  color: ${colors.TEXT};
+  font-size: 4vw;
+`;
