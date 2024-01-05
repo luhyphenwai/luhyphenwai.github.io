@@ -74,14 +74,30 @@ export const SectionCentered = styled.div`
 export const BufferSection = styled.div`
   height: 10vh;
 `;
+
+export const LetterContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+`;
 ////////// TEXT //////////
 
 export const Title = styled.h1`
   display: flex;
   font-family: ${BOLD_FONT};
-  color: ${colors.DARK_BLUE};
-  font-size: 15vw;
-  margin: 0; */
+  color: ${colors.TEXT};
+  font-size: 10vw;
+`;
+
+// Individual letters for animation
+export const Letter = styled.h1`
+  font-family: ${BOLD_FONT};
+  color: ${colors.TEXT};
+  font-size: 14vw;
+  margin: 0;
+
+  animation: 1s ${fadeIn};
+  overflow: hidden;
 `;
 
 export const BoldSubTitle = styled.h2`
@@ -99,8 +115,19 @@ export const SubTitle = styled.h2`
   margin: 0;
   z-index: 1;
 `;
+
+export const SubLetter = styled.h2`
+  font-family: ${BOLD_FONT};
+  color: ${colors.TEXT};
+  font-size: 5vw;
+  margin: 0;
+
+  animation: 1s ${fadeIn};
+  overflow: hidden;
+`;
+
 export const SubHeader = styled.h1`
-  font-family: "Fredoka One", cursive;
+  font-family: ${REGULAR_FONT};
   color: ${colors.TEXT};
   font-size: 2.5vw;
   margin: 0;
@@ -108,7 +135,7 @@ export const SubHeader = styled.h1`
 `;
 
 export const Text = styled.p`
-  font-family: "Fredoka One", cursive;
+  font-family: ${REGULAR_FONT};
   color: ${colors.TEXT};
   font-size: 2vw;
 
@@ -162,7 +189,7 @@ export const DisplayImg = styled.img`
 export const SeperationLine = styled.div`
   position: static;
   width: 80vw;
-  height: 3px;
+  height: 5px;
   margin-left: 1vw;
   background-color: ${colors.TEXT};
   border-radius: 5px;
@@ -176,17 +203,6 @@ export const IntroSubheaderContainer = styled.div`
   position: absolute;
   top: 1vh;
   left: 1vw;
-`;
-
-// Individual letters for animation
-export const Letter = styled.h1`
-  font-family: ${BOLD_FONT};
-  color: ${colors.TEXT};
-  font-size: 14vw;
-  margin: 0;
-
-  animation: 1s ${fadeIn};
-  overflow: hidden;
 `;
 
 // Holds both words for name
@@ -237,14 +253,44 @@ export const LandingArrowContainer = styled.a`
   }
 `;
 
+////////// ABOUT ME //////////
+export const AboutText = styled.div`
+  font-family: ${REGULAR_FONT};
+  color: ${colors.TEXT};
+  font-size: 2vw;
+  margin: 0;
+  z-index: 1;
+
+  width: 50vw;
+`;
+
 ////////// PROJECTS //////////
 export const ProjectHeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 1vw;
-  margin-top: 1vh;
+  margin-top: 1h;
+  margin-bottom: -5vh;
+
+  position: relative;
 `;
 
+export const ProjectSubtitle = styled.div`
+  margin-left: 0.25vw;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  margin-right: 13vw;
+
+  position: absolute;
+  top: -2vw;
+  right: 0;
+
+  font-family: ${REGULAR_FONT};
+  color: ${colors.TEXT};
+  font-size: 2vw;
+
+  text-align: right;
+`;
 export const ProjectContainer = styled.div`
   display: flex;
 
@@ -257,7 +303,7 @@ export const ProjectContainer = styled.div`
   border-radius: 20px;
 
   overflow: hidden;
-  background-color: ${colors.BACKGROUND_DARK};
+  // background-color: ${colors.BACKGROUND_DARK};
 `;
 
 export const ProjectColumn = styled.div`
@@ -267,7 +313,8 @@ export const ProjectColumn = styled.div`
   justify-content: flex-start;
 
   width: 45vw;
-  padding: 2vw;
+  // padding: 2vw;
+  padding-top: 5vw;
   padding-bottom: 0vw;
 `;
 
@@ -280,12 +327,17 @@ export const Project = styled.a`
 
   width: 41vw;
   height: auto;
-  margin-bottom: 2vw;
+  margin-bottom: 3vw;
 
   border-radius: 20px;
   background-color: ${colors.BACKGROUND};
+
+  box-shadow: 0px 0px 10px black;
+
   &:hover {
     cursor: pointer;
+    margin-top: -1vw;
+    margin-bottom: 4vw;
     // background-color: ${colors.DARK_BLUE};
   }
 
@@ -450,11 +502,15 @@ export const ProjectEndText = styled.div`
   padding: 2vw;
 
   border-radius: 20px;
-  background-color: ${colors.BACKGROUND};
+  background-color: ${colors.BACKGROUND_DARK};
 
-  ${Project}:hover & {
-    opacity: 1;
+  &:hover {
+    cursor: pointer;
+    margin-top: -1vw;
+    margin-bottom: 3vw;
+    // background-color: ${colors.DARK_BLUE};
   }
+
   z-index: 0;
 
   transition: 0.4s;
@@ -462,8 +518,8 @@ export const ProjectEndText = styled.div`
 
 export const ProjectEndIcon = styled.a`
   position: absolute;
-  bottom: 2vw;
-  left: 4.5vw;
+  bottom: 1vw;
+  left: 2vw;
 
   flex-direction: row;
   justify-content: flex-end;

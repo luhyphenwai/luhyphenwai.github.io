@@ -4,7 +4,7 @@ import Links from '../Subcomponents/Links.jsx'
 import SideMenu from "../Subcomponents/SideMenu.jsx"
 import Landing from './Landing.jsx'
 import HomeProjects from './HomeProjects.jsx'
-import Me from './Me.jsx'
+import About from './About.jsx'
 import * as colors from '../../colors.js'
 
 import { BufferSection, Section, SeperationLine, UnderConstructionText } from "./HomeStyles.js"
@@ -34,13 +34,15 @@ const Home = (props) => (
         
     {/* INTRO SECTION */}
     <Landing/>
-      
-    <BufferSection/>
     
+    {/* <BufferSection/>
+    <About/> */}
+    
+    <BufferSection/>
     <HomeProjects/>
     
     {/* Under Construction Section */}
-    <div style={background} id='Section3x'>
+    <div style={background} id='Section3'>
       <UnderConstructionText> 🚧 under construction 🚧</UnderConstructionText>
     </div>
 
