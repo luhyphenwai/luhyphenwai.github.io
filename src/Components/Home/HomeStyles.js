@@ -72,7 +72,7 @@ export const SectionCentered = styled.div`
 `;
 
 export const BufferSection = styled.div`
-  height: 10vh;
+  height: 20vh;
 `;
 
 export const LetterContainer = styled.div`
