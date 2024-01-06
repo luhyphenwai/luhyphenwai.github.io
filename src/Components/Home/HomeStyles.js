@@ -63,7 +63,7 @@ export const SectionCentered = styled.div`
   z-index: 1;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
@@ -98,6 +98,12 @@ export const Letter = styled.h1`
 
   animation: 1s ${fadeIn};
   overflow: hidden;
+
+  &:hover {
+    margin-top: -2.1vh;
+    font-size: 15vw;
+  }
+  transition: 0.2s;
 `;
 
 export const BoldSubTitle = styled.h2`
@@ -106,6 +112,11 @@ export const BoldSubTitle = styled.h2`
   font-size: 4vw;
   margin: 0;
   z-index: 1;
+
+  &:hover {
+    font-size: 4.25vw;
+  }
+  transition: 0.2s;
 `;
 
 export const SubTitle = styled.h2`
@@ -114,6 +125,11 @@ export const SubTitle = styled.h2`
   font-size: 3vw;
   margin: 0;
   z-index: 1;
+
+  &:hover {
+    margin-bottom: 0.5vh;
+  }
+  transition: 0.2s;
 `;
 
 export const SubLetter = styled.h2`
@@ -228,13 +244,13 @@ export const LastNameContainer = styled.div`
 
 export const LeftLandingSubText = styled.div`
   position: absolute;
-  bottom: 1vh;
+  bottom: 2vh;
   left: 1vw;
   z-index: 1;
 `;
 export const RightLandingSubText = styled.div`
   position: absolute;
-  bottom: 1vh;
+  bottom: 2vh;
   right: 2vw;
   z-index: 1;
 `;
@@ -254,14 +270,45 @@ export const LandingArrowContainer = styled.a`
 `;
 
 ////////// ABOUT ME //////////
+
+export const AboutTextContainer = styled.div``;
+
 export const AboutText = styled.div`
   font-family: ${REGULAR_FONT};
   color: ${colors.TEXT};
   font-size: 2vw;
+
   margin: 0;
+  margin-left: -5vw;
+  margin-right: 5vw;
+  margin-bottom: 5vh;
   z-index: 1;
 
   width: 50vw;
+
+  &:hover {
+    margin-left: -4vw;
+    margin-right: 4vw;
+  }
+  transition: 0.2s;
+`;
+
+export const AboutImage = styled.img`
+  width: 50vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border-radius: 4%;
+
+  box-shadow: 1vw 2vh ${colors.TEXT};
+
+  &:hover {
+    margin-left: 0vw;
+    width: 52vh;
+    margin-left: 0vw;
+    box-shadow: 2vw 3vh ${colors.TEXT};
+  }
+
+  transition: 0.5s;
 `;
 
 ////////// PROJECTS //////////

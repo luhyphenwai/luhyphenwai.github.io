@@ -59,7 +59,7 @@ const Landing = (props) => (
         </AttentionSeeker>
       </RightLandingSubText>
       
-      <LandingArrowContainer href="#1">
+      <LandingArrowContainer href="#about">
         <Fade direction='down' delay={6400} duration={1000} triggerOnce={true}>
             <ArrowDown>
               <Icon icon="mdi:arrow-down" color={colors.TEXT} /> 

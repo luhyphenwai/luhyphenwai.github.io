@@ -20,7 +20,7 @@ export default function Projects(){
     
     return (
         <>
-          <SectionLong id='1'>
+          <SectionLong id='projects'>
 
             <ProjectHeaderContainer>
               <LetterContainer>

@@ -35,16 +35,15 @@ const Home = (props) => (
     {/* INTRO SECTION */}
     <Landing/>
     
-    {/* <BufferSection/>
-    <About/> */}
+    <About/>
     
     <BufferSection/>
     <HomeProjects/>
     
     {/* Under Construction Section */}
-    <div style={background} id='Section3'>
+    {/* <div style={background} id='Section3'>
       <UnderConstructionText> 🚧 under construction 🚧</UnderConstructionText>
-    </div>
+    </div> */}
 
 
   </>
