@@ -3,7 +3,7 @@ import React from 'react'
 import { Icon } from '@iconify/react'
 import {AttentionSeeker, Bounce, Fade, Flip, JackInTheBox, Slide, Zoom} from "react-awesome-reveal"
 
-import {Section, Flexbox, Title, SubTitle,LeftLandingSubText, RightLandingSubText,  Letter,  ArrowDown, BoldSubTitle, IntroSubheaderContainer, LandingArrowContainer, NameContainer, FirstNameContainer, LastNameContainer, SectionCentered, AboutText, AboutImage, AboutTextContainer} from "./HomeStyles.js"
+import {Section, Flexbox, Title, SubTitle,LeftLandingSubText, RightLandingSubText,  Letter,  ArrowDown, BoldSubTitle, IntroSubheaderContainer, LandingArrowContainer, NameContainer, FirstNameContainer, LastNameContainer, SectionCentered, AboutText, AboutImage, AboutTextContainer, AboutImageContainer} from "./HomeStyles.js"
 import * as colors from '../../colors.js'
 
 import meImg from '../../Images/me but cropped.jpg'
@@ -26,7 +26,9 @@ const About = (props) => (
             </AboutTextContainer>
 
             <Fade direction='right' delay={1200} duration={1200} triggerOnce={true}>
+              <AboutImageContainer>
                 <AboutImage src={meImg}/>
+              </AboutImageContainer>                
             </Fade>
 
       <LandingArrowContainer href="#projects">

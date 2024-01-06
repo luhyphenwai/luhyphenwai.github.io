@@ -5,6 +5,8 @@ import HomeDesktop from "./Components/Home/HomeDesktop";
 import Projects from "./Components/Projects/Projects";
 import { BrowserRouter, Routes, Router, Switch, Route } from "react-router-dom";
 
+import { useMediaQuery } from "react-responsive";
+
 import "./App.css";
 
 function App() {

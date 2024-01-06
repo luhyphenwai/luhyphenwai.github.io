@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
 import * as colors from "../../colors";
 
@@ -294,25 +294,34 @@ export const AboutText = styled.div`
 `;
 
 export const AboutImage = styled.img`
-  width: 30vw;
-  max-height: 50vh;
+  width: auto;
+  height: 100%;
 
-  margin-left: 1vw;
-  margin-right: 1vw;
+  // object-fit: cover;
+
   border-radius: 4%;
 
   box-shadow: 1vw 2vh ${colors.TEXT};
 
   &:hover {
-    margin-left: 0vw;
-    width: 32vw;
-    margin-left: 0vw;
+    height: 105%;
+    margin-left: -1vw;
     box-shadow: 2vw 3vh ${colors.TEXT};
   }
 
   transition: 0.5s;
 `;
 
+export const AboutImageContainer = styled.div`
+  width: 30vw;
+  height: 75vh;
+
+  display: flex;
+  justify-content: center;
+
+  margin-left: 1vw;
+  margin-right: 1vw;
+`;
 ////////// PROJECTS //////////
 export const ProjectHeaderContainer = styled.div`
   display: flex;
@@ -559,6 +568,13 @@ export const ProjectEndText = styled.div`
     margin-bottom: 3vw;
     // background-color: ${colors.DARK_BLUE};
   }
+
+  ${(props) =>
+    props.mobile === true &&
+    css`
+      height: 20px;
+      width: 20px;
+    `}
 
   z-index: 0;
 
