@@ -27,7 +27,7 @@ const background = {
 
 
 
-const Home = (props) => (
+const HomeDesktop = (props) => (
   <>
     <SideMenu/>
     <Links/>
@@ -49,4 +49,4 @@ const Home = (props) => (
   </>
 );
 
-export default Home;
+export default HomeDesktop;

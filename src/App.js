@@ -1,7 +1,7 @@
 // import "./App.scss";
 
 // Components
-import Home from "./Components/Home/Home";
+import HomeDesktop from "./Components/Home/HomeDesktop";
 import Projects from "./Components/Projects/Projects";
 import { BrowserRouter, Routes, Router, Switch, Route } from "react-router-dom";
 
@@ -21,7 +21,7 @@ function App() {
       {/* <Intro /> */}
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<HomeDesktop />} />
           <Route path="/Projects" element={<Projects />} />
         </Routes>
       </BrowserRouter>

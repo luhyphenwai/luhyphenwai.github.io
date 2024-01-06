@@ -65,7 +65,7 @@ export default function Projects(){
                 </Fade>
                 
                 <Fade style={{zIndex:0}} duration={800} direction='up' delay={600} triggerOnce={true}>
-                  <Project href='https://luwai.dev/HTML/Projects/typer.typer.html'>
+                  <Project href='https://luwai.dev/HTML/Projects/typer/typer.html'>
                     <ProjectImageWhite src={TyperImg} />
                     <ProjectTitle> Typer</ProjectTitle>
                     <ProjectTitleLine/>
@@ -80,7 +80,7 @@ export default function Projects(){
                       <ProjectLink href='https://github.com/luwaiwong/luwaiwong.github.io' target="_blank" rel="noopener noreferrer">
                         <Icon icon="mdi:github" color={colors.TEXT} />
                       </ProjectLink>
-                      <ProjectLink href='https://luwai.dev/HTML/Projects/typer.typer.html' target="_blank" rel="noopener noreferrer">
+                      <ProjectLink href='https://luwai.dev/HTML/Projects/typer/typer.html' target="_blank" rel="noopener noreferrer">
                         <Icon icon="mdi:link" color={colors.TEXT} />
                       </ProjectLink>
                     </ProjectLinks>
@@ -121,7 +121,7 @@ export default function Projects(){
               <ProjectColumn >
 
                 <Fade style={{zIndex:0}} duration={800} direction='up' delay={500}  triggerOnce={true}>
-                  <Project >
+                  <Project href='/HTML/Projects/unity-pathfinding/index.html' target="_blank" rel="noopener noreferrer">
                     <ProjectImageWhite src={UnityPathfindingImg} />
                     <ProjectTitle> Unity Pathfinding</ProjectTitle>
                     <ProjectTitleLine/>

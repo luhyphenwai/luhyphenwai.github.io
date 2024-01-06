@@ -294,7 +294,9 @@ export const AboutText = styled.div`
 `;
 
 export const AboutImage = styled.img`
-  width: 50vh;
+  width: 30vw;
+  max-height: 50vh;
+
   margin-left: 1vw;
   margin-right: 1vw;
   border-radius: 4%;
@@ -303,7 +305,7 @@ export const AboutImage = styled.img`
 
   &:hover {
     margin-left: 0vw;
-    width: 52vh;
+    width: 32vw;
     margin-left: 0vw;
     box-shadow: 2vw 3vh ${colors.TEXT};
   }
