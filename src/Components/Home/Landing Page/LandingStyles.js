@@ -28,7 +28,7 @@ export const FirstNameContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: -2vw;
-  margin-bottom: -2vh;
+  margin-top: -30vh;
 `;
 export const LastNameContainer = styled.div`
   display: flex;
@@ -70,10 +70,25 @@ export const LandingArrowContainerTall = styled.a`
   width: 100vw;
   justify-content: center;
   position: absolute;
-  bottom: 15vh;
+  bottom: 12.5vh;
   height: 5vh;
 
   &:hover {
     cursor: pointer;
   }
+`;
+
+// Hold left and right text
+
+export const LeftLandingSubTextTall = styled.div`
+  position: absolute;
+  bottom: 20vh;
+  left: 2vw;
+  z-index: 1;
+`;
+export const RightLandingSubTextTall = styled.div`
+  position: absolute;
+  bottom: 20vh;
+  right: 2vw;
+  z-index: 1;
 `;

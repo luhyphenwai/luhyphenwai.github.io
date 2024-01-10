@@ -3,13 +3,15 @@ import React from 'react'
 import { Icon } from '@iconify/react'
 import {AttentionSeeker, Bounce, Fade, Flip, JackInTheBox, Slide, Zoom} from "react-awesome-reveal"
 
-import { SectionCentered, AboutText, AboutImage, AboutTextContainer, AboutImageContainer, ArrowDown} from "./HomeStyles.js"
-import { LandingArrowContainer } from './Landing Page/LandingStyles.js'
-import * as colors from '../../colors.js'
+import { SectionCentered,  ArrowDown} from "../HomeStyles.js"
+import {AboutText, AboutImage, AboutTextContainer, AboutImageContainer} from './AboutStyles.js'
 
-import meImg from '../../Images/me but cropped.jpg'
+import { LandingArrowContainer } from '../Landing Page/LandingStyles.js'
+import * as colors from '../../../colors.js'
 
-const About = (props) => (
+import meImg from '../../../Images/me but cropped.jpg'
+
+const AboutWide = (props) => (
   <>
     <SectionCentered id='about'>
             <AboutTextContainer>
@@ -43,4 +45,4 @@ const About = (props) => (
   </>
 );
 
-export default About;
+export default AboutWide;

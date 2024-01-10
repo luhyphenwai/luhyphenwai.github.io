@@ -1,10 +1,10 @@
 import React from 'react'
 
 import Links from '../Menus/Links/Links.jsx'
-import SideMenu from "../Menus/SideMenu.jsx"
+import SideMenu from "../Menus/SideMenu/SideMenu.jsx"
 import Landing from './Landing Page/Landing.jsx'
-import HomeProjects from './HomeProjects.jsx'
-import About from './About.jsx'
+import HomeProjects from './HomeProjects/HomeProjects.jsx'
+import About from './About/About.jsx'
 import * as colors from '../../colors.js'
 
 import { BufferSection, Section, SeperationLine, UnderConstructionText } from "./HomeStyles.js"

@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Outlet, Link } from "react-router-dom";
+
 import { Slide , Fade} from "react-awesome-reveal"
-import { MenuBackground, MenuButton, MenuButtonContainer, MenuContainer, SideMenuButton } from "./SubStyles"
+import { motion, useScroll, useSpring, useTransform} from "framer-motion";
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+
 import { Icon } from '@iconify/react'
 
-import { useRef } from 'react';
-import { motion, useScroll, useSpring, useTransform} from "framer-motion";
+import { MenuBackground, MenuButton, MenuButtonContainer, SideMenuButton } from "./SubStyles.js"
 
-import * as colors from '../../colors.js'
 
-import { Outlet, Link } from "react-router-dom";
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import * as colors from '../../../colors.js'
+
 
 
 
@@ -69,16 +71,12 @@ export default function SideMenu (){
                 </Fade>
             </SideMenuButton>   
             
-            {/* <MenuContainer> */}
-                <MenuBackground visible={showMenu}>
-                    <MenuButtonContainer visible={showObj}>
-                        <MenuButton visible={showObj}>Home</MenuButton>
-                    </MenuButtonContainer>
-                </MenuBackground>
-            {/* </MenuContainer> */}
+            <MenuBackground visible={showMenu}>
+                <MenuButtonContainer visible={showObj}>
+                    <MenuButton visible={showObj}>Home</MenuButton>
+                </MenuButtonContainer>
+            </MenuBackground>
         </>
         
     );
 };
-
-// export default SideMenu;

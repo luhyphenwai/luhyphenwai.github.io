@@ -1,6 +1,6 @@
 import React from 'react'
-import {SectionCentered, Flexbox, Title, SubTitle,  Letter,  ArrowDownHeight, BoldSubTitle } from "../HomeStyles.js"
-import {IntroSubheaderContainer, NameContainer, FirstNameContainer, LastNameContainer,LeftLandingSubText, RightLandingSubText, LandingArrowContainerTall} from "./LandingStyles.js"
+import {SectionCentered, Flexbox, Title, SubTitle,  Letter,  ArrowDownHeight, BoldSubTitle } from "../HomeStylesTall.js"
+import {IntroSubheaderContainer, NameContainer, FirstNameContainer, LastNameContainer,LeftLandingSubTextTall, RightLandingSubTextTall, LandingArrowContainerTall} from "./LandingStyles.js"
 import * as colors from '../../../colors.js'
 
 import { Icon } from '@iconify/react'
@@ -42,23 +42,23 @@ const LandingTall = (props) => (
       </NameContainer>
 
 
-      <LeftLandingSubText>
-        <Fade delay={4000} direction='down' triggerOnce={true}>
+      <LeftLandingSubTextTall>
+        <Fade delay={4000}direction='down' triggerOnce={true}>
+            <SubTitle>Developer</SubTitle>
+        </Fade>
+        <Fade delay={4800} direction='down' triggerOnce={true}>
             <SubTitle>Stats & CS</SubTitle>
         </Fade>
         
-        <Fade delay={4800}direction='down' triggerOnce={true}>
-            <SubTitle>Developer</SubTitle>
-        </Fade>
-      </LeftLandingSubText>
+      </LeftLandingSubTextTall>
 
-      <RightLandingSubText>
+      <RightLandingSubTextTall>
         <AttentionSeeker effect="rubberBand" delay={7000} style={{zIndex:0}}>
         <Fade delay={5600} direction='down' triggerOnce={true}>
             <SubTitle>uoft '26</SubTitle>
         </Fade>
         </AttentionSeeker>
-      </RightLandingSubText>
+      </RightLandingSubTextTall>
       
       <LandingArrowContainerTall href="#about">
         <Fade direction='down' delay={6400} duration={1000} triggerOnce={true}>

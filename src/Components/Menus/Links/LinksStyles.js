@@ -14,7 +14,7 @@ export const SideLinkContainerHorizontal = styled.div`
   width: 100vw;
 
   position: fixed;
-  bottom: 1vh;
+  bottom: 0vh;
 
   display: flex;
   flex-direction: column;

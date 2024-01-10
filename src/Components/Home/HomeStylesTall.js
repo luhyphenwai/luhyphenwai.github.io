@@ -93,7 +93,7 @@ export const Title = styled.h1`
 export const Letter = styled.h1`
   font-family: ${BOLD_FONT};
   color: ${colors.TEXT};
-  font-size: 14vw;
+  font-size: 9vh;
   margin: 0;
 
   animation: 1s ${fadeIn};
@@ -109,7 +109,7 @@ export const Letter = styled.h1`
 export const BoldSubTitle = styled.h2`
   font-family: ${BOLD_FONT};
   color: ${colors.TEXT};
-  font-size: 4vw;
+  font-size: 4vh;
   margin: 0;
   z-index: 1;
 
@@ -122,7 +122,7 @@ export const BoldSubTitle = styled.h2`
 export const SubTitle = styled.h2`
   font-family: ${REGULAR_FONT};
   color: ${colors.TEXT};
-  font-size: 3vw;
+  font-size: 3.5vh;
   margin: 0;
   z-index: 1;
 
@@ -224,6 +224,59 @@ export const SeperationLine = styled.div`
   border-radius: 5px;
 `;
 
+////////// ABOUT ME //////////
+
+export const AboutTextContainer = styled.div``;
+
+export const AboutText = styled.div`
+  font-family: ${REGULAR_FONT};
+  color: ${colors.TEXT};
+  font-size: 2vw;
+
+  margin: 0;
+  margin-left: -5vw;
+  margin-right: 5vw;
+  margin-bottom: 5vh;
+  z-index: 1;
+
+  width: 50vw;
+
+  &:hover {
+    margin-left: -4vw;
+    margin-right: 4vw;
+  }
+  transition: 0.2s;
+`;
+
+export const AboutImage = styled.img`
+  width: auto;
+  height: 100%;
+
+  // object-fit: cover;
+
+  border-radius: 4%;
+
+  box-shadow: 1vw 2vh ${colors.TEXT};
+
+  &:hover {
+    height: 105%;
+    margin-left: -1vw;
+    box-shadow: 2vw 3vh ${colors.TEXT};
+  }
+
+  transition: 0.5s;
+`;
+
+export const AboutImageContainer = styled.div`
+  width: 30vw;
+  height: 75vh;
+
+  display: flex;
+  justify-content: center;
+
+  margin-left: 1vw;
+  margin-right: 1vw;
+`;
 ////////// PROJECTS //////////
 export const ProjectHeaderContainer = styled.div`
   display: flex;

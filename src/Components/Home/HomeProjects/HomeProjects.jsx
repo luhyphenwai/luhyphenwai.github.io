@@ -3,20 +3,20 @@ import React from 'react'
 import { Icon } from '@iconify/react'
 import {AttentionSeeker, Bounce, Fade, Flip, JackInTheBox, Slide, Zoom} from "react-awesome-reveal"
 
-import { BoldSubTitle, Project, ProjectColumn, ProjectContainer, ProjectHeaderContainer, ProjectImage, ProjectImageWhite, ProjectLinks,ProjectLink, ProjectTags, ProjectText, ProjectTitle, ProjectTitleLine, SectionLong, ProjectEndText, ProjectEndIcon, Title, SeperationLine, SubTitle, ProjectSubtitle, LetterContainer, SubLetter} from './HomeStyles.js';
-import * as colors from '../../colors.js'
-import * as links from '../../links.js'
+import { BoldSubTitle, Project, ProjectColumn, ProjectContainer, ProjectHeaderContainer, ProjectImage, ProjectImageWhite, ProjectLinks,ProjectLink, ProjectTags, ProjectText, ProjectTitle, ProjectTitleLine, SectionLong, ProjectEndText, ProjectEndIcon, Title, SeperationLine, SubTitle, ProjectSubtitle, LetterContainer, SubLetter} from '../HomeStyles.js';
+import * as colors from '../../../colors.js'
+import * as links from '../../../links.js'
 
 
 
-import UnityPathfindingImg from '../../Images/Screenshots/Unity Pathfinding.png'
-import TyperImg from '../../Images/Screenshots/typer.png'
-import OfficeImg from '../../Images/Screenshots/The Office.jpg'
-import SimImg from '../../Images/Screenshots/SIMULATION.png'
-import ReturnImg from '../../Images/Screenshots/RETURN.gif'
-import hijakImg from '../../Images/Screenshots/hijack.gif'
-import necromergerImg from '../../Images/Screenshots/necromerger.png'
-import sortingImg from '../../Images/Screenshots/sorting.png'
+import UnityPathfindingImg from '../../../Images/Screenshots/Unity Pathfinding.png'
+import TyperImg from '../../../Images/Screenshots/typer.png'
+import OfficeImg from '../../../Images/Screenshots/The Office.jpg'
+import SimImg from '../../../Images/Screenshots/SIMULATION.png'
+import ReturnImg from '../../../Images/Screenshots/RETURN.gif'
+import hijakImg from '../../../Images/Screenshots/hijack.gif'
+import necromergerImg from '../../../Images/Screenshots/necromerger.png'
+import sortingImg from '../../../Images/Screenshots/sorting.png'
 export default function Projects(){
 
     
