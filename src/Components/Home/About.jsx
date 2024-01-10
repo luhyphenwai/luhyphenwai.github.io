@@ -3,7 +3,8 @@ import React from 'react'
 import { Icon } from '@iconify/react'
 import {AttentionSeeker, Bounce, Fade, Flip, JackInTheBox, Slide, Zoom} from "react-awesome-reveal"
 
-import {Section, Flexbox, Title, SubTitle,LeftLandingSubText, RightLandingSubText,  Letter,  ArrowDown, BoldSubTitle, IntroSubheaderContainer, LandingArrowContainer, NameContainer, FirstNameContainer, LastNameContainer, SectionCentered, AboutText, AboutImage, AboutTextContainer, AboutImageContainer} from "./HomeStyles.js"
+import { SectionCentered, AboutText, AboutImage, AboutTextContainer, AboutImageContainer, ArrowDown} from "./HomeStyles.js"
+import { LandingArrowContainer } from './Landing Page/LandingStyles.js'
 import * as colors from '../../colors.js'
 
 import meImg from '../../Images/me but cropped.jpg'
