@@ -63,3 +63,17 @@ export const LandingArrowContainer = styled.a`
     cursor: pointer;
   }
 `;
+
+////////// Tall //////////
+export const LandingArrowContainerTall = styled.a`
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  position: absolute;
+  bottom: 15vh;
+  height: 5vh;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;

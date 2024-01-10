@@ -189,6 +189,19 @@ export const ArrowDown = styled.a`
   transition: 0.2s;
 `;
 
+export const ArrowDownHeight = styled.a`
+  margin-top: 0vh;
+  font-size: 5vh;
+
+  display: flex;
+  justify-content: center;
+  width: 10vw;
+
+  &:hover {
+    margin-top: 1vh;
+  }
+  transition: 0.2s;
+`;
 export const DisplayImg = styled.img`
   position: absolute;
   width: 35vw;

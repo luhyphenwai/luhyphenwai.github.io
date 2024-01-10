@@ -1,6 +1,6 @@
 import React from 'react'
-import {SectionCentered, Flexbox, Title, SubTitle,  Letter,  ArrowDown, BoldSubTitle, } from "../HomeStyles.js"
-import {IntroSubheaderContainer, LandingArrowContainer, NameContainer, FirstNameContainer, LastNameContainer,LeftLandingSubText, RightLandingSubText} from "./LandingStyles.js"
+import {SectionCentered, Flexbox, Title, SubTitle,  Letter,  ArrowDownHeight, BoldSubTitle } from "../HomeStyles.js"
+import {IntroSubheaderContainer, NameContainer, FirstNameContainer, LastNameContainer,LeftLandingSubText, RightLandingSubText, LandingArrowContainerTall} from "./LandingStyles.js"
 import * as colors from '../../../colors.js'
 
 import { Icon } from '@iconify/react'
@@ -23,7 +23,7 @@ const LandingTall = (props) => (
       <NameContainer>
         <FirstNameContainer> 
           <Fade cascade damping={0.1} duration={800} delay={1500} style={{zIndex:1}} direction={'up'} triggerOnce={true}>
-            <Letter> M</Letter>
+            <Letter> L</Letter>
             <Letter> u</Letter>
             <Letter> -</Letter>
             <Letter> W</Letter>
@@ -60,13 +60,13 @@ const LandingTall = (props) => (
         </AttentionSeeker>
       </RightLandingSubText>
       
-      <LandingArrowContainer href="#about">
+      <LandingArrowContainerTall href="#about">
         <Fade direction='down' delay={6400} duration={1000} triggerOnce={true}>
-            <ArrowDown>
+            <ArrowDownHeight>
               <Icon icon="mdi:arrow-down" color={colors.TEXT} /> 
-            </ArrowDown>
+            </ArrowDownHeight>
         </Fade>
-      </LandingArrowContainer>
+      </LandingArrowContainerTall>
     </SectionCentered>
   </>
 );

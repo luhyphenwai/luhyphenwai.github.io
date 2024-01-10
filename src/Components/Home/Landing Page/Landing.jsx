@@ -5,14 +5,12 @@ import LandingWide from './LandingWide';
 import LandingTall from './LandingTall';
 
 const Landing = (props) => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 1224px)'
-  })
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-    
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+  const isTall = isTabletOrMobile && isPortrait
   return <> 
-    {isDesktopOrLaptop && <LandingWide/>} 
-    {isTabletOrMobile && <LandingTall/>} 
+    {!isTall && <LandingWide/>} 
+    {isTall && <LandingTall/>} 
   
   </>
 };

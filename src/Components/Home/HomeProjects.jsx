@@ -205,6 +205,9 @@ export default function Projects(){
                       <ProjectLink href={links.necroLink} target="_blank" rel="noopener noreferrer">
                         <Icon icon="simple-icons:itchdotio" color={colors.TEXT} />
                       </ProjectLink>
+                      <ProjectLink href={links.necroGithubLink} target="_blank" rel="noopener noreferrer">
+                        <Icon icon="mdi:github" color={colors.TEXT} />
+                      </ProjectLink>
                     </ProjectLinks>
                   </Project>
                 </Fade>

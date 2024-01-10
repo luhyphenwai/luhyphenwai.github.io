@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react'
 import { motion, useScroll, useSpring, useTransform} from "framer-motion";
 import { Fade } from "react-awesome-reveal"
 
-import { SideLinks, SideLinkBackground, SideLinkContainerVertical} from "../SubStyles.js"
+import { SideLinksHorizontal, SideLinkBackgroundHorizontal, SideLinkContainerHorizontal} from "./LinksStyles.js"
 import * as colors from '../../../colors.js'
 import * as links from '../../../links.js'
 
@@ -27,7 +27,7 @@ function getMax(num){
         return num;
     }
 }
-export default function LinksWide(){
+export default function LinksTall(){
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -37,47 +37,47 @@ export default function LinksWide(){
     // const y = 1
 
     return (
-        <div>
-            <SideLinkContainerVertical as={motion.div} >
-                <SideLinkBackground as={motion.div} style={{ scale: y}}>
-                    <Fade direction='right' duration={1000} delay={4000} dampen={0.1} cascade triggerOnce>
+        <>
+            <SideLinkContainerHorizontal as={motion.div} >
+                <SideLinkBackgroundHorizontal as={motion.div} style={{ scale: y}}>
+                    <Fade direction='up' duration={1000} delay={0} dampen={0.1} cascade triggerOnce>
                         <a href={links.itchLink} target="_blank" rel="noopener noreferrer">
-                            <SideLinks as={motion.div}  href={links.itchLink}>
+                            <SideLinksHorizontal as={motion.div}  href={links.itchLink}>
                                 <Icon icon="simple-icons:itchdotio" color={colors.TEXT} /> 
-                            </SideLinks>
+                            </SideLinksHorizontal>
                         </a>
                         <a href={links.twitterLink} target="_blank" rel="noopener noreferrer">
-                            <SideLinks as={motion.div}  href={links.twitterLink}>
+                            <SideLinksHorizontal as={motion.div}  href={links.twitterLink}>
                                 <Icon icon="akar-icons:x-fill" color={colors.TEXT}  />
-                            </SideLinks> 
+                            </SideLinksHorizontal> 
                         </a>
                         
                         <a href={links.githubLink} target="_blank" rel="noopener noreferrer">
-                            <SideLinks as={motion.div}  href={links.githubLink}>
+                            <SideLinksHorizontal as={motion.div}  href={links.githubLink}>
                                 <Icon icon="mdi:github" color={colors.TEXT}  />
-                            </SideLinks>
+                            </SideLinksHorizontal>
                         </a>
                         
                         <a href={links.instagramLink} target="_blank" rel="noopener noreferrer">
-                            <SideLinks as={motion.div}  href={links.instagramLink}>
+                            <SideLinksHorizontal as={motion.div}  href={links.instagramLink}>
                                 <Icon icon="ri:instagram-line" color={colors.TEXT} />
-                            </SideLinks>
+                            </SideLinksHorizontal>
                         </a>
                         
                         <a href={links.linkedinLink} target="_blank" rel="noopener noreferrer">
                                 
-                            <SideLinks as={motion.div} href={links.linkedinLink}>
+                            <SideLinksHorizontal as={motion.div} href={links.linkedinLink}>
                                 <Icon icon="mdi:linkedin" color={colors.TEXT} />    
-                            </SideLinks>
+                            </SideLinksHorizontal>
                         </a>
                     </Fade>
                     
-                </SideLinkBackground>
-            </SideLinkContainerVertical>
+                </SideLinkBackgroundHorizontal>
+            </SideLinkContainerHorizontal>
              <div ref={ref} style={{position: "absolute", marginTop: "200px"}}>
                 
             </div>
             
-        </div>
+        </>
     );
 }

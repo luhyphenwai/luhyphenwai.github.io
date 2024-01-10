@@ -24,5 +24,8 @@ export const sortingGithubLink =
   "https://github.com/luwaiwong/react-sorting-visualizer";
 
 export const returnLink = "https://luwai.itch.io/RETURN";
+export const returnGithubLink = "https://github.com/luwaiwong/ajat-2021-return";
 
 export const necroLink = "https://luwai.itch.io/Necromerger";
+export const necroGithubLink =
+  "https://github.com/luwaiwong/brackeys-2021.1-necromerger";

@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react'
 import { motion, useScroll, useSpring, useTransform} from "framer-motion";
 import { Fade } from "react-awesome-reveal"
 
-import { SideLinks, SideLinkBackground, SideLinkContainer} from "../SubStyles.js"
+import { SideLinks, SideLinkBackgroundVertical, SideLinkContainerVertical} from "./LinksStyles.js"
 import * as colors from '../../../colors.js'
 import * as links from '../../../links.js'
 
@@ -38,8 +38,8 @@ export default function LinksWide(){
 
     return (
         <div>
-            <SideLinkContainer as={motion.div} >
-                <SideLinkBackground as={motion.div} style={{ scale: y}}>
+            <SideLinkContainerVertical as={motion.div} >
+                <SideLinkBackgroundVertical as={motion.div} style={{ scale: y}}>
                     <Fade direction='right' duration={1000} delay={4000} dampen={0.1} cascade triggerOnce>
                         <a href={links.itchLink} target="_blank" rel="noopener noreferrer">
                             <SideLinks as={motion.div}  href={links.itchLink}>
@@ -72,8 +72,8 @@ export default function LinksWide(){
                         </a>
                     </Fade>
                     
-                </SideLinkBackground>
-            </SideLinkContainer>
+                </SideLinkBackgroundVertical>
+            </SideLinkContainerVertical>
              <div ref={ref} style={{position: "absolute", marginTop: "200px"}}>
                 
             </div>
