@@ -1,6 +1,6 @@
 import React from 'react'
 import {SectionCentered, Flexbox, Title, SubTitle,  Letter,  ArrowDownHeight, BoldSubTitle } from "../HomeStylesTall.js"
-import {IntroSubheaderContainer, NameContainer, FirstNameContainer, LastNameContainer,LeftLandingSubTextTall, RightLandingSubTextTall, LandingArrowContainerTall} from "./LandingStyles.js"
+import {IntroSubheaderContainer, NameContainer, FirstNameContainerTall, LastNameContainerTall,LeftLandingSubTextTall, RightLandingSubTextTall, LandingArrowContainerTall} from "./LandingStyles.js"
 import * as colors from '../../../colors.js'
 
 import { Icon } from '@iconify/react'
@@ -21,7 +21,7 @@ const LandingTall = (props) => (
             </Fade>
       </IntroSubheaderContainer>
       <NameContainer>
-        <FirstNameContainer> 
+        <FirstNameContainerTall> 
           <Fade cascade damping={0.1} duration={800} delay={1500} style={{zIndex:1}} direction={'up'} triggerOnce={true}>
             <Letter> L</Letter>
             <Letter> u</Letter>
@@ -30,15 +30,15 @@ const LandingTall = (props) => (
             <Letter> a</Letter>
             <Letter> i</Letter>
           </Fade>
-        </FirstNameContainer>
-        <LastNameContainer> 
+        </FirstNameContainerTall>
+        <LastNameContainerTall> 
           <Fade cascade damping={0.1} duration={800} delay={2500} style={{zIndex:1}} direction={'up'} triggerOnce={true}>
             <Letter> W</Letter>
             <Letter> o</Letter>
             <Letter> n</Letter>
             <Letter> g</Letter>
           </Fade>
-        </LastNameContainer>
+        </LastNameContainerTall>
       </NameContainer>
 
 

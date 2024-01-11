@@ -72,7 +72,7 @@ export const SectionCentered = styled.div`
 `;
 
 export const BufferSection = styled.div`
-  height: 20vh;
+  height: 15vh;
 `;
 
 export const LetterContainer = styled.div`
@@ -93,15 +93,15 @@ export const Title = styled.h1`
 export const Letter = styled.h1`
   font-family: ${BOLD_FONT};
   color: ${colors.TEXT};
-  font-size: 9vh;
+  font-size: 8.5vh;
   margin: 0;
 
   animation: 1s ${fadeIn};
   overflow: hidden;
 
   &:hover {
-    margin-top: -2.1vh;
-    font-size: 15vw;
+    margin-top: -1vh;
+    font-size: 10vh;
   }
   transition: 0.2s;
 `;
@@ -114,7 +114,7 @@ export const BoldSubTitle = styled.h2`
   z-index: 1;
 
   &:hover {
-    font-size: 4.25vw;
+    font-size: 5vh;
   }
   transition: 0.2s;
 `;
@@ -135,7 +135,7 @@ export const SubTitle = styled.h2`
 export const SubLetter = styled.h2`
   font-family: ${BOLD_FONT};
   color: ${colors.TEXT};
-  font-size: 5vw;
+  font-size: 5.5vh;
   margin: 0;
 
   animation: 1s ${fadeIn};
@@ -222,328 +222,4 @@ export const SeperationLine = styled.div`
   margin-left: 1vw;
   background-color: ${colors.TEXT};
   border-radius: 5px;
-`;
-
-////////// ABOUT ME //////////
-
-export const AboutTextContainer = styled.div``;
-
-export const AboutText = styled.div`
-  font-family: ${REGULAR_FONT};
-  color: ${colors.TEXT};
-  font-size: 2vw;
-
-  margin: 0;
-  margin-left: -5vw;
-  margin-right: 5vw;
-  margin-bottom: 5vh;
-  z-index: 1;
-
-  width: 50vw;
-
-  &:hover {
-    margin-left: -4vw;
-    margin-right: 4vw;
-  }
-  transition: 0.2s;
-`;
-
-export const AboutImage = styled.img`
-  width: auto;
-  height: 100%;
-
-  // object-fit: cover;
-
-  border-radius: 4%;
-
-  box-shadow: 1vw 2vh ${colors.TEXT};
-
-  &:hover {
-    height: 105%;
-    margin-left: -1vw;
-    box-shadow: 2vw 3vh ${colors.TEXT};
-  }
-
-  transition: 0.5s;
-`;
-
-export const AboutImageContainer = styled.div`
-  width: 30vw;
-  height: 75vh;
-
-  display: flex;
-  justify-content: center;
-
-  margin-left: 1vw;
-  margin-right: 1vw;
-`;
-////////// PROJECTS //////////
-export const ProjectHeaderContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 1vw;
-  margin-top: 1h;
-  margin-bottom: -5vh;
-
-  position: relative;
-`;
-
-export const ProjectSubtitle = styled.div`
-  margin-left: 0.25vw;
-  margin-top: 5vh;
-  margin-bottom: 10vh;
-  margin-right: 13vw;
-
-  position: absolute;
-  top: -2vw;
-  right: 0;
-
-  font-family: ${REGULAR_FONT};
-  color: ${colors.TEXT};
-  font-size: 2vw;
-
-  text-align: right;
-`;
-export const ProjectContainer = styled.div`
-  display: flex;
-
-  // height: 150vh;
-  height: fit-content;
-  width: 90vw;
-
-  margin-left: 1vw;
-  margin-top: 1vh;
-  border-radius: 20px;
-
-  overflow: hidden;
-  // background-color: ${colors.BACKGROUND_DARK};
-`;
-
-export const ProjectColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-
-  width: 45vw;
-  // padding: 2vw;
-  padding-top: 5vw;
-  padding-bottom: 0vw;
-`;
-
-export const Project = styled.a`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  position: relative;
-
-  width: 41vw;
-  height: auto;
-  margin-bottom: 3vw;
-
-  border-radius: 20px;
-  background-color: ${colors.BACKGROUND};
-
-  box-shadow: 0px 0px 10px black;
-
-  &:hover {
-    cursor: pointer;
-    margin-top: -1vw;
-    margin-bottom: 4vw;
-    // background-color: ${colors.DARK_BLUE};
-  }
-
-  z-index: 100;
-
-  transition: 0.4s;
-`;
-
-export const ProjectImage = styled.img`
-  border-radius: 20px;
-
-  width: 100%;
-  // height: 100%;
-
-  background-color: ${colors.BACKGROUND};
-
-  ${Project}:hover & {
-    cursor: pointer;
-    opacity: 0.4;
-  }
-
-  opacity: 1;
-  transition: 0.4s;
-`;
-export const ProjectImageWhite = styled.img`
-  border-radius: 20px;
-
-  width: 100%;
-  // height: 100%;
-
-  background-color: ${colors.BACKGROUND};
-
-  ${Project}:hover & {
-    cursor: pointer;
-    opacity: 0.1;
-  }
-
-  opacity: 1;
-  transition: 0.4s;
-`;
-
-export const ProjectTitle = styled.h3`
-  font-family: ${REGULAR_FONT};
-  font-size: 3vw;
-  font-decoration: underline;
-
-  color: ${colors.TEXT};
-
-  position: absolute;
-  top: -2vh;
-  left: 1vw;
-
-  opacity: 0;
-
-  ${Project}:hover & {
-    opacity: 1;
-  }
-  transition: 0.4s;
-`;
-export const ProjectTitleLine = styled.div`
-  position: absolute;
-  top: 6vw;
-  left: 1vw;
-  width: 39vw;
-  height: 3px;
-  background-color: ${colors.TEXT};
-  border-radius: 5px;
-
-  opacity: 0;
-
-  ${Project}:hover & {
-    opacity: 1;
-  }
-  transition: 0.4s;
-`;
-
-export const ProjectText = styled.div`
-  font-family: ${REGULAR_FONT};
-  font-size: 2vw;
-  font-decoration: underline;
-
-  color: ${colors.TEXT};
-  position: absolute;
-  top: 7vw;
-  margin: 1vw;
-
-  opacity: 0;
-
-  ${Project}:hover & {
-    opacity: 1;
-  }
-
-  transition: 0.4s;
-`;
-
-export const ProjectTags = styled.div`
-  font-family: ${REGULAR_FONT};
-  font-size: 2vw;
-  font-decoration: underline;
-
-  color: ${colors.TEXT};
-  position: absolute;
-  bottom: 1vw;
-  margin: 1vw;
-  width: 50%;
-
-  opacity: 0;
-
-  ${Project}:hover & {
-    opacity: 1;
-  }
-
-  transition: 0.4s;
-`;
-
-export const ProjectLinks = styled.div`
-  position: absolute;
-  bottom: 1vw;
-  right: 1vw;
-
-  flex-direction: row;
-  justify-content: flex-end;
-`;
-
-export const ProjectLink = styled.a`
-  font-family: ${REGULAR_FONT};
-  font-size: 4vw;
-  color: ${colors.TEXT};
-  margin-left: 1vw;
-
-  z-index: 200;
-  &:hover {
-    cursor: pointer;
-    font-size: 5vw;
-  }
-
-  opacity: 0;
-
-  ${Project}:hover & {
-    opacity: 1;
-  }
-
-  transition: 0.4s;
-`;
-
-export const ProjectEndText = styled.div`
-  font-family: ${REGULAR_FONT};
-  font-size: 2vw;
-
-  color: ${colors.TEXT};
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  position: relative;
-
-  width: 37vw;
-  height: 100%;
-  margin-bottom: 2vw;
-
-  padding: 2vw;
-
-  border-radius: 20px;
-  background-color: ${colors.BACKGROUND_DARK};
-
-  &:hover {
-    cursor: pointer;
-    margin-top: -1vw;
-    margin-bottom: 3vw;
-    // background-color: ${colors.DARK_BLUE};
-  }
-
-  ${(props) =>
-    props.mobile === true &&
-    css`
-      height: 20px;
-      width: 20px;
-    `}
-
-  z-index: 0;
-
-  transition: 0.4s;
-`;
-
-export const ProjectEndIcon = styled.a`
-  position: absolute;
-  bottom: 1vw;
-  left: 2vw;
-
-  flex-direction: row;
-  justify-content: flex-end;
-
-  color: ${colors.TEXT};
-  font-size: 4vw;
 `;

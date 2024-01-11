@@ -28,7 +28,6 @@ export const FirstNameContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: -2vw;
-  margin-top: -30vh;
 `;
 export const LastNameContainer = styled.div`
   display: flex;
@@ -91,4 +90,17 @@ export const RightLandingSubTextTall = styled.div`
   bottom: 20vh;
   right: 2vw;
   z-index: 1;
+`;
+
+// Holds the "Letters" text
+export const FirstNameContainerTall = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: -2vw;
+  margin-top: -30vh;
+`;
+export const LastNameContainerTall = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: -2vh;
 `;
