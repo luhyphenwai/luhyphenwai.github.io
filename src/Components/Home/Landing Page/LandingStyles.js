@@ -69,7 +69,7 @@ export const LandingArrowContainerTall = styled.a`
   width: 100vw;
   justify-content: center;
   position: absolute;
-  bottom: 12.5vh;
+  bottom: 17vh;
   height: 5vh;
 
   &:hover {
@@ -81,13 +81,13 @@ export const LandingArrowContainerTall = styled.a`
 
 export const LeftLandingSubTextTall = styled.div`
   position: absolute;
-  bottom: 20vh;
+  bottom: 25vh;
   left: 2vw;
   z-index: 1;
 `;
 export const RightLandingSubTextTall = styled.div`
   position: absolute;
-  bottom: 20vh;
+  bottom: 25vh;
   right: 2vw;
   z-index: 1;
 `;

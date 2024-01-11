@@ -130,7 +130,7 @@ export const AboutImageContainerVertical = styled.div`
   justify-content: center;
 `;
 
-export const AboutArrowContainerVertical = styled.div`
+export const AboutArrowContainerVertical = styled.a`
   display: flex;
   width: 100vw;
   justify-content: center;
