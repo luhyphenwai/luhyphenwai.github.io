@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.63c2a7fe.css",
-    "main.js": "/static/js/main.755b6562.js",
+    "main.js": "/static/js/main.bd13235f.js",
     "static/media/necromerger.png": "/static/media/necromerger.244d0b18f5c53393b091.png",
     "static/media/hijack.gif": "/static/media/hijack.7b5d05e10c375493eaed.gif",
     "static/media/SIMULATION.png": "/static/media/SIMULATION.1b8c5b652328696fc7fd.png",
@@ -13,10 +13,10 @@
     "static/media/typer.png": "/static/media/typer.b782b865f3a028ecd31f.png",
     "index.html": "/index.html",
     "main.63c2a7fe.css.map": "/static/css/main.63c2a7fe.css.map",
-    "main.755b6562.js.map": "/static/js/main.755b6562.js.map"
+    "main.bd13235f.js.map": "/static/js/main.bd13235f.js.map"
   },
   "entrypoints": [
     "static/css/main.63c2a7fe.css",
-    "static/js/main.755b6562.js"
+    "static/js/main.bd13235f.js"
   ]
 }
