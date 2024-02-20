@@ -19,7 +19,7 @@ export const pathfindingLink = "/HTML/Projects/unity-pathfinding/index.html";
 
 export const hijackLink = "https://luwai.itch.io/Hijack";
 
-export const sortingLink = "/HTML/react-sorting-visualizer";
+export const sortingLink = "/react-sorting-visualizer";
 export const sortingGithubLink =
   "https://github.com/luwaiwong/react-sorting-visualizer";
 
