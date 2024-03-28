@@ -23,7 +23,7 @@ const AboutWide = (props) => (
 
                 <Fade direction='left' delay={600} duration={1200} triggerOnce={true}>
                     <AboutText>
-                        I build web apps and games in my spare time, and I'm interested in working on AI/Machine Learning as well as VR and AR
+                        I build things with code and develop games in my spare time, I'm very interested in VR and AR, and I'm always looking for new projects to work on. 
                     </AboutText>
                 </Fade>
             </AboutTextContainer>

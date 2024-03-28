@@ -25,8 +25,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/Projects" element={<Projects />} />
-          <Route path="/Platform" element={<Platform />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/platform" element={<Platform />} />
         </Routes>
       </BrowserRouter>
     </div>
