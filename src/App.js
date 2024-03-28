@@ -24,7 +24,7 @@ function App() {
       {/* <Intro /> */}
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/platform" element={<Platform />} />
         </Routes>
