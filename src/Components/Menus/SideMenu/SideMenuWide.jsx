@@ -73,7 +73,7 @@ export default function SideMenu (){
             
             <MenuBackground visible={showMenu}>
                 <MenuButtonContainer visible={showObj}>
-                    <MenuButton visible={showObj}>Home</MenuButton>
+                    <MenuButton visible={showObj} href={"/"}>Home</MenuButton>
                 </MenuButtonContainer>
             </MenuBackground>
         </>

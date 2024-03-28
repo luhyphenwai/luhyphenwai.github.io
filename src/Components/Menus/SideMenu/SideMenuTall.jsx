@@ -73,7 +73,7 @@ export default function SideMenu (){
             
             <MenuBackground visible={showMenu}>
                 <MenuButtonContainerVertical visible={showObj}>
-                    <MenuButtonVertical visible={showObj}>Home</MenuButtonVertical>
+                    <MenuButtonVertical visible={showObj} href={"www.luwai.dev"}>Home</MenuButtonVertical>
                 </MenuButtonContainerVertical>
             </MenuBackground>
         </>
