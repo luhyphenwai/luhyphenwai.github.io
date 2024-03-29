@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="title">COVID-19 Tracker</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/Images/confounded-face.svg" />
+        <link rel="stylesheet" href="/CSS/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- google stuff -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+
+        <link href='https://css.gg/instagram.css' rel='stylesheet'>
+    </head>
+
+<body lang="en" background="/Images/pariag2.PNG" id="body">
+    <!-- Top menu bar -->
+    <nav class="topbar" id="topBar">
+        <a class = "left-text" style="cursor: pointer;" onclick="fadeOut('/')" id="leftText"> lu-wai </a>
+            <div class="right-box"id="rightBox">
+            <a style="cursor: pointer;" onclick="fadeOut('/contacts.html')" class="right-item" id="right1" onmouseover="this.style.marginRight='11px'" onmouseout="this.style.marginRight='15px'">Me</a>
+            <a style="cursor: pointer;" onclick="fadeOut('/projects')" class="right-item" id="right2">Stuff</a>
+            <a style="cursor: pointer;"class="material-icons right-item" onclick="toggleMenu()"id="right3">menu</a>
+            </div>
+        <div class="line" id="line"></div>
+    </nav>
+  
+    <!-- Sidebar menu -->
+    <div class="menu-hidden" id="menu">
+    <div class="menu-topbar">
+        <a style="cursor: pointer;" onclick="fadeOut('/')"class="topleft-text">lu-wai</a>
+        <a style="cursor: pointer;"class="material-icons menu-toggle" onclick="toggleMenu()">close</a>
+    </div>
+  
+    <div class="menu-main">
+        <a style="cursor: pointer;"onclick="fadeOut('/projects')" class="menu-section">
+        <div class="menu-section-text">My Stuff</div>
+        </a>
+        <a style="cursor: pointer;"onclick="fadeOut('/me')" class="menu-section">
+        <div class="menu-section-text">Me</div>
+        </a>
+    </div>
+    <p class="menu-bottombar-text">Find me here here</p>
+    <div class="menu-bottombar">
+        <a class="material-icons menu-bottombar-item" style="cursor: pointer;" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+        <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
+        <img src="/Images/itchio-textless-white.svg" alt="Insta" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
+        <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
+    </div>
+    </div>
+      
+      
+        
+        <div style="height: 115px;"></div>
+        <div class="wrapper" style="background-color: white; width: 80vw; margin-left: 10vw; margin-right: 0;">
+            <!-- Main Body of Site -->
+            <div style="height: 25px;"></div>
+            <h1 >COVID-19 STATISTICS</h1>
+        
+            <h1 style="font-size: 50px;">Global Statistics</h1>
+            <div class="flexbox-container" style="width: 70vw; margin-left: 5vw;">
+                <a style="cursor: pointer;" class="section-button">
+                    <div class="section-button-text" id="gCases">
+                      Total Cases:
+                    </div>
+                </a>
+                <a style="cursor: pointer;" class="section-button">
+                    <div class="section-button-text" id="gDeaths">
+                      Total Deaths:
+                    </div>
+                </a>
+                <a style="cursor: pointer;" class="section-button">
+                    <div class="section-button-text" id="gRecovered">
+                      Total Recovered:
+                    </div>
+                </a>
+            </div>
+
+            <h1>Country Statistics</h1>
+            <div class="flexbox-container">
+                <div class="flexbox-container" style="width: 70vw;margin-left: -20vw;">
+                    <a style="cursor: pointer;" class="section-button" >
+                        <div class="section-button-text" id="cases">
+                          Total Cases:
+                        </div>
+                    </a>
+                    <a style="cursor: pointer;" class="section-button">
+                        <div class="section-button-text" id="deaths">
+                          Total Deaths:
+                        </div>
+                    </a>
+                    <a style="cursor: pointer;" class="section-button">
+                        <div class="section-button-text" id="recovered">
+                          Total Recovered:
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <p style="text-align: center;">Select a Country</p>
+            <select id="country" name="country" style="margin-left: 30vw; width: 10vw; float: left;">
+            
+            </select>
+            <button onclick="fetchData()" style=" width: 10vw;">Refresh Stats</button>
+        
+        
+            <script>
+
+                // Dropdown menu
+                let country = document.getElementById("country").value
+                let dropdown = document.getElementById("country")
+
+                generateDropDownList();
+                setGlobalData();
+                
+                
+                
+
+                function generateDropDownList(){
+                    fetch("https://api.covid19api.com/summary")
+                    .then(res => {
+                        if(res.ok){
+                            console.log("SUCCESS")
+                        }   else {
+                            console.log("Not Successful")
+                        }
+                        return res.json()
+                    })
+                    .then(data => {
+                        data.Countries.forEach((obj, index) => {
+                            var dropdownObj = document.createElement("option")
+                            dropdownObj.textContent = obj.Country;
+                            dropdownObj.value = obj.Country;
+                            dropdown.appendChild(dropdownObj)
+                        });
+                    })
+                    .catch(error => console.log("ERROR"))
+
+                    setGlobalData();
+                
+                }
+
+                function fetchData(){
+                    country = document.getElementById("country").value
+                    console.log(country)
+                    fetch("https://api.covid19api.com/summary")
+                    .then(res => {
+                        if(res.ok){
+                            console.log("SUCCESS")
+                        }   else {
+                            console.log("Not Successful")
+                        }
+                        return res.json()
+                    })
+                    .then(data => switchValues(data))
+                    .catch(error => console.log("ERROR"))
+
+                    setGlobalData();
+                
+                }
+                function switchValues(data){
+                    document.getElementById("cases").className = "section-button-text-black"; 
+                    document.getElementById("deaths").className = "section-button-text-black"; 
+                    document.getElementById("recovered").className = "section-button-text-black"; 
+                    setTimeout(function() {generateHTML(data)}, 500);
+                }
+                function generateHTML(data){
+                    console.log(data)
+                    data.Countries.forEach((obj, index) => {
+                        if (obj.Country == country){
+                                    
+                            document.getElementById("cases").innerHTML = "Total Cases: " +"<br>"+ Number(obj.TotalConfirmed).toLocaleString()
+                            document.getElementById("deaths").innerHTML = "Total Deaths: " +"<br>"+Number(obj.TotalDeaths).toLocaleString()
+                            document.getElementById("recovered").innerHTML = "Total Recovered: " +"<br>"+Number(obj.TotalRecovered).toLocaleString()
+                        }
+                    });
+                    document.getElementById("cases").className = "section-button-text"; 
+                    document.getElementById("deaths").className = "section-button-text"; 
+                    document.getElementById("recovered").className = "section-button-text"; 
+                }
+
+                function setGlobalData(){
+                    fetch("https://api.covid19api.com/summary")
+                    .then(res => {
+                        if(res.ok){
+                            console.log("SUCCESS")
+                        }   else {
+                            console.log("Not Successful")
+                        }
+                        return res.json()
+                    })
+                    .then(data => {
+                        document.getElementById("gCases").innerHTML = "Total Cases: " +"<br>"+Number(data.Global.TotalConfirmed).toLocaleString()
+                        document.getElementById("gDeaths").innerHTML = "Total Deaths: " +"<br>"+Number(data.Global.TotalDeaths).toLocaleString()
+                        document.getElementById("gRecovered").innerHTML = "Total Recovered: " +"<br>"+Number(data.Global.TotalRecovered).toLocaleString()
+                    })
+                    .catch(error => console.log("ERROR"))
+                }
+            </script>
+            <div style="height: 25px;"></div>
+        </div>
+        
+        <div style="height: 25px;"></div>
+        <!-- Bottom bar -->
+        <div style="background-color: black; height: 15vh;">
+            <p class="menu-bottombar-text" style="padding-top:5vh; margin: 0;">Find me here</p>
+            <div class="menu-bottombar">
+            <a class="material-icons menu-bottombar-item" style="cursor: pointer;" onclick="fadeOut('mailto:luwaiwong@gmail.com')">email</a>
+            <img src="/Images/instagram.png" alt="Insta" class="bottom-image" onclick="fadeOut('https://www.instagram.com/luhyphenwai/')">
+            <img src="/Images/itchio-textless-white.svg" alt="Itch" class="bottom-image" onclick="fadeOut('https://luhyphenwai.itch.io/')">
+            <img src="/Images/github.png" alt="Itch" class="bottom-image" onclick="fadeOut('https://github.com/luhyphenwai')">
+            </div>
+        </div>
+        <script src="/animations.js"></script>
+    </body>
+</html>
