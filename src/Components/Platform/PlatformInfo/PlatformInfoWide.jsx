@@ -36,6 +36,11 @@ I’m a CS student that wants to give you events you want, and boost your career
                          - And anything else you’re all interested in! I want to focus on listening to YOUR input and giving you events you’d actually use in your career!
                     </AboutText>
                 </Fade>
+                <Fade direction='left' delay={600} duration={1200} triggerOnce={true}>
+                    <AboutText>
+                      Qualifications
+                    </AboutText>
+                </Fade>
             </AboutTextContainer>
 
             <Fade direction='right' delay={1200} duration={1200} triggerOnce={true}>

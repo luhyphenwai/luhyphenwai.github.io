@@ -9,6 +9,25 @@ const REGULAR_FONT = "Source Code Pro";
 
 export const AboutTextContainer = styled.div``;
 
+export const AboutTitle = styled.div`
+  font-family: ${REGULAR_FONT};
+  color: ${colors.TEXT};
+  font-size: 1.45vw;
+
+  margin: 0;
+  margin-left: -5vw;
+  margin-right: 5vw;
+  margin-bottom: 1vh;
+  z-index: 1;
+
+  width: 50vw;
+
+  &:hover {
+    margin-left: -4vw;
+    margin-right: 4vw;
+  }
+  transition: 0.2s;
+`;
 export const AboutText = styled.div`
   font-family: ${REGULAR_FONT};
   color: ${colors.TEXT};
@@ -17,7 +36,7 @@ export const AboutText = styled.div`
   margin: 0;
   margin-left: -5vw;
   margin-right: 5vw;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
   z-index: 1;
 
   width: 50vw;
