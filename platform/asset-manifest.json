@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/platform/static/css/main.63c2a7fe.css",
+    "main.js": "/platform/static/js/main.f611d2ac.js",
+    "static/media/necromerger.png": "/platform/static/media/necromerger.244d0b18f5c53393b091.png",
+    "static/media/me.jpg": "/platform/static/media/me.0d895769c954a9075886.jpg",
+    "static/media/hijack.gif": "/platform/static/media/hijack.7b5d05e10c375493eaed.gif",
+    "static/media/SIMULATION.png": "/platform/static/media/SIMULATION.1b8c5b652328696fc7fd.png",
+    "static/media/me but cropped.jpg": "/platform/static/media/me but cropped.2a099e8f674e891888a2.jpg",
+    "static/media/The Office.jpg": "/platform/static/media/The Office.049244c080f3ea0a0e9d.jpg",
+    "static/media/Unity Pathfinding.png": "/platform/static/media/Unity Pathfinding.0a1d0b9f40df9d9941a1.png",
+    "static/media/sorting.png": "/platform/static/media/sorting.e2efcaff1db44ff948de.png",
+    "static/media/RETURN.gif": "/platform/static/media/RETURN.4df9996b666e0a951a7c.gif",
+    "static/media/typer.png": "/platform/static/media/typer.b782b865f3a028ecd31f.png",
+    "index.html": "/platform/index.html",
+    "main.63c2a7fe.css.map": "/platform/static/css/main.63c2a7fe.css.map",
+    "main.f611d2ac.js.map": "/platform/static/js/main.f611d2ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63c2a7fe.css",
+    "static/js/main.f611d2ac.js"
+  ]
+}
