@@ -4,30 +4,32 @@ import App from "./App";
 import Home from "./Components/Home/Home";
 import Projects from "./Components/Projects/Projects";
 import Platform from "./Components/Platform/Platform";
-import { BrowserRouter, Routes, Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Router,
+  Switch,
+  Route,
+  HashRouter,
+  createHashRouter,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 import { useMediaQuery } from "react-responsive";
 
 import "./App.css";
 
+const router = createHashRouter([
+  {
+    path: "/platform/*",
+    element: <App />,
+  },
+]);
+
 ReactDOM.render(
   <React.StrictMode>
-    <div>
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Mono&display=swap');
-        @import
-        url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
-      </style>
-      {/* <Intro /> */}
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/platform" element={<Platform />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <RouterProvider router={router} />
   </React.StrictMode>,
   document.getElementById("root")
 );
