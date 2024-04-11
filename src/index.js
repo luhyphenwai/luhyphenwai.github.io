@@ -20,9 +20,9 @@ import { useMediaQuery } from "react-responsive";
 
 import "./App.css";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
-    path: "/platform/*",
+    path: "/*",
     element: <App />,
   },
 ]);

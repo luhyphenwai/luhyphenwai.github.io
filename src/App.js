@@ -37,7 +37,7 @@ export default function App() {
       {/* <Intro /> */}
 
       <Routes>
-        <Route path="/" element={<Platform />} />
+        <Route path="/" element={<Home />} />
         <Route path="/platform" element={<Platform />} />
         <Route path="*" element={<Platform />} />
       </Routes>
