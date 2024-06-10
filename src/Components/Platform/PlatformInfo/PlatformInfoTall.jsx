@@ -8,7 +8,7 @@ import {AboutTextVertical, AboutImageVertical, AboutTextContainerVertical, About
 
 import * as colors from '../../../colors.js'
 
-import meImg from '../../../Images/me but cropped.jpg'
+import meImg from '../../../Images/me.jpg'
 
 const AboutTall = (props) => (
   <>

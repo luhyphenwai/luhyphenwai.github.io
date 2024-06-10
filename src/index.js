@@ -20,16 +20,17 @@ import { useMediaQuery } from "react-responsive";
 
 import "./App.css";
 
-const router = createBrowserRouter([
-  {
-    path: "/*",
-    element: <App />,
-  },
-]);
+// const router = createBrowserRouter([
+//   {
+//     path: "/*",
+//     element: <App />,
+//   },
+// ]);
 
 ReactDOM.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
+    {/* <RouterProvider router={router} /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

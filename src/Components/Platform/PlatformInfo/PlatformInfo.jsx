@@ -11,7 +11,6 @@ const About = (props) => {
   return <> 
     {!isTall && <AboutWide/>} 
     {isTall && <AboutTall/>} 
-  
   </>
 };
 

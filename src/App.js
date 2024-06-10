@@ -39,7 +39,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/platform" element={<Platform />} />
-        <Route path="*" element={<Platform />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
