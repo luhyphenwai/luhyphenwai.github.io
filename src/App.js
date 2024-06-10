@@ -27,7 +27,7 @@ export default function App() {
         @import
         url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
       </style>
-      {/* <Intro /> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/platform" element={<Platform />} />

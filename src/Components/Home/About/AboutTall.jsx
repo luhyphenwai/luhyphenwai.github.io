@@ -16,13 +16,13 @@ const AboutTall = (props) => (
         <AboutTextContainerVertical>
             <Fade direction='left' delay={0} duration={1200} triggerOnce={true}>
                 <AboutTextVertical>
-                    I'm Lu-Wai, I'm currently studying mathematics and statistics at the University Of Toronto, on track to graduate in 2026. 
+                    I'm Lu-Wai, I'm currently studying mathematics and computer science at the University Of Toronto, on track to graduate in 2026. 
                 </AboutTextVertical>
             </Fade>
 
             <Fade direction='left' delay={600} duration={1200} triggerOnce={true}>
                 <AboutTextVertical>
-                    I build web apps and games in my spare time, and I'm interested in working on AI/Machine Learning as well as VR and AR
+                    I'm passionate about Space, VR and AR technology, and Game Development. And I'm always looking to work on new and interesting projects!
                 </AboutTextVertical>
             </Fade>
         </AboutTextContainerVertical>
