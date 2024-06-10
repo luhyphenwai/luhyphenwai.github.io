@@ -131,7 +131,7 @@ export default function HomeProjectsWide(){
                 </Fade>
 
                 <Fade style={{zIndex:0}} duration={800} direction='up' delay={700} triggerOnce={true}>
-                  <Project href={links.hijackLink} target="_blank" rel="noopener noreferrer">
+                  <Project href={links.sortingLink} target="_blank" rel="noopener noreferrer">
                     <ProjectImageWhite src={sortingImg} />
                     <ProjectTitle> Sorting Visualizer</ProjectTitle>
                     <ProjectTitleLine/>
