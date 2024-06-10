@@ -38,7 +38,7 @@ ParseText();
 
 // Parse the text from 1-1000.txt
 function ParseText() {
-  fetch("./1-1000.txt")
+  fetch("./1-1000.txt", { mode: "no-cors" })
     .then((res) => res.text())
     .then((text) => text.toString())
     .then((str) => {
@@ -46,7 +46,7 @@ function ParseText() {
       GenerateRandomText();
     });
 
-  fetch("./quotes.json")
+  fetch("./quotes.json", { mode: "no-cors" })
     .then((res) => res.json())
     .then((quoteJSON) => {
       for (var i = 0; i < quoteJSON.quotes.length; i++) {

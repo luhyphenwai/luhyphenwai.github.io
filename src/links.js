@@ -9,7 +9,7 @@ export const linkedinLink = "https://www.linkedin.com/in/luwai/";
 export const officeItchLink = "https://luwai.itch.io/the-office";
 export const officeGithubLink = "https://github.com/luwaiwong/TOJam-2022";
 
-export const typerLink = "https://luwai.itch.io/typer";
+export const typerLink = "https://www.luwai.dev/projects/typer";
 export const typerGithubLink =
   "https://github.com/luwaiwong/luwaiwong.github.io";
 
