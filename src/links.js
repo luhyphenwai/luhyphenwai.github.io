@@ -15,11 +15,11 @@ export const typerGithubLink =
 
 export const simulationLink = "https://luwai.itch.io/simulation";
 
-export const pathfindingLink = "/HTML/Projects/unity-pathfinding/index.html";
+export const pathfindingLink = "/projects/unity-pathfinding/index.html";
 
 export const hijackLink = "https://luwai.itch.io/Hijack";
 
-export const sortingLink = "/react-sorting-visualizer";
+export const sortingLink = "https://www.luwai.dev/react-sorting-visualizer";
 export const sortingGithubLink =
   "https://github.com/luwaiwong/react-sorting-visualizer";
 

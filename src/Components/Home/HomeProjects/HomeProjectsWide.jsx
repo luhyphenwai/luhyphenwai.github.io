@@ -68,28 +68,6 @@ export default function HomeProjectsWide(){
 
                 </Fade>
                 
-                <Fade style={{zIndex:0}} duration={800} direction='up' delay={600} triggerOnce={true}>
-                  <Project href={links.typerLink}>
-                    <ProjectImageWhite src={TyperImg} />
-                    <ProjectTitle> Typer</ProjectTitle>
-                    <ProjectTitleLine/>
-
-                    <ProjectText>
-                      A typing trainer made with vanilla HTML and JavaScript
-                    </ProjectText>
-
-                    <ProjectTags>HTML, JS</ProjectTags>
-
-                    <ProjectLinks>
-                      <ProjectLink href={links.typerGithubLink} target="_blank" rel="noopener noreferrer">
-                        <Icon icon="mdi:github" color={colors.TEXT} />
-                      </ProjectLink>
-                      <ProjectLink href={links.typerLink} target="_blank" rel="noopener noreferrer">
-                        <Icon icon="mdi:link" color={colors.TEXT} />
-                      </ProjectLink>
-                    </ProjectLinks>
-                  </Project>
-                </Fade>
 
                 <Fade style={{zIndex:0}} duration={800} direction='up' triggerOnce={true}>
                   <Project href={links.simulationLink} target="_blank" rel="noopener noreferrer">
@@ -117,6 +95,13 @@ export default function HomeProjectsWide(){
                     Check out my github for source code and more projects
                     <ProjectEndIcon href={links.githubLink} target="_blank" rel="noopener noreferrer">
                       <Icon icon="mdi:github"/>
+                    </ProjectEndIcon>
+                </ProjectEndText>
+                
+                <ProjectEndText href={links.githubLink} target="_blank" rel="noopener noreferrer">
+                    Check out my itch.io for more games
+                    <ProjectEndIcon href={links.itchLink} target="_blank" rel="noopener noreferrer">
+                      <Icon icon="simple-icons:itchdotio"/>
                     </ProjectEndIcon>
                 </ProjectEndText>
 
