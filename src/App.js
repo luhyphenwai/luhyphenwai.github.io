@@ -18,13 +18,6 @@ import { useMediaQuery } from "react-responsive";
 
 import "./App.css";
 
-// const router = createHashRouter([
-//   {
-//     path: "/*",
-//     element: <App />,
-//   },
-// ]);
-
 export default function App() {
   return (
     <div>
@@ -35,7 +28,6 @@ export default function App() {
         url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
       </style>
       {/* <Intro /> */}
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/platform" element={<Platform />} />

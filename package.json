@@ -1,7 +1,7 @@
 {
   "name": "luwaiwong.github.io",
   "version": "0.1.0",
-  "homepage": "https://www.luwai.dev/platform",
+  "homepage": "https://www.luwai.dev/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
