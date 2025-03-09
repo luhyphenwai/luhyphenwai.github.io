@@ -112,26 +112,27 @@ const CaseComp = () => {
 
   const suggestedQuestions = [
     "What's NVIDIA's current market position?",
-    "How does the 'AI Compute as a Service' model work?",
     "What are the major players in the AI market?",
-    "What are the financial projections for this strategy?"
+    "How does the 'AI Compute as a Service' model work?",
+    "What are the benefits of this strategy?",
+    "What are the financial projections for this strategy?",
   ];
 
   return (
     <div className="chatbot-container">
       <div className="chatbot-header-2">
-        <h2 
+        <p 
           onClick={handleUserProfileClick} 
           style={{ cursor: 'pointer', textDecoration: 'underline' }}
         >
           @luwaiwong
-        </h2>
-        <h2 
+        </p>
+        <p
           onClick={handleUserLinkedinClick} 
           style={{ cursor: 'pointer', textDecoration: 'underline' }}
         >
           linkedin
-        </h2>
+        </p>
       </div>
       <div className="messages-container">
         {messages.length === 0 ? (
@@ -142,7 +143,7 @@ const CaseComp = () => {
             <div className="chatbot-header">
               <h2>NVIDIA's Next Move: <br/> AI Compute as a Service</h2>
             </div>
-            <div className="chatbot-header-2">
+            <div className="chatbot-header-3">
               <h2>Ask questions or try these suggestions:</h2>
             </div>
             <div className="suggestion-chips">
@@ -164,7 +165,8 @@ const CaseComp = () => {
               className={`message ${message.role === 'user' ? 'user-message' : 'ai-message'}`}
             >
               <div className="message-content">
-              <ReactMarkdown>{message.content}</ReactMarkdown></div>
+                <ReactMarkdown>{message.content}</ReactMarkdown>
+              </div>
             </div>
           ))
         )}

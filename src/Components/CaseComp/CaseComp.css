@@ -41,7 +41,7 @@
   body {
     background-color: var(--nvidia-black);
     color: var(--text-white);
-    font-family: 'Söhne', 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: 'Space Grotesk','Söhne', 'Segoe UI', Helvetica, Arial, sans-serif;
     overflow: hidden;
   }
   
@@ -110,17 +110,38 @@
     background-color: var(--nvidia-black);
     color: var(--text-white);
     z-index: 10;
-    box-shadow: 0 2px 10px var(--shadow-color);
+    /* box-shadow: 0 2px 10px var(--shadow-color); */
   }
-  .chatbot-header-2 h2 {
-    font-weight: 300;
+  .chatbot-header-2 p {
+    font-weight: 600;
     letter-spacing: 0.3px;
     margin-left: 10px;
     margin-right: 5px;
     font-size: 1rem;
-    position: relative;
+    /* position: relative; */
     display: flex;
     align-items: center;
+    text-decoration: none;
+  }
+
+  .chatbot-header-3 {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 5px;
+    background-color: var(--nvidia-black);
+    color: var(--text-white);
+    z-index: 10;
+    /* box-shadow: 0 2px 10px var(--shadow-color); */
+  }
+  .chatbot-header-3 h2 {
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
   }
   .chatbot-header h2 {
     font-weight: 600;
@@ -189,10 +210,12 @@
     /* max-width: ; */
     display: flex;
     padding: 16px;
+    height: 100px;
     background-color: var(--nvidia-black);
     position: relative;
     box-shadow: 0 -2px 10px var(--shadow-color);
     z-index: 10;
+    
   }
   
   input {
@@ -392,7 +415,7 @@
     }
     
     .message-content {
-      font-size: 0.95rem;
+      font-size: 0.8rem;
     }
   }
   
