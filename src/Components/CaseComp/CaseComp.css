@@ -67,8 +67,31 @@
     animation: fadeIn 0.5s ease-out;
   }
   
+  .header {
+    padding: 10px 0px;
+    background-color: var(--nvidia-black);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 10px var(--shadow-color);
+  }
+  
+  .header h2 {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-size: 3rem;
+    /* padding-right: 40px; */
+    /* margin: 20px; */
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
   .chatbot-header {
-    padding: 16px 20px;
+    padding: 20px 20px;
     background-color: var(--nvidia-black);
     color: var(--text-white);
     display: flex;
@@ -101,6 +124,8 @@
     font-weight: 600;
     letter-spacing: 0.3px;
     font-size: 1.2rem;
+    padding-right: 40px;
+    /* margin: 20px; */
     position: relative;
     display: flex;
     align-items: center;
@@ -112,7 +137,7 @@
     width: 20px;
     height: 20px;
     background-color: var(--nvidia-green);
-    margin-right: 10px;
+    margin-right: 30px;
     border-radius: 3px;
     transform: rotate(45deg);
     transition: transform 0.3s ease;

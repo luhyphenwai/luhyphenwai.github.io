@@ -136,8 +136,11 @@ const CaseComp = () => {
       <div className="messages-container">
         {messages.length === 0 ? (
           <div className="empty-state">
+          <div className="header">
+            <h2>Flashpoint AI</h2>
+          </div>
             <div className="chatbot-header">
-              <h2>NVIDIA's "AI Compute as a Service" Strategy</h2>
+              <h2>NVIDIA's Next Move: <br/> AI Compute as a Service</h2>
             </div>
             <div className="chatbot-header-2">
               <h2>Ask questions or try these suggestions:</h2>
