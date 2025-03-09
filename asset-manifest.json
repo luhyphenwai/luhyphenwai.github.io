@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa2e3819.css",
-    "main.js": "/static/js/main.f673bfa7.js",
+    "main.css": "/static/css/main.1d608c3f.css",
+    "main.js": "/static/js/main.4a91cfaa.js",
     "static/media/necromerger.png": "/static/media/necromerger.244d0b18f5c53393b091.png",
     "static/media/me.jpg": "/static/media/me.0d895769c954a9075886.jpg",
     "static/media/hijack.gif": "/static/media/hijack.7b5d05e10c375493eaed.gif",
@@ -12,11 +12,11 @@
     "static/media/RETURN.gif": "/static/media/RETURN.4df9996b666e0a951a7c.gif",
     "static/media/typer.png": "/static/media/typer.b782b865f3a028ecd31f.png",
     "index.html": "/index.html",
-    "main.fa2e3819.css.map": "/static/css/main.fa2e3819.css.map",
-    "main.f673bfa7.js.map": "/static/js/main.f673bfa7.js.map"
+    "main.1d608c3f.css.map": "/static/css/main.1d608c3f.css.map",
+    "main.4a91cfaa.js.map": "/static/js/main.4a91cfaa.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa2e3819.css",
-    "static/js/main.f673bfa7.js"
+    "static/css/main.1d608c3f.css",
+    "static/js/main.4a91cfaa.js"
   ]
 }
