@@ -17,7 +17,7 @@ const AboutWide = (props) => (
             <AboutTextContainer>
                 <Fade direction='left' delay={0} duration={1200} triggerOnce={true}>
                     <AboutText>
-Howdy, I’m Lu-Wai Wong, and I’m running for CSSU President!
+Howdy, I’m Lu-Wai Wong, and I’m runfsdfsdning for CSSU President!
 
                     </AboutText>
                 </Fade>

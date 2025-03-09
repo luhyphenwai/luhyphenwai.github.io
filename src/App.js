@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Home from "./Components/Home/Home";
-import Projects from "./Components/Projects/Projects";
-import Platform from "./Components/Platform/Platform";
+import CaseComp from "./Components/CaseComp/CaseComp"
 import {
   BrowserRouter,
   Routes,
@@ -29,9 +28,9 @@ export default function App() {
       </style>
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/platform" element={<Platform />} />
-        <Route path="*" element={<Home />} />
+        <Route path="/" element={<CaseComp />} />
+        <Route path="/casecomp" element={<CaseComp />} />
+        <Route path="*" element={<CaseComp />} />
       </Routes>
     </div>
   );
