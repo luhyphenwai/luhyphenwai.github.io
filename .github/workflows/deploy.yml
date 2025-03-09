@@ -21,7 +21,7 @@ jobs:
       - name: Build
         env:
           REACT_APP_OPENAI_API_KEY: ${{ secrets.REACT_APP_OPENAI_API_KEY }}
-        run: npm run build
+        run: CI=false npm run build
         
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
