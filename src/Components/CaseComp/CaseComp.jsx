@@ -50,7 +50,6 @@ const CaseComp = () => {
 
 
   const sendMessage = async (e) => {
-    // console.log(process.env.REACT_APP_OPENAI_API_KEY, API_KEY)
     console.log("if you're here, hi! also please don't try to break the ai i'm begging you :)")
     e.preventDefault();
     if (input.trim() === '') return;
