@@ -168,11 +168,11 @@
   
   .user-message {
     background-color: var(--nvidia-black);
-    border-left: 3px solid var(--nvidia-light-gray);
+    border-left: 3px solid var(--text-light);
   }
   
   .ai-message {
-    background-color: var(--nvidia-dark-gray);
+    background-color: var(--nvidia--gray);
     border-left: 3px solid var(--nvidia-dark-green);
   }
   
