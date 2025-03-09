@@ -3,6 +3,32 @@ import './CaseComp.css';
 import { prompt } from './prompt';
 
 import ReactMarkdown from 'react-markdown';
+function xorEncrypt(text, key) {
+  let encrypted = [];
+  
+  for (let i = 0; i < text.length; i++) {
+      // XOR each character with the corresponding key character
+      let encryptedChar = text.charCodeAt(i) ^ key.charCodeAt(i % key.length);
+      encrypted.push(encryptedChar);
+  }
+
+  // Convert array of numbers to a string (for easy storage/transmission)
+  return encrypted.join(",");
+}
+
+function xorDecrypt(encryptedString, key) {
+  let encryptedNumbers = encryptedString.split(",").map(num => parseInt(num, 10));
+  let decrypted = '';
+
+  for (let i = 0; i < encryptedNumbers.length; i++) {
+      // XOR each number with the corresponding key character
+      let decryptedChar = encryptedNumbers[i] ^ key.charCodeAt(i % key.length);
+      decrypted += String.fromCharCode(decryptedChar);
+  }
+
+  return decrypted;
+}
+
 
 const CaseComp = () => {
   const startingMessage = { role: 'assistant', content: 'Hi, if you have any questions about our strategy regarding NVIDIAs "AI Compute as a Service" strategy, just ask!' }
@@ -11,7 +37,7 @@ const CaseComp = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
-  const API_KEY = process.env.REACT_APP_OPENAI_API_KEY_1+process.env.REACT_APP_OPENAI_API_KEY_2;
+  const API_KEY = xorDecrypt(process.env.REACT_APP_OPENAI_API_KEY, "PLEASENOHACK");
 
   // Automatic scroll to bottom when messages update
   useEffect(() => {
@@ -24,6 +50,7 @@ const CaseComp = () => {
 
 
   const sendMessage = async (e) => {
+    // console.log(process.env.REACT_APP_OPENAI_API_KEY, API_KEY)
     console.log("if you're here, hi! also please don't try to break the ai i'm begging you :)")
     e.preventDefault();
     if (input.trim() === '') return;
