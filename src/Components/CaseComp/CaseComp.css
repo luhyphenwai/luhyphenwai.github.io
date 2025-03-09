@@ -1,6 +1,7 @@
 /* ChatbotApp.css - ChatGPT-NVIDIA Hybrid Theme */
 :root {
     --nvidia-green: #76b900;
+    --blue: #5e81ac;
     --nvidia-dark-green: #5c9100;
     --nvidia-black: #111111;
     --nvidia-dark-gray: #202123;
@@ -167,7 +168,7 @@
   
   .user-message {
     background-color: var(--nvidia-black);
-    border-left: 3px solid var(--nvidia-green);
+    border-left: 3px solid var(--nvidia-light-gray);
   }
   
   .ai-message {
