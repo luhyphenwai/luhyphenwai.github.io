@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import './CaseComp.css';
 import { prompt } from './prompt';
 
+import ReactMarkdown from 'react-markdown';
+
 const CaseComp = () => {
   const startingMessage = { role: 'assistant', content: 'Hi, if you have any questions about our strategy regarding NVIDIAs "AI Compute as a Service" strategy, just ask!' }
   const startingPrompt = {role: 'developer', content: prompt}
@@ -131,7 +133,8 @@ const CaseComp = () => {
               key={index}
               className={`message ${message.role === 'user' ? 'user-message' : 'ai-message'}`}
             >
-              <div className="message-content">{message.content}</div>
+              <div className="message-content">
+              <ReactMarkdown>{message.content}</ReactMarkdown></div>
             </div>
           ))
         )}
