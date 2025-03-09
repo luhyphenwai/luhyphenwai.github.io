@@ -21,7 +21,7 @@ const CaseComp = () => {
   };
 
   const sendMessage = async (e) => {
-    console.log(API_KEY)
+    console.log("hello :)")
     e.preventDefault();
     if (input.trim() === '') return;
 
