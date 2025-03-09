@@ -1,0 +1,401 @@
+/* ChatbotApp.css - ChatGPT-NVIDIA Hybrid Theme */
+:root {
+    --nvidia-green: #76b900;
+    --nvidia-dark-green: #5c9100;
+    --nvidia-black: #111111;
+    --nvidia-dark-gray: #202123;
+    --nvidia-medium-gray: #343541;
+    --nvidia-light-gray: #444654;
+    --text-white: #f7f7f8;
+    --text-light: #d1d5db;
+    --text-dark: #ececf1;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+  }
+  .suggestion-chips {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .suggestion-chip {
+    background-color: var(--nvidia-dark-gray);
+    padding: 8px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .suggestion-chip:hover {
+    background-color: var(--nvidia-dark-gray);
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--nvidia-black);
+    color: var(--text-white);
+    font-family: 'Söhne', 'Segoe UI', Helvetica, Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--nvidia-black);
+    overflow: hidden;
+  }
+  
+  .chatbot-container {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: auto, auto;
+    flex-direction: column;
+    background-color: var(--nvidia-black);
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .chatbot-header {
+    padding: 16px 20px;
+    background-color: var(--nvidia-black);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 10px var(--shadow-color);
+  }
+  
+  .chatbot-header-2 {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 20px;
+    background-color: var(--nvidia-black);
+    color: var(--text-white);
+    z-index: 10;
+    box-shadow: 0 2px 10px var(--shadow-color);
+  }
+  .chatbot-header-2 h2 {
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .chatbot-header h2 {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-size: 1.2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chatbot-header h2::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--nvidia-green);
+    margin-right: 10px;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .chatbot-header:hover h2::before {
+    transform: rotate(135deg);
+  }
+  
+  .messages-container {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    background-color: var(--nvidia-black);
+    padding: 0;
+  }
+  
+  .message {
+    max-width: 100%;
+    padding: 24px;
+    word-wrap: break-word;
+    width: 100%;
+    animation: messageSlideIn 0.3s ease-out;
+  }
+  
+  .user-message {
+    background-color: var(--nvidia-black);
+    border-left: 3px solid var(--nvidia-green);
+  }
+  
+  .ai-message {
+    background-color: var(--nvidia-dark-gray);
+    border-left: 3px solid var(--nvidia-dark-green);
+  }
+  
+  .message-content {
+    line-height: 1.6;
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-light);
+  }
+  
+  .input-form {
+    /* max-width: ; */
+    display: flex;
+    padding: 16px;
+    background-color: var(--nvidia-black);
+    position: relative;
+    box-shadow: 0 -2px 10px var(--shadow-color);
+    z-index: 10;
+  }
+  
+  input {
+    flex: 1;
+    padding: 16px 50px 16px 16px;
+    background-color: var(--nvidia-black);
+    border: 1px solid #5e5e5e;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    color: var(--text-white);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 0 rgba(118, 185, 0, 0);
+  }
+  
+  input:focus {
+    border-color: var(--nvidia-green);
+    box-shadow: 0 0 0 3px rgba(118, 185, 0, 0.3);
+  }
+  
+  button {
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background-color: var(--nvidia-green);
+    color: var(--nvidia-black);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    animation: pulseButton 2s infinite;
+  }
+  
+  button::after {
+    content: "→";
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: var(--nvidia-dark-green);
+    transform: translateY(-50%) scale(1.05);
+    animation: none;
+  }
+  
+  button:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+    animation: none;
+  }
+  
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: var(--text-light);
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease;
+  }
+  
+  /* .empty-state::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: var(--nvidia-green);
+    margin-bottom: 20px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: rotate 5s infinite linear;
+  }
+   */
+  .loading {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .loading .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--nvidia-green);
+    margin: 0 4px;
+    display: inline-block;
+    animation: loadingDot 1.5s infinite ease-in-out;
+  }
+  
+  .loading .dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .loading .dot:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .loading .dot:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  /* Custom scrollbar */
+  .messages-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .messages-container::-webkit-scrollbar-track {
+    background: var(--nvidia-medium-gray);
+  }
+  
+  .messages-container::-webkit-scrollbar-thumb {
+    background: #5e5e5e;
+    border-radius: 3px;
+  }
+  
+  .messages-container::-webkit-scrollbar-thumb:hover {
+    background: var(--nvidia-green);
+  }
+  
+  /* For Firefox */
+  .messages-container {
+    scrollbar-width: thin;
+    scrollbar-color: #5e5e5e var(--nvidia-medium-gray);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes messageSlideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulseButton {
+    0% {
+      box-shadow: 0 0 0 0 rgba(118, 185, 0, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 6px rgba(118, 185, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(118, 185, 0, 0);
+    }
+  }
+  
+  @keyframes loadingDot {
+    0%, 80%, 100% {
+      transform: scale(0.8);
+      opacity: 0.6;
+    }
+    40% {
+      transform: scale(1.2);
+      opacity: 1;
+      box-shadow: 0 0 10px rgba(118, 185, 0, 0.7);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .chatbot-container {
+      max-width: 100%;
+      border-radius: 0;
+    }
+    
+    .message {
+      padding: 20px 16px;
+    }
+    
+    .message-content {
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Animation for new messages appearing */
+  @keyframes highlightNew {
+    0% {
+      background-color: rgba(118, 185, 0, 0.2);
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+  
+  /* Apply the animation to newly added messages */
+  .message.new-message {
+    animation: messageSlideIn 0.3s ease-out, highlightNew 2s ease 0.3s;
+  }
+  
+  /* Style for code blocks within messages */
+  .message-content pre {
+    background-color: #2d2d2d;
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 10px 0;
+    border-left: 3px solid var(--nvidia-green);
+  }
+  
+  .message-content code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: #e6e6e6;
+  }
