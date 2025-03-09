@@ -11,7 +11,7 @@ const CaseComp = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
-  const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
+  const API_KEY = process.env.REACT_APP_OPENAI_API_KEY_1+process.env.REACT_APP_OPENAI_API_KEY_2;
 
   // Automatic scroll to bottom when messages update
   useEffect(() => {
