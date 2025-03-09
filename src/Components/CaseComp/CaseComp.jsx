@@ -21,7 +21,7 @@ const CaseComp = () => {
   };
 
   const sendMessage = async (e) => {
-    console.log("if youre here, hi! also please don't try to break the ai i'm begging you")
+    console.log("if youre here, hi! also please don't try to break the ai i'm begging you :)")
     e.preventDefault();
     if (input.trim() === '') return;
 
