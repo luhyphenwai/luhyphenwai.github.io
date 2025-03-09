@@ -22,6 +22,7 @@ const CaseComp = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+
   const sendMessage = async (e) => {
     console.log("if you're here, hi! also please don't try to break the ai i'm begging you :)")
     e.preventDefault();
@@ -86,7 +87,7 @@ const CaseComp = () => {
   const suggestedQuestions = [
     "What's NVIDIA's current market position?",
     "How does the 'AI Compute as a Service' model work?",
-    "What are major players in the AI market currently?",
+    "What are the major players in the AI market?",
     "What are the financial projections for this strategy?"
   ];
 
